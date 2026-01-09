@@ -1,16 +1,24 @@
-## Hi there 👋
+<h1 align="center" style="color: #ffffff;">Hi, I'm Ange !</h1>
+<h3 align="center" style="color: #ffffff;"> junior Fullstack developer</h3>
 
-<!--
-**angeBiancamaria/angeBiancamaria** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+- :dizzy: **Web Developer** aiming to become Lead Developer.
 
-Here are some ideas to get you started:
+- 📖 I’m learning **symphony** & **react**.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- :desktop_computer: And currently working on a datapack minecraft and a time gestion website.
+
+
+<p align="center">
+</p>
+
+<h3 align="left" style="color: #ffffff;">Languages, frameworks and tools I'm using in my projects :</h3>
+<p align="left">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=html,css,js,ts,java,python,php,tailwind,bootstrap,react,symfony,mysql" />
+  </a>
+</p>
+<p align="left">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=figma,git,github" />
+  </a>
+</p>
