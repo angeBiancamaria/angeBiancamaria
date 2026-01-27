@@ -1,22 +1,65 @@
-<h1 align="center" style="color: #ffffff;">Hi , I'm Ange !</h1>
-<h3 align="center" style="color: #ffffff;">  junior Fullstack developer</h3>
+# 👋 Hi, I'm Ange
 
-- 📖 I’m learning  **symphony** & **react**.
+🎓 **Junior Fullstack Web Developer** (backend-oriented)  
+📍 Based in France
 
-- :desktop_computer: And currently working on a datapack minecraft and a time gestion website.
+I'm passionate about **creating things** — web applications, games, useful tools, and experimental projects.  
+I enjoy building, understanding systems, and improving them step by step.
 
+---
 
-<p align="center">
-</p>
+## 🎯 Current Goal
 
-<h3 align="left" style="color: #ffffff;">Languages, frameworks and tools I'm using in my projects :</h3>
-<p align="left">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,js,ts,java,python,php,tailwind,bootstrap,react,symfony,mysql" />
-  </a>
-</p>
-<p align="left">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=figma,git,github" />
-  </a>
-</p>
+- 🔍 Looking for an **internship**
+- 🔁 With the objective of continuing on a **work-study program (alternance)**  
+  toward a **Bachelor / Master in Web Development**
+- 🏫 Target training center: **Aflokkat**
+
+> I’m also open to a **full-time position** if no alternance opportunity is available.
+
+---
+
+## 🧠 Profile
+
+- 🧩 Mainly **backend-oriented**
+- 🎨 Improving my **frontend skills**
+- 🛠️ Certified **Web Developer (Fullstack)**
+- 🚀 Interested in:
+  - Web development
+  - Game-related projects (Minecraft / modding)
+  - Creative tools & useful applications
+  - AI-powered projects
+
+---
+
+## ⭐ Featured Project
+
+- **Time Management Web Application**  
+  My main project, focused on backend logic, database design, and user management.  
+  The project is actively evolving and serves as my primary technical showcase.
+
+---
+
+## 📖 Currently Learning
+
+- **Symfony**
+- **React**
+
+---
+
+## 🧰 Languages, Frameworks & Tools
+
+![Skills](https://skillicons.dev/icons?i=html,css,js,ts,java,python,php,tailwind,bootstrap,react,symfony,mysql)
+  
+![Tools](https://skillicons.dev/icons?i=figma,git,github)
+
+---
+
+## 📫 Contact
+
+- 📧 Email: ange.biancamaria09@gmail.com  
+- 💼 LinkedIn: https://www.linkedin.com/in/ange-biancamaria/
+
+---
+
+> *Creating, learning, and building things that matter.*
