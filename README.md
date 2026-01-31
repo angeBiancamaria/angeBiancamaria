@@ -7,7 +7,7 @@ I'm passionate about **creating things** — web applications, games, useful too
 I enjoy building, understanding systems, and improving them step by step.
 
 ---
-
+ 
 ## 🎯 Current Goal
 
 - 🔍 Looking for an **internship**
