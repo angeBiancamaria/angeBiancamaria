@@ -9,7 +9,7 @@ I enjoy building, understanding systems, and improving them step by step.
 ---
  
 ## 🎯 Current Goal
-
+ 
 - 🔍 Looking for an **internship**
 - 🔁 With the objective of continuing on a **work-study program (alternance)**  
   toward a **Bachelor / Master in Web Development**
