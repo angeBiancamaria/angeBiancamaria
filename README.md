@@ -1,4 +1,4 @@
-# 👋 Hi, I'm Ange
+# 👋 Hi, I'm Ange 
 
 🎓 **Junior Fullstack Web Developer** (backend-oriented)  
 📍 Based in France
