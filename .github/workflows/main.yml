@@ -2,8 +2,11 @@ name: Daily Quote Update
 
 on:
   schedule:
-    - cron: "0 8 * * *" # tous les jours à 8h
+    - cron: "0 8 * * *"
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update-readme:
@@ -11,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Generate quote
         run: |
@@ -37,8 +40,8 @@ jobs:
 
       - name: Commit & Push
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
           git commit -m "chore: update daily quote" || exit 0
           git push
