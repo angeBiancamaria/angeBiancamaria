@@ -2,3 +2,4 @@ If it compiles, ship it.
 I would love to change the world, but they won’t give me the source code.
 2026-04-07 | Debugging: being the detective in a crime movie where you are also the murderer.
 2026-04-07 15:50 | There are 10 types of people in the world: those who understand binary and those who don’t.
+2026-04-07 23:21 | I don’t always test my code… but when I do, I do it in production.
