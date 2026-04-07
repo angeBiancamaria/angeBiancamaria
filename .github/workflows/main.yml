@@ -18,19 +18,38 @@ jobs:
 
       - name: Generate quote
         run: |
+          FILE="quotes_history.txt"
+          touch $FILE
+
           QUOTES=(
-            "I don’t always test my code… but when I do, I do it in production."
-            "There are 10 types of people in the world: those who understand binary and those who don’t."
-            "It works on my machine."
-            "First, solve the problem. Then, write the code."
-            "I’m not lazy, I’m just in energy-saving mode."
-            "Debugging: being the detective in a crime movie where you are also the murderer."
-            "Computers are fast; developers keep it interesting."
-            "Weeks of coding can save you hours of planning."
-            "I would love to change the world, but they won’t give me the source code."
-            "If it compiles, ship it."
-          )
-          QUOTE=${QUOTES[$RANDOM % ${#QUOTES[@]}]}
+                  "I don’t always test my code… but when I do, I do it in production."
+                  "There are 10 types of people in the world: those who understand binary and those who don’t."
+                  "It works on my machine."
+                  "First, solve the problem. Then, write the code."
+                  "I’m not lazy, I’m just in energy-saving mode."
+                  "Debugging: being the detective in a crime movie where you are also the murderer."
+                  "Computers are fast; developers keep it interesting."
+                  "Weeks of coding can save you hours of planning."
+                  "I would love to change the world, but they won’t give me the source code."
+                  "If it compiles, ship it."
+                 )
+
+          UNUSED=()
+
+          for Q in "${QUOTES[@]}"; do
+            if ! grep -Fxq "$Q" $FILE; then
+           UNUSED+=("$Q")
+           fi
+          done
+
+          if [ ${#UNUSED[@]} -eq 0 ]; then
+            echo "" > $FILE
+            UNUSED=("${QUOTES[@]}")
+          fi
+          
+          QUOTE=${UNUSED[$RANDOM % ${#UNUSED[@]}]}
+
+          echo "$QUOTE" >> $FILE
           echo "$QUOTE" > quote.txt
 
       - name: Update README
