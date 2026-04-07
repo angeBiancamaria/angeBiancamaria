@@ -37,7 +37,7 @@ jobs:
           UNUSED=()
 
           for Q in "${QUOTES[@]}"; do
-            if ! grep -Fxq "$Q" $FILE; then
+            if ! grep -Fq "| $Q" $FILE; then
            UNUSED+=("$Q")
            fi
           done
@@ -50,7 +50,8 @@ jobs:
           QUOTE=${UNUSED[$RANDOM % ${#UNUSED[@]}]}
 
           echo "$QUOTE" >> $FILE
-          echo "$QUOTE" > quote.txt
+          DATE=$(date +%Y-%m-%d)
+echo "$DATE | $QUOTE" >> $FILE
 
       - name: Update README
         run: |
