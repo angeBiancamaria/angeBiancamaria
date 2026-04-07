@@ -49,7 +49,7 @@ jobs:
           
           QUOTE=${UNUSED[$RANDOM % ${#UNUSED[@]}]}
 
-          DATE=$(date +%Y-%m-%d)
+          DATE=$(TZ="Europe/Paris" date "+%Y-%m-%d %H:%M")
           echo "$DATE | $QUOTE" >> $FILE
           echo "$QUOTE" > quote.txt
 
