@@ -49,9 +49,9 @@ jobs:
           
           QUOTE=${UNUSED[$RANDOM % ${#UNUSED[@]}]}
 
-          echo "$QUOTE" >> $FILE
           DATE=$(date +%Y-%m-%d)
-echo "$DATE | $QUOTE" >> $FILE
+          echo "$DATE | $QUOTE" >> $FILE
+          echo "$QUOTE" > quote.txt
 
       - name: Update README
         run: |
