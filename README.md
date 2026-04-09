@@ -9,7 +9,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> I would love to change the world, but they won’t give me the source code.
+> Weeks of coding can save you hours of planning.
 
 ---
   
