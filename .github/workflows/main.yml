@@ -20,8 +20,10 @@ jobs:
         run: |
           FILE="quotes_history.txt"
           STATS_FILE="quotes_stats.txt"
+          DELAY_FILE="delay_log.txt"
 
           touch $FILE
+          touch $DELAY_FILE
 
           QUOTES=(
             "I don’t always test my code… but when I do, I do it in production."
@@ -44,7 +46,6 @@ jobs:
             fi
           done
 
-          # Si toutes les quotes ont été utilisées → on recommence SANS supprimer l'historique
           if [ ${#UNUSED[@]} -eq 0 ]; then
             UNUSED=("${QUOTES[@]}")
           fi
@@ -54,6 +55,16 @@ jobs:
           # Date + heure FR
           DATE=$(TZ="Europe/Paris" date "+%Y-%m-%d %H:%M")
 
+          # -------- DELAY --------
+          EXPECTED_TIME="08:00"
+          EXPECTED_TS=$(date -d "$EXPECTED_TIME" +%s)
+          NOW_TS=$(date +%s)
+
+          DELAY=$(( (NOW_TS - EXPECTED_TS) / 60 ))
+
+          echo "$DATE | Delay: ${DELAY} min" >> $DELAY_FILE
+
+          # -------- HISTORY --------
           echo "$DATE | $QUOTE" >> $FILE
           echo "$QUOTE" > quote.txt
 
@@ -71,6 +82,6 @@ jobs:
         run: |
           git config user.name "angeBiancamaria"
           git config user.email "129753970+angeBiancamaria@users.noreply.github.com"
-          git add README.md quotes_history.txt quotes_stats.txt
+          git add README.md quotes_history.txt quotes_stats.txt delay_log.txt
           git commit --author="angeBiancamaria <129753970+angeBiancamaria@users.noreply.github.com>" -m "chore: update daily quote" || exit 0
           git push
