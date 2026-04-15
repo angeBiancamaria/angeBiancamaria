@@ -2,7 +2,7 @@ name: Daily Quote Update
 
 on:
   schedule:
-    - cron: "0 5 * * *"
+    - cron: "0 8 * * *"
   workflow_dispatch:
 
 permissions:
@@ -19,39 +19,48 @@ jobs:
       - name: Generate quote
         run: |
           FILE="quotes_history.txt"
+          STATS_FILE="quotes_stats.txt"
+
           touch $FILE
 
           QUOTES=(
-                  "I don’t always test my code… but when I do, I do it in production."
-                  "There are 10 types of people in the world: those who understand binary and those who don’t."
-                  "It works on my machine."
-                  "First, solve the problem. Then, write the code."
-                  "I’m not lazy, I’m just in energy-saving mode."
-                  "Debugging: being the detective in a crime movie where you are also the murderer."
-                  "Computers are fast; developers keep it interesting."
-                  "Weeks of coding can save you hours of planning."
-                  "I would love to change the world, but they won’t give me the source code."
-                  "If it compiles, ship it."
-                 )
+            "I don’t always test my code… but when I do, I do it in production."
+            "There are 10 types of people in the world: those who understand binary and those who don’t."
+            "It works on my machine."
+            "First, solve the problem. Then, write the code."
+            "I’m not lazy, I’m just in energy-saving mode."
+            "Debugging: being the detective in a crime movie where you are also the murderer."
+            "Computers are fast; developers keep it interesting."
+            "Weeks of coding can save you hours of planning."
+            "I would love to change the world, but they won’t give me the source code."
+            "If it compiles, ship it."
+          )
 
           UNUSED=()
 
           for Q in "${QUOTES[@]}"; do
             if ! grep -Fq "| $Q" $FILE; then
-           UNUSED+=("$Q")
-           fi
+              UNUSED+=("$Q")
+            fi
           done
 
+          # Si toutes les quotes ont été utilisées → on recommence SANS supprimer l'historique
           if [ ${#UNUSED[@]} -eq 0 ]; then
-            echo "" > $FILE
             UNUSED=("${QUOTES[@]}")
           fi
-          
+
           QUOTE=${UNUSED[$RANDOM % ${#UNUSED[@]}]}
 
+          # Date + heure FR
           DATE=$(TZ="Europe/Paris" date "+%Y-%m-%d %H:%M")
+
           echo "$DATE | $QUOTE" >> $FILE
           echo "$QUOTE" > quote.txt
+
+          # -------- STATS --------
+          cut -d '|' -f2 $FILE | sed 's/^ //' > temp_quotes.txt
+          sort temp_quotes.txt | uniq -c | sort -nr | awk '{count=$1; $1=""; sub(/^ /, ""); print $0 " | " count}' > $STATS_FILE
+          rm temp_quotes.txt
 
       - name: Update README
         run: |
@@ -62,6 +71,6 @@ jobs:
         run: |
           git config user.name "angeBiancamaria"
           git config user.email "129753970+angeBiancamaria@users.noreply.github.com"
-          git add README.md quotes_history.txt
+          git add README.md quotes_history.txt quotes_stats.txt
           git commit --author="angeBiancamaria <129753970+angeBiancamaria@users.noreply.github.com>" -m "chore: update daily quote" || exit 0
           git push
