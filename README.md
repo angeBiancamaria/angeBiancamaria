@@ -9,7 +9,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Debugging: being the detective in a crime movie where you are also the murderer.
+> I would love to change the world, but they won’t give me the source code.
 
 ---
   
