@@ -2,3 +2,4 @@
 2026-04-15 08:53 | I don’t always test my code… but when I do, I do it in production.
 2026-04-16 00:28 | Debugging: being the detective in a crime movie where you are also the murderer.
 2026-04-16 11:07 | I would love to change the world, but they won’t give me the source code.
+2026-04-17 08:29 | Computers are fast; developers keep it interesting.
