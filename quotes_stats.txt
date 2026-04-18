@@ -1,3 +1,4 @@
+There are 10 types of people in the world: those who understand binary and those who don’t. | 1
 It works on my machine. | 1
 I would love to change the world, but they won’t give me the source code. | 1
 I don’t always test my code… but when I do, I do it in production. | 1
