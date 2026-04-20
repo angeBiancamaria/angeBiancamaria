@@ -9,7 +9,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> First, solve the problem. Then, write the code.
+> I’m not lazy, I’m just in energy-saving mode.
 
 ---
   
