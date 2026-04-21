@@ -56,7 +56,7 @@ jobs:
           DATE=$(TZ="Europe/Paris" date "+%Y-%m-%d %H:%M")
 
           # -------- DELAY --------
-          EXPECTED_TIME="08:00"
+          EXPECTED_TIME="07:00"
           EXPECTED_TS=$(date -d "$EXPECTED_TIME" +%s)
           NOW_TS=$(date +%s)
 
