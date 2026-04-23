@@ -9,7 +9,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> If it compiles, ship it.
+> Debugging: being the detective in a crime movie where you are also the murderer.
 
 ---
   
