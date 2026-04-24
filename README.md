@@ -9,7 +9,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Debugging: being the detective in a crime movie where you are also the murderer.
+> Computers are fast; developers keep it interesting.
 
 ---
   
