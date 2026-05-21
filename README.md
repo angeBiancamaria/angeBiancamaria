@@ -9,7 +9,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> First, solve the problem. Then, write the code.
+> Debugging: being the detective in a crime movie where you are also the murderer.
 
 ---
   
