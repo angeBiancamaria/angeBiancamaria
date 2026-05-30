@@ -46,3 +46,4 @@
 2026-05-27 09:55 | Computers are fast; developers keep it interesting.
 2026-05-28 09:47 | If it compiles, ship it.
 2026-05-29 09:45 | I would love to change the world, but they won’t give me the source code.
+2026-05-30 08:39 | There are 10 types of people in the world: those who understand binary and those who don’t.
