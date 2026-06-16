@@ -63,3 +63,4 @@
 2026-06-13 09:39 | If it compiles, ship it.
 2026-06-14 10:07 | If it compiles, ship it.
 2026-06-15 11:51 | If it compiles, ship it.
+2026-06-16 11:15 | I don’t always test my code… but when I do, I do it in production.
