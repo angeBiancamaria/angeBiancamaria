@@ -70,3 +70,4 @@
 2026-06-20 09:42 | It works on my machine.
 2026-06-21 10:20 | I would love to change the world, but they won’t give me the source code.
 2026-06-22 11:38 | I would love to change the world, but they won’t give me the source code.
+2026-06-23 09:38 | Debugging: being the detective in a crime movie where you are also the murderer.
