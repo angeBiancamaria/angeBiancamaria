@@ -1,7 +1,7 @@
 I would love to change the world, but they won’t give me the source code. | 11
 It works on my machine. | 10
+There are 10 types of people in the world: those who understand binary and those who don’t. | 9
 Computers are fast; developers keep it interesting. | 9
-There are 10 types of people in the world: those who understand binary and those who don’t. | 8
 Debugging: being the detective in a crime movie where you are also the murderer. | 8
 If it compiles, ship it. | 7
 I don’t always test my code… but when I do, I do it in production. | 6

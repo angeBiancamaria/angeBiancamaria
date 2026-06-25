@@ -72,3 +72,4 @@
 2026-06-22 11:38 | I would love to change the world, but they won’t give me the source code.
 2026-06-23 09:38 | Debugging: being the detective in a crime movie where you are also the murderer.
 2026-06-24 09:31 | It works on my machine.
+2026-06-25 09:32 | There are 10 types of people in the world: those who understand binary and those who don’t.
