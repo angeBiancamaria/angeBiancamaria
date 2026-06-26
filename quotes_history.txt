@@ -73,3 +73,4 @@
 2026-06-23 09:38 | Debugging: being the detective in a crime movie where you are also the murderer.
 2026-06-24 09:31 | It works on my machine.
 2026-06-25 09:32 | There are 10 types of people in the world: those who understand binary and those who don’t.
+2026-06-26 09:41 | I don’t always test my code… but when I do, I do it in production.
