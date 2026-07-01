@@ -9,7 +9,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> There are 10 types of people in the world: those who understand binary and those who don’t.
+> I would love to change the world, but they won’t give me the source code.
 
 ---
   
