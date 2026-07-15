@@ -9,7 +9,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Computers are fast; developers keep it interesting.
+> Weeks of coding can save you hours of planning.
 
 ---
   
