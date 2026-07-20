@@ -9,7 +9,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> It works on my machine.
+> Debugging: being the detective in a crime movie where you are also the murderer.
 
 ---
   
