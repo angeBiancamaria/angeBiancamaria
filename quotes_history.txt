@@ -117,3 +117,4 @@
 2026-08-06 08:21 | If it compiles, ship it.
 2026-08-07 07:26 | I would love to change the world, but they won’t give me the source code.
 2026-08-08 06:45 | Weeks of coding can save you hours of planning.
+2026-08-09 06:54 | There are 10 types of people in the world: those who understand binary and those who don’t.
