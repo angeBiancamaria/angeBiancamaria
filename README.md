@@ -9,7 +9,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Computers are fast; developers keep it interesting.
+> There are 10 types of people in the world: those who understand binary and those who don’t.
 
 ---
   
