@@ -2,7 +2,7 @@ I would love to change the world, but they won’t give me the source code. | 25
 There are 10 types of people in the world: those who understand binary and those who don’t. | 21
 It works on my machine. | 15
 I’m not lazy, I’m just in energy-saving mode. | 14
-I don’t always test my code… but when I do, I do it in production. | 13
+I don’t always test my code… but when I do, I do it in production. | 14
 Computers are fast; developers keep it interesting. | 13
 Debugging: being the detective in a crime movie where you are also the murderer. | 12
 If it compiles, ship it. | 10
