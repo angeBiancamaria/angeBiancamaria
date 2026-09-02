@@ -9,7 +9,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> I don’t always test my code… but when I do, I do it in production.
+> Computers are fast; developers keep it interesting.
 
 ---
   
