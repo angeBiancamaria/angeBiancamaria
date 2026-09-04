@@ -9,7 +9,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> It works on my machine.
+> I’m not lazy, I’m just in energy-saving mode.
 
 ---
   
