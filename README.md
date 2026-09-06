@@ -9,7 +9,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Computers are fast; developers keep it interesting.
+> I would love to change the world, but they won’t give me the source code.
 
 ---
   
