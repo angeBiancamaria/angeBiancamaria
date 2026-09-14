@@ -9,7 +9,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> I don’t always test my code… but when I do, I do it in production.
+> Weeks of coding can save you hours of planning.
 
 ---
   
