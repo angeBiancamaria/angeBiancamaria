@@ -9,7 +9,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Weeks of coding can save you hours of planning.
+> If it compiles, ship it.
 
 ---
   
