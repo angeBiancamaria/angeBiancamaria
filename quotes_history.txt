@@ -157,3 +157,4 @@
 2026-09-15 11:02 | Debugging: being the detective in a crime movie where you are also the murderer.
 2026-09-16 10:55 | Weeks of coding can save you hours of planning.
 2026-09-17 10:59 | If it compiles, ship it.
+2026-09-18 10:34 | Debugging: being the detective in a crime movie where you are also the murderer.
