@@ -9,7 +9,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> If it compiles, ship it.
+> It works on my machine.
 
 ---
   
