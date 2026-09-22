@@ -9,7 +9,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> It works on my machine.
+> First, solve the problem. Then, write the code.
 
 ---
   
