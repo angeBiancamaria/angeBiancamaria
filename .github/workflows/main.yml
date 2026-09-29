@@ -117,8 +117,8 @@ jobs:
 
           # -------- DELAY --------
           EXPECTED_TIME="07:00"
-          EXPECTED_TS=$(date -d "$EXPECTED_TIME" +%s)
-          NOW_TS=$(date +%s)
+          EXPECTED_TS=$(TZ="Europe/Paris" date -d "$EXPECTED_TIME" +%s)
+          NOW_TS=$(TZ="Europe/Paris" date +%s)
 
           DELAY=$(( (NOW_TS - EXPECTED_TS) / 60 ))
 
@@ -133,15 +133,128 @@ jobs:
           sort temp_quotes.txt | uniq -c | sort -nr | awk '{count=$1; $1=""; sub(/^ /, ""); print $0 " | " count}' > $STATS_FILE
           rm temp_quotes.txt
 
+          # -------- TOP 3 QUOTES --------
+          head -n 3 "$STATS_FILE" > top_quotes.txt
+
+          # Generate a polished SVG chart for the README.
+          python3 - <<'PY'
+          from pathlib import Path
+          from xml.sax.saxutils import escape
+
+          rows = []
+          for line in Path("top_quotes.txt").read_text(encoding="utf-8").splitlines():
+              if " | " in line:
+                  quote, count = line.rsplit(" | ", 1)
+                  try:
+                      rows.append((quote, int(count)))
+                  except ValueError:
+                      pass
+
+          W, H = 900, 470
+          bg = "#0d1117"
+          panel = "#161b22"
+          border = "#30363d"
+          text_color = "#f0f6fc"
+          muted = "#8b949e"
+          accents = ["#f2cc60", "#c9d1d9", "#d2995f"]
+
+          def wrap(s, width=62):
+              words = s.split()
+              lines, current = [], ""
+              for word in words:
+                  candidate = (current + " " + word).strip()
+                  if len(candidate) <= width:
+                      current = candidate
+                  else:
+                      if current:
+                          lines.append(current)
+                      current = word
+              if current:
+                  lines.append(current)
+              return lines[:2]
+
+          max_count = max((count for _, count in rows), default=1)
+          parts = [
+              f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">',
+              f'<rect width="{W}" height="{H}" rx="18" fill="{bg}"/>',
+              f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="18" fill="none" stroke="{border}"/>',
+              f'<text x="42" y="52" fill="{text_color}" font-family="Arial, sans-serif" font-size="25" font-weight="700">🏆 Top 3 Daily Quotes</text>',
+              f'<text x="42" y="78" fill="{muted}" font-family="Arial, sans-serif" font-size="14">The quotes that appeared most often in the daily rotation</text>',
+          ]
+
+          if not rows:
+              parts.append(f'<text x="42" y="145" fill="{muted}" font-family="Arial, sans-serif" font-size="16">No quote statistics available yet.</text>')
+          else:
+              y = 112
+              bar_x = 610
+              bar_w = 225
+              for i, (quote, count) in enumerate(rows):
+                  accent = accents[i]
+                  medal = ["1", "2", "3"][i]
+                  parts.append(f'<rect x="36" y="{y}" width="828" height="100" rx="14" fill="{panel}" stroke="{border}"/>')
+                  parts.append(f'<circle cx="72" cy="{y+50}" r="23" fill="{accent}"/>')
+                  parts.append(f'<text x="72" y="{y+57}" text-anchor="middle" fill="#0d1117" font-family="Arial, sans-serif" font-size="17" font-weight="700">{medal}</text>')
+
+                  qlines = wrap(quote)
+                  for j, qline in enumerate(qlines):
+                      parts.append(
+                          f'<text x="112" y="{y+39+j*22}" fill="{text_color}" '
+                          f'font-family="Arial, sans-serif" font-size="15" font-weight="600">{escape(qline)}</text>'
+                      )
+
+                  ratio = count / max_count if max_count else 0
+                  width = max(8, int(bar_w * ratio))
+                  parts.append(f'<rect x="{bar_x}" y="{y+36}" width="{bar_w}" height="10" rx="5" fill="#21262d"/>')
+                  parts.append(f'<rect x="{bar_x}" y="{y+36}" width="{width}" height="10" rx="5" fill="{accent}"/>')
+                  parts.append(
+                      f'<text x="{bar_x}" y="{y+68}" fill="{muted}" font-family="Arial, sans-serif" '
+                      f'font-size="13">{count} use(s)</text>'
+                  )
+                  y += 112
+
+          parts.append(f'<text x="42" y="{H-18}" fill="{muted}" font-family="Arial, sans-serif" font-size="11">Updated automatically by GitHub Actions</text>')
+          parts.append("</svg>")
+
+          Path("top_quotes.svg").write_text("\n".join(parts), encoding="utf-8")
+          PY
+
       - name: Update README
         run: |
           QUOTE=$(cat quote.txt)
           sed -i "/📝 \*\*Daily thought\*\*/,/^$/ s|> .*|> $QUOTE|" README.md
 
+          python3 - <<'PY'
+          from pathlib import Path
+
+          readme = Path("README.md")
+          stats = Path("top_quotes.txt")
+          text = readme.read_text(encoding="utf-8")
+
+          lines = []
+          for i, line in enumerate(stats.read_text(encoding="utf-8").splitlines(), 1):
+              if " | " in line:
+                  quote, count = line.rsplit(" | ", 1)
+                  lines.append(f"{i}. **{quote}** — {count} use(s)")
+
+          start = "<!-- TOP_QUOTES_START -->"
+          end = "<!-- TOP_QUOTES_END -->"
+          section = "### 🏆 Top 3 Daily Quotes\n\n![Top 3 Daily Quotes](./top_quotes.svg)"
+          block = f"{start}\n{section}\n{end}"
+
+          if start in text and end in text:
+              before = text.split(start, 1)[0]
+              after = text.split(end, 1)[1]
+              text = before + block + after
+          else:
+              text = text.rstrip() + "\n\n" + block + "\n"
+
+          readme.write_text(text, encoding="utf-8")
+          PY
+
       - name: Commit & Push
         run: |
           git config user.name "angeBiancamaria"
           git config user.email "129753970+angeBiancamaria@users.noreply.github.com"
-          git add README.md quotes_history.txt quotes_stats.txt delay_log.txt
+          git add README.md quotes_history.txt quotes_stats.txt delay_log.txt top_quotes.txt top_quotes.svg
           git commit --author="angeBiancamaria <129753970+angeBiancamaria@users.noreply.github.com>" -m "chore: update daily quote" || exit 0
           git push
