@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=venom&height=300&color=gradient&section=header&reversal=false&text=hello+i%27m+ange+%F0%9F%91%8B&textBg=false&fontSize=70&fontAlign=50&fontAlignY=50&animation=scaleIn&rotate=0&strokeWidth=0&descSize=20&descAlign=50&descAlignY=60"/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6366F1&center=true&vCenter=true&width=650&lines=Full+Stack+Developer+💻;mySQL+%7C+symphony+%7C+react;Creating+learning+and+building+things+that+matter;%2C+Always+Creating+📖)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6366F1&center=true&vCenter=true&width=650&lines=Full+Stack+Developer+💻;mySQL+%7C+symphony+%7C+react;Creating+learning+and+building+things+that+matter;+Always+Creating+📖)](https://git.io/typing-svg)
 
 </div>
 
@@ -78,6 +78,19 @@ framework/librairie ;
 Tools
 
 ![Tools](https://skillicons.dev/icons?i=figma,git,github)
+
+---
+
+## 📊 GitHub Stats
+
+<div align="center">
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=angeBiancamaria&show_icons=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=6366f1&icon_color=6366f1&text_color=c9d1d9" />
+  <img width="41%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=angeBiancamaria&layout=compact&hide_border=true&bg_color=0d1117&title_color=6366f1&text_color=c9d1d9&langs_count=8" />
+</div>
+
+<div align="center">
+  <img width="90%" src="https://streak-stats.demolab.com?user=angeBiancamaria&theme=tokyonight_duo&hide_border=true&background=0D1117" />
+</div>
 
 ---
 
