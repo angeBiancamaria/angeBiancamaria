@@ -86,6 +86,7 @@ I enjoy building, understanding systems, and improving them step by step.
     <td align="center"><img src="https://skillicons.dev/icons?i=python"/><br/>python</td>
     <td align="center"><img src="https://skillicons.dev/icons?i=php"/><br/>php</td>
     <td align="center"><img src="https://skillicons.dev/icons?i=mysql"/><br/>mysql</td>
+    <td align="center"><img src="https://skillicons.dev/icons?i=githubactions"/><br/>githubactions</td>
   </tr>
 </table>
 
