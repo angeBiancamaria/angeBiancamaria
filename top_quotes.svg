@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470">
+<rect width="900" height="470" rx="18" fill="#0d1117"/>
+<rect x="1" y="1" width="898" height="468" rx="18" fill="none" stroke="#30363d"/>
+<text x="42" y="52" fill="#f0f6fc" font-family="Arial, sans-serif" font-size="25" font-weight="700">🏆 Top 3 Daily Quotes</text>
+<text x="42" y="78" fill="#8b949e" font-family="Arial, sans-serif" font-size="14">The quotes that appeared most often in the daily rotation</text>
+<rect x="36" y="112" width="828" height="100" rx="14" fill="#161b22" stroke="#30363d"/>
+<circle cx="72" cy="162" r="23" fill="#f2cc60"/>
+<text x="72" y="169" text-anchor="middle" fill="#0d1117" font-family="Arial, sans-serif" font-size="17" font-weight="700">1</text>
+<text x="112" y="151" fill="#f0f6fc" font-family="Arial, sans-serif" font-size="15" font-weight="600">I would love to change the world, but they won’t give me the</text>
+<text x="112" y="173" fill="#f0f6fc" font-family="Arial, sans-serif" font-size="15" font-weight="600">source code.</text>
+<rect x="610" y="148" width="225" height="10" rx="5" fill="#21262d"/>
+<rect x="610" y="148" width="225" height="10" rx="5" fill="#f2cc60"/>
+<text x="610" y="180" fill="#8b949e" font-family="Arial, sans-serif" font-size="13">28 use(s)</text>
+<rect x="36" y="224" width="828" height="100" rx="14" fill="#161b22" stroke="#30363d"/>
+<circle cx="72" cy="274" r="23" fill="#c9d1d9"/>
+<text x="72" y="281" text-anchor="middle" fill="#0d1117" font-family="Arial, sans-serif" font-size="17" font-weight="700">2</text>
+<text x="112" y="263" fill="#f0f6fc" font-family="Arial, sans-serif" font-size="15" font-weight="600">There are 10 types of people in the world: those who</text>
+<text x="112" y="285" fill="#f0f6fc" font-family="Arial, sans-serif" font-size="15" font-weight="600">understand binary and those who don’t.</text>
+<rect x="610" y="260" width="225" height="10" rx="5" fill="#21262d"/>
+<rect x="610" y="260" width="176" height="10" rx="5" fill="#c9d1d9"/>
+<text x="610" y="292" fill="#8b949e" font-family="Arial, sans-serif" font-size="13">22 use(s)</text>
+<rect x="36" y="336" width="828" height="100" rx="14" fill="#161b22" stroke="#30363d"/>
+<circle cx="72" cy="386" r="23" fill="#d2995f"/>
+<text x="72" y="393" text-anchor="middle" fill="#0d1117" font-family="Arial, sans-serif" font-size="17" font-weight="700">3</text>
+<text x="112" y="375" fill="#f0f6fc" font-family="Arial, sans-serif" font-size="15" font-weight="600">I’m not lazy, I’m just in energy-saving mode.</text>
+<rect x="610" y="372" width="225" height="10" rx="5" fill="#21262d"/>
+<rect x="610" y="372" width="144" height="10" rx="5" fill="#d2995f"/>
+<text x="610" y="404" fill="#8b949e" font-family="Arial, sans-serif" font-size="13">18 use(s)</text>
+<text x="42" y="452" fill="#8b949e" font-family="Arial, sans-serif" font-size="11">Updated automatically by GitHub Actions</text>
+</svg>

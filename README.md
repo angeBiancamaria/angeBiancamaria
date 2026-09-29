@@ -14,7 +14,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Delivering reliable software and carefully managed technical surprises.
+> Writing code that future developers will definitely understand. Probably.
 
 ---
   
@@ -127,3 +127,9 @@ I enjoy building, understanding systems, and improving them step by step.
 ---
 
 > *Creating, learning, and building things that matter.*
+
+<!-- TOP_QUOTES_START -->
+### 🏆 Top 3 Daily Quotes
+
+![Top 3 Daily Quotes](./top_quotes.svg)
+<!-- TOP_QUOTES_END -->
