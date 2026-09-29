@@ -53,8 +53,7 @@ I enjoy building, understanding systems, and improving them step by step.
 
 ## 📖 Currently Learning
 
-- **Symfony**
-- **React**
+![Symfony](https://skillicons.dev/icons?i=symfony)  ![React](https://skillicons.dev/icons?i=react)  ![Rust](https://skillicons.dev/icons?i=rust)  ![Tauri](https://skillicons.dev/icons?i=tauri)  ![Arduino](https://skillicons.dev/icons?i=arduino)
 
 ---
 
