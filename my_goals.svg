@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0f172a"/><stop offset="1" stop-color="#080d18"/></linearGradient>
+<linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#60a5fa"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+<linearGradient id="p" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c084fc"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+</defs>
+<rect width="1000" height="420" rx="24" fill="url(#bg)"/>
+<text x="52" y="62" fill="#f8fafc" font-family="Arial,sans-serif" font-size="34" font-weight="700">My Goals</text>
+<path d="M220 51H900" stroke="#60a5fa" stroke-width="2" opacity=".65"/>
+<path d="M900 51l10 10 10-10-10-10z" fill="#93c5fd"/>
+
+<!-- TARGET 1 -->
+<g transform="translate(45 105)">
+<circle cx="145" cy="105" r="92" fill="none" stroke="#2563eb" stroke-width="2" opacity=".3"/>
+<circle cx="145" cy="105" r="78" fill="#0b1220" stroke="#60a5fa" stroke-width="4"/>
+<circle cx="145" cy="105" r="58" fill="#172554" stroke="#f8fafc" stroke-width="5"/>
+<circle cx="145" cy="105" r="38" fill="#dbeafe" stroke="#60a5fa" stroke-width="5"/>
+<circle cx="145" cy="105" r="19" fill="#2563eb"/>
+<circle cx="145" cy="105" r="7" fill="#fff"/>
+<g transform="rotate(-42 145 105)"><path d="M145 5V105" stroke="#fff" stroke-width="7" stroke-linecap="round"/><path d="M145 0l-11 18h22z" fill="#fff"/></g>
+<rect x="285" y="5" width="205" height="42" rx="21" fill="#111c35" stroke="#60a5fa" stroke-width="2"/>
+<text x="387" y="34" text-anchor="middle" fill="#93c5fd" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2">GOAL 01</text>
+<text x="285" y="88" fill="#f8fafc" font-family="Arial,sans-serif" font-size="28" font-weight="700">Internship</text>
+<text x="285" y="122" fill="#94a3b8" font-family="Arial,sans-serif" font-size="17">Gain professional experience</text>
+<text x="285" y="149" fill="#94a3b8" font-family="Arial,sans-serif" font-size="17">in a real working environment.</text>
+</g>
+
+<!-- connector -->
+<path d="M485 210H520" stroke="#64748b" stroke-width="3"/>
+<path d="M512 202l12 8-12 8" fill="none" stroke="#c4b5fd" stroke-width="3"/>
+
+<!-- TARGET 2 -->
+<g transform="translate(505 105)">
+<circle cx="145" cy="105" r="92" fill="none" stroke="#7c3aed" stroke-width="2" opacity=".3"/>
+<circle cx="145" cy="105" r="78" fill="#120d24" stroke="#c084fc" stroke-width="4"/>
+<circle cx="145" cy="105" r="58" fill="#2e1065" stroke="#f8fafc" stroke-width="5"/>
+<circle cx="145" cy="105" r="38" fill="#ede9fe" stroke="#c084fc" stroke-width="5"/>
+<circle cx="145" cy="105" r="19" fill="#7c3aed"/>
+<circle cx="145" cy="105" r="7" fill="#fff"/>
+<g transform="rotate(-42 145 105)"><path d="M145 5V105" stroke="#fff" stroke-width="7" stroke-linecap="round"/><path d="M145 0l-11 18h22z" fill="#fff"/></g>
+<rect x="285" y="5" width="205" height="42" rx="21" fill="#1a1230" stroke="#c084fc" stroke-width="2"/>
+<text x="387" y="34" text-anchor="middle" fill="#d8b4fe" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2">GOAL 02</text>
+<text x="285" y="88" fill="#f8fafc" font-family="Arial,sans-serif" font-size="28" font-weight="700">Work-study</text>
+<text x="285" y="122" fill="#94a3b8" font-family="Arial,sans-serif" font-size="17">Alternance toward a</text>
+<text x="285" y="149" fill="#94a3b8" font-family="Arial,sans-serif" font-size="17">Bachelor / Master in Web Development.</text>
+</g>
+</svg>
