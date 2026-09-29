@@ -113,11 +113,6 @@ I enjoy building, understanding systems, and improving them step by step.
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=angeBiancamaria&show_icons=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=6366f1&icon_color=6366f1&text_color=c9d1d9" />
-  <img width="41%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=angeBiancamaria&layout=compact&hide_border=true&bg_color=0d1117&title_color=6366f1&text_color=c9d1d9&langs_count=8" />
-</div>
-
-<div align="center">
   <img width="90%" src="https://streak-stats.demolab.com?user=angeBiancamaria&theme=tokyonight_duo&hide_border=true&background=0D1117" />
 </div>
 
