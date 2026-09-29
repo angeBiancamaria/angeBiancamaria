@@ -24,7 +24,7 @@ I enjoy building, understanding systems, and improving them step by step.
   
 ## 🎯 Current Goal
  
-<div align="center">\n  <img src="./my_goals.svg" alt="My Goals" width="90%"/>\</div>\
+<div align="center"> <img src="./my_goals.svg" alt="My Goals" width="90%"/></div>
 
 > I’m also open to a **full-time position** if no alternance opportunity is available.
 
