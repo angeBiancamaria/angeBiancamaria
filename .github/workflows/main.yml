@@ -36,6 +36,67 @@ jobs:
             "Weeks of coding can save you hours of planning."
             "I would love to change the world, but they won’t give me the source code."
             "If it compiles, ship it."
+            “Turning coffee into scalable solutions since the first compile.”
+            “It works on my machine — now let's make it work everywhere.”
+            “Writing code today that future me will pretend not to recognize.”
+            “Professional bug creator and part-time bug remover.”
+            “Making computers do things they were never explicitly asked to do.”
+            “Clean code is temporary. Deadlines are forever.”
+            “Debugging: because the code refuses to explain itself.”
+            “Building features nobody knew they needed until yesterday.”
+            “One commit at a time, one questionable decision at a time.”
+            “Turning business requirements into surprisingly specific error messages.”
+            “Keeping production alive with code and positive thinking.”
+            “I don't always write bugs, but when I do, they're in production.”
+            “Making software look easy since discovering Stack Overflow.”
+            “Refactoring yesterday's genius into today's technical debt.”
+            “Code, test, deploy, question every life choice.”
+            “Solving problems that would not exist without software.”
+            “My favorite programming language is whatever pays the bills.”
+            “Writing elegant solutions to problems created by previous elegant solutions.”
+            “Turning ‘just one small change’ into a three-day adventure.”
+            “Deploying confidence, debugging reality.”
+            “Professional problem solver, occasional problem generator.”
+            “Making APIs talk to each other so humans don't have to.”
+            “Some call it technical debt. I call it future employment.”
+            “If it compiles, it's a promising start.”
+            “Building the future, one error message at a time.”
+            “My code has fewer bugs than my sleep schedule.”
+            “Turning caffeine, documentation, and questionable ideas into software.”
+            “Because apparently, computers need instructions for everything.”
+            “Writing code that future developers will definitely understand. Probably.”
+            “Keeping the semicolons aligned and the deadlines slightly less so.”
+            “Debugging is just detective work with worse lighting.”
+            “I came for the code and stayed for the production incidents.”
+            “Making complex problems slightly more complicated before simplifying them.”
+            “Turning requirements into features and features into maintenance tasks.”
+            “Code first, documentation when the guilt becomes unbearable.”
+            “Building systems robust enough to survive their users.”
+            “One does not simply deploy without checking the logs.”
+            “Creating solutions, fixing problems, and occasionally creating new ones.”
+            “My code doesn't judge you. The linter does.”
+            “Writing software with confidence, deploying it with caution.”
+            “The fastest way to find a bug is to announce that everything works.”
+            “Making machines productive while questioning my own productivity.”
+            “Turning vague requirements into very precise technical problems.”
+            “A good developer knows the answer. A great developer knows where to look.”
+            “Keeping production stable through skill, testing, and suspicious amounts of luck.”
+            “Every bug is just an undocumented feature waiting for attention.”
+            “Building tomorrow's legacy code today.”
+            “Professional software engineer, amateur fortune teller for production issues.”
+            “The code is clean. The Git history is classified.”
+            “Deploying software is easy. Explaining why it broke is the real feature.”
+            Quelques-unes un peu plus sèches / “corporate”
+            “Delivering reliable software and carefully managed technical surprises.”
+            “Optimizing performance, maintainability, and the occasional existential crisis.”
+            “Engineering solutions with measurable results and immeasurable debugging sessions.”
+            “Transforming business logic into maintainable code and manageable chaos.”
+            “Committed to clean code, reliable systems, and reasonably timed coffee breaks.”
+            “Improving systems one pull request and one review comment at a time.”
+            “Building software that works, scales, and occasionally behaves as documented.”
+            “Turning complex requirements into simple interfaces and complicated Git histories.”
+            “Focused on delivering quality software, preferably before production finds the bugs.”
+            “Software development: where ‘almost finished’ is a perfectly valid status.”
           )
 
           UNUSED=()
