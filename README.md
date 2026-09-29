@@ -6,7 +6,11 @@
 
 </div>
 
-📍 Based in France 
+<!-- Corsica location card -->
+
+<a href="#" title="Viva Corsica">
+  <img src="./corsica_card.svg" alt="Based in Corsica" width="900"/>
+</a>
   
 I'm passionate about **creating things** — web applications, games, useful tools, and  experimental projects.  
 I enjoy building, understanding systems, and improving them step by step.
@@ -32,15 +36,24 @@ I enjoy building, understanding systems, and improving them step by step.
 
 ## 🧠 Profile
 
-- 🧩 Mainly **backend-oriented**
-- 🎨 Improving my **frontend skills**
-- 🛠️ Certified **Web Developer (Fullstack)**
-- 🚀 Interested in:
-  - Web development
-  - Game-related projects (Minecraft / modding)
-  - Creative tools & useful applications
-  - AI-powered projects
-
+          const developer = {
+            name: "Ange",
+            role: "Full Stack Web Developer",
+        
+            profile: {
+                specialization: "Backend",
+                frontend: "Currently improving",
+                certification: "Web Developer (Fullstack)"
+            },
+        
+            interests: [
+                "Web development",
+                "Game development & modding",
+                "Creative tools",
+                "Useful applications",
+                "AI-powered projects"
+            ]
+          ;
 ---
 
 ## ⭐ Featured Project
