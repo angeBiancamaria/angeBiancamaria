@@ -51,32 +51,62 @@ I enjoy building, understanding systems, and improving them step by step.
 
 ---
 
-## 📖 Currently Learning
+## 📖 Currently Learning & improving
 
-![Symfony](https://skillicons.dev/icons?i=symfony)  ![React](https://skillicons.dev/icons?i=react)  ![Rust](https://skillicons.dev/icons?i=rust)  ![Tauri](https://skillicons.dev/icons?i=tauri)  ![Arduino](https://skillicons.dev/icons?i=arduino)
-
+<table align="center">
+  <tr>
+    <td align="center"><img src="https://skillicons.dev/icons?i=symfony"/><br/>symfony</td>
+    <td align="center"><img src="https://skillicons.dev/icons?i=react"/><br/>react</td>
+    <td align="center"><img src="https://skillicons.dev/icons?i=rust"/><br/>rust</td>
+    <td align="center"><img src="https://skillicons.dev/icons?i=tauri"/><br/>tauri</td>
+    <td align="center"><img src="https://skillicons.dev/icons?i=arduino"/><br/>arduino</td>
+  </tr>
+</table>
 ---
 
 ## 🧰 Languages, Frameworks & Tools
 
 ***Skills :***
 
-Frontend:
+<table align="center">
+  <div align="center">Frontend:</div> 
+  <tr>
+    <td align="center"><img src="https://skillicons.dev/icons?i=html"/><br/>html</td>
+    <td align="center"><img src="https://skillicons.dev/icons?i=css"/><br/>css</td>
+    <td align="center"><img src="https://skillicons.dev/icons?i=js"/><br/>js</td>
+    <td align="center"><img src="https://skillicons.dev/icons?i=ts"/><br/>ts</td>
+  </tr>
+</table>
 
-![front](https://skillicons.dev/icons?i=html,css,js,ts)
 
+<table align="center">
+  <div align="center">Backend:</div> 
+  <tr>
+    <td align="center"><img src="https://skillicons.dev/icons?i=java"/><br/>java</td>
+    <td align="center"><img src="https://skillicons.dev/icons?i=python"/><br/>python</td>
+    <td align="center"><img src="https://skillicons.dev/icons?i=php"/><br/>php</td>
+    <td align="center"><img src="https://skillicons.dev/icons?i=mysql"/><br/>mysql</td>
+  </tr>
+</table>
 
-Backend:
+<table align="center">
+ <div align="center">framework/librairie:</div> 
+  <tr>
+    <td align="center"><img src="https://skillicons.dev/icons?i=tailwind"/><br/>tailwind</td>
+    <td align="center"><img src="https://skillicons.dev/icons?i=bootstrap"/><br/>bootstrap</td>
+    <td align="center"><img src="https://skillicons.dev/icons?i=react"/><br/>react</td>
+    <td align="center"><img src="https://skillicons.dev/icons?i=symfony"/><br/>symfony</td>
+  </tr>
+</table>
 
-![back](https://skillicons.dev/icons?i=java,python,php,mysql)
-
-framework/librairie ;
-
-![back](https://skillicons.dev/icons?i=tailwind,bootstrap,react,symfony)
-
-Tools
-
-![Tools](https://skillicons.dev/icons?i=figma,git,github)
+<table align="center">
+  <div align="center">Tools:</div> 
+  <tr>
+    <td align="center"><img src="https://skillicons.dev/icons?i=figma"/><br/>figma</td>
+    <td align="center"><img src="https://skillicons.dev/icons?i=git"/><br/>git</td>
+    <td align="center"><img src="https://skillicons.dev/icons?i=github"/><br/>github</td>
+  </tr>
+</table>
 
 ---
 
