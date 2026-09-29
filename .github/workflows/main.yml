@@ -97,7 +97,7 @@ jobs:
             “Turning complex requirements into simple interfaces and complicated Git histories.”
             “Focused on delivering quality software, preferably before production finds the bugs.”
             “Software development: where ‘almost finished’ is a perfectly valid status.”
-          )
+            )
 
           UNUSED=()
 
