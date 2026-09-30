@@ -170,3 +170,4 @@
 2026-09-28 12:17 | Weeks of coding can save you hours of planning.
 2026-09-29 12:24 | Delivering reliable software and carefully managed technical surprises.
 2026-09-29 14:23 | Writing code that future developers will definitely understand. Probably.
+2026-09-30 12:05 | Making software look easy since discovering Stack Overflow.
