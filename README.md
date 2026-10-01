@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Making software look easy since discovering Stack Overflow.
+> Building tomorrow's legacy code today.
 
 ---
   
