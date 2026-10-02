@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Building tomorrow's legacy code today.
+> Turning complex requirements into simple interfaces and complicated Git histories.
 
 ---
   
