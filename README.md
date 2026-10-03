@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Turning complex requirements into simple interfaces and complicated Git histories.
+> Software development: where ‘almost finished’ is a perfectly valid status.
 
 ---
   

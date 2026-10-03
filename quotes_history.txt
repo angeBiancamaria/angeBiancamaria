@@ -173,3 +173,4 @@
 2026-09-30 12:05 | Making software look easy since discovering Stack Overflow.
 2026-10-01 12:33 | Building tomorrow's legacy code today.
 2026-10-02 12:08 | Turning complex requirements into simple interfaces and complicated Git histories.
+2026-10-03 11:30 | Software development: where ‘almost finished’ is a perfectly valid status.
