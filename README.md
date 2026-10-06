@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Making APIs talk to each other so humans don't have to.
+> Building software that works, scales, and occasionally behaves as documented.
 
 ---
   
