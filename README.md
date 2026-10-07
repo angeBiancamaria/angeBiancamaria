@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Building software that works, scales, and occasionally behaves as documented.
+> Turning caffeine, documentation, and questionable ideas into software.
 
 ---
   

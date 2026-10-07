@@ -10,6 +10,7 @@ If it compiles, ship it. | 12
 First, solve the problem. Then, write the code. | 12
 Writing code that future developers will definitely understand. Probably. | 1
 Turning complex requirements into simple interfaces and complicated Git histories. | 1
+Turning caffeine, documentation, and questionable ideas into software. | 1
 Software development: where ‘almost finished’ is a perfectly valid status. | 1
 Making software look easy since discovering Stack Overflow. | 1
 Making APIs talk to each other so humans don't have to. | 1
