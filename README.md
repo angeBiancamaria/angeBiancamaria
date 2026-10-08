@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Turning caffeine, documentation, and questionable ideas into software.
+> I don't always write bugs, but when I do, they're in production.
 
 ---
   
