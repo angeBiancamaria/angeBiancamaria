@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> I don't always write bugs, but when I do, they're in production.
+> Committed to clean code, reliable systems, and reasonably timed coffee breaks.
 
 ---
   
