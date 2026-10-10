@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Committed to clean code, reliable systems, and reasonably timed coffee breaks.
+> Debugging: because the code refuses to explain itself.
 
 ---
   

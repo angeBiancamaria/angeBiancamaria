@@ -180,3 +180,4 @@
 2026-10-07 12:40 | Turning caffeine, documentation, and questionable ideas into software.
 2026-10-08 13:00 | I don't always write bugs, but when I do, they're in production.
 2026-10-09 13:00 | Committed to clean code, reliable systems, and reasonably timed coffee breaks.
+2026-10-10 12:13 | Debugging: because the code refuses to explain itself.
