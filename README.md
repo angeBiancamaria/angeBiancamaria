@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Debugging: because the code refuses to explain itself.
+> Turning vague requirements into very precise technical problems.
 
 ---
   
