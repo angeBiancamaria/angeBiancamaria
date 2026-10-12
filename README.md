@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Turning vague requirements into very precise technical problems.
+> Building systems robust enough to survive their users.
 
 ---
   
