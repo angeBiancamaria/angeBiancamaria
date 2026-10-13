@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Building systems robust enough to survive their users.
+> One does not simply deploy without checking the logs.
 
 ---
   
