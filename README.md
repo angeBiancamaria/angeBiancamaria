@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> One does not simply deploy without checking the logs.
+> Writing software with confidence, deploying it with caution.
 
 ---
   
