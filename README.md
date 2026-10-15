@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Writing software with confidence, deploying it with caution.
+> If it compiles, it's a promising start.
 
 ---
   
