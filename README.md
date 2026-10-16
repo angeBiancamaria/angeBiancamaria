@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> If it compiles, it's a promising start.
+> Some call it technical debt. I call it future employment.
 
 ---
   
