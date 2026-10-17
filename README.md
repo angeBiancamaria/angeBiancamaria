@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Some call it technical debt. I call it future employment.
+> Turning requirements into features and features into maintenance tasks.
 
 ---
   
