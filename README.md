@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Turning requirements into features and features into maintenance tasks.
+> The fastest way to find a bug is to announce that everything works.
 
 ---
   
