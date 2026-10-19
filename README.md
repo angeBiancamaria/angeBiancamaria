@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> The fastest way to find a bug is to announce that everything works.
+> Building the future, one error message at a time.
 
 ---
   
