@@ -190,3 +190,4 @@
 2026-10-17 10:07 | Turning requirements into features and features into maintenance tasks.
 2026-10-18 10:23 | The fastest way to find a bug is to announce that everything works.
 2026-10-19 11:24 | Building the future, one error message at a time.
+2026-10-20 10:59 | Writing elegant solutions to problems created by previous elegant solutions.

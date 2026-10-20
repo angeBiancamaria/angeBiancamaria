@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Building the future, one error message at a time.
+> Writing elegant solutions to problems created by previous elegant solutions.
 
 ---
   
