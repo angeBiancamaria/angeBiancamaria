@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Writing elegant solutions to problems created by previous elegant solutions.
+> Refactoring yesterday's genius into today's technical debt.
 
 ---
   
