@@ -10,6 +10,7 @@ If it compiles, ship it. | 12
 First, solve the problem. Then, write the code. | 12
 Writing software with confidence, deploying it with caution. | 1
 Writing elegant solutions to problems created by previous elegant solutions. | 1
+Writing code today that future me will pretend not to recognize. | 1
 Writing code that future developers will definitely understand. Probably. | 1
 Turning vague requirements into very precise technical problems. | 1
 Turning requirements into features and features into maintenance tasks. | 1
