@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Writing code today that future me will pretend not to recognize.
+> Code first, documentation when the guilt becomes unbearable.
 
 ---
   

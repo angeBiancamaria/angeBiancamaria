@@ -29,6 +29,7 @@ I don't always write bugs, but when I do, they're in production. | 1
 Delivering reliable software and carefully managed technical surprises. | 1
 Debugging: because the code refuses to explain itself. | 1
 Committed to clean code, reliable systems, and reasonably timed coffee breaks. | 1
+Code first, documentation when the guilt becomes unbearable. | 1
 Building tomorrow's legacy code today. | 1
 Building the future, one error message at a time. | 1
 Building systems robust enough to survive their users. | 1
