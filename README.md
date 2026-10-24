@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Code first, documentation when the guilt becomes unbearable.
+> Code, test, deploy, question every life choice.
 
 ---
   
