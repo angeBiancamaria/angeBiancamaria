@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Code, test, deploy, question every life choice.
+> Keeping the semicolons aligned and the deadlines slightly less so.
 
 ---
   
