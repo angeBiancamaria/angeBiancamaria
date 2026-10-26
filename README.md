@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Keeping the semicolons aligned and the deadlines slightly less so.
+> It works on my machine — now let's make it work everywhere.
 
 ---
   
