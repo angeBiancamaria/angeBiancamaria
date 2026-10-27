@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> It works on my machine — now let's make it work everywhere.
+> Building features nobody knew they needed until yesterday.
 
 ---
   
