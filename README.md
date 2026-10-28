@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Building features nobody knew they needed until yesterday.
+> Turning business requirements into surprisingly specific error messages.
 
 ---
   

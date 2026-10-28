@@ -16,6 +16,7 @@ Turning vague requirements into very precise technical problems. | 1
 Turning requirements into features and features into maintenance tasks. | 1
 Turning complex requirements into simple interfaces and complicated Git histories. | 1
 Turning caffeine, documentation, and questionable ideas into software. | 1
+Turning business requirements into surprisingly specific error messages. | 1
 The fastest way to find a bug is to announce that everything works. | 1
 Some call it technical debt. I call it future employment. | 1
 Software development: where ‘almost finished’ is a perfectly valid status. | 1
