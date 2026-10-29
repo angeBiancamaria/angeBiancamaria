@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Turning business requirements into surprisingly specific error messages.
+> Keeping production stable through skill, testing, and suspicious amounts of luck.
 
 ---
   

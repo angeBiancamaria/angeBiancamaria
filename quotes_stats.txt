@@ -25,6 +25,7 @@ One does not simply deploy without checking the logs. | 1
 Making software look easy since discovering Stack Overflow. | 1
 Making APIs talk to each other so humans don't have to. | 1
 Keeping the semicolons aligned and the deadlines slightly less so. | 1
+Keeping production stable through skill, testing, and suspicious amounts of luck. | 1
 Keeping production alive with code and positive thinking. | 1
 It works on my machine — now let's make it work everywhere. | 1
 If it compiles, it's a promising start. | 1
