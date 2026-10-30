@@ -15,6 +15,7 @@ Writing code that future developers will definitely understand. Probably. | 1
 Turning vague requirements into very precise technical problems. | 1
 Turning requirements into features and features into maintenance tasks. | 1
 Turning complex requirements into simple interfaces and complicated Git histories. | 1
+Turning coffee into scalable solutions since the first compile. | 1
 Turning caffeine, documentation, and questionable ideas into software. | 1
 Turning business requirements into surprisingly specific error messages. | 1
 The fastest way to find a bug is to announce that everything works. | 1
