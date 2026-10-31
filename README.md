@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Turning coffee into scalable solutions since the first compile.
+> Professional problem solver, occasional problem generator.
 
 ---
   
