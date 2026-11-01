@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Professional problem solver, occasional problem generator.
+> Engineering solutions with measurable results and immeasurable debugging sessions.
 
 ---
   
