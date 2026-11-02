@@ -142,3 +142,11 @@ I enjoy building, understanding systems, and improving them step by step.
 
 ![Top 3 Daily Quotes](./img/top_quotes.svg)
 <!-- TOP_QUOTES_END -->
+
+### 🐍 My contribution snake
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/angeBiancamaria/angeBiancamaria/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/angeBiancamaria/angeBiancamaria/output/github-snake.svg" />
+  <img alt="Animated snake eating my GitHub contributions" src="https://raw.githubusercontent.com/angeBiancamaria/angeBiancamaria/output/github-snake.svg" />
+</picture>
