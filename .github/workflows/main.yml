@@ -2,7 +2,7 @@ name: Daily Quote Update
 
 on:
   schedule:
-    - cron: "0 4 * * *"
+    - cron: "0 6 * * *"  # 06:00 UTC chaque jour
   workflow_dispatch:
 
 permissions:
@@ -116,14 +116,16 @@ jobs:
           # Date + heure FR
           DATE=$(TZ="Europe/Paris" date "+%Y-%m-%d %H:%M")
 
-          # -------- DELAY --------
-          EXPECTED_TIME="07:00"
-          EXPECTED_TS=$(TZ="Europe/Paris" date -d "$EXPECTED_TIME" +%s)
-          NOW_TS=$(TZ="Europe/Paris" date +%s)
-
-          DELAY=$(( (NOW_TS - EXPECTED_TS) / 60 ))
-
-          echo "$DATE | Delay: ${DELAY} min" >> $DELAY_FILE
+          # -------- DELAY GITHUB ACTIONS --------
+          # Le workflow est planifié à 06:00 UTC. On mesure le retard réel
+          # par rapport à cette heure, sans dépendre du changement d'heure français.
+          if [ "$GITHUB_EVENT_NAME" = "schedule" ]; then
+            EXPECTED_TS=$(date -u -d "$(date -u +%F) 06:00:00" +%s)
+            NOW_TS=$(date -u +%s)
+            DELAY=$(( (NOW_TS - EXPECTED_TS) / 60 ))
+            [ "$DELAY" -lt 0 ] && DELAY=0
+            echo "$DATE | Delay: ${DELAY} min" >> "$DELAY_FILE"
+          fi
 
           # -------- HISTORY --------
           echo "$DATE | $QUOTE" >> $FILE
@@ -252,10 +254,143 @@ jobs:
           readme.write_text(text, encoding="utf-8")
           PY
 
+
+      - name: Create monthly quote and delay report
+        run: |
+          # Génère une seule archive, le premier jour du mois, pour le mois précédent.
+          if [ "$(date -u +%d)" != "01" ]; then
+            echo "Monthly report skipped: not the first day of the month."
+            exit 0
+          fi
+          mkdir -p img/monthly
+
+          python3 - <<'PY'
+          from collections import Counter
+          from datetime import datetime, timezone
+          from pathlib import Path
+          from xml.sax.saxutils import escape
+          import calendar
+
+          now = datetime.now(timezone.utc)
+          # Le rapport produit le 1er du mois couvre le mois civil précédent.
+          year = now.year if now.month > 1 else now.year - 1
+          month = now.month - 1 if now.month > 1 else 12
+          month_key = f"{year:04d}-{month:02d}"
+          month_label = f"{calendar.month_name[month]} {year}"
+
+          history_path = Path("stats/quotes_history.txt")
+          delay_path = Path("stats/delay_log.txt")
+          history = history_path.read_text(encoding="utf-8").splitlines() if history_path.exists() else []
+          delay_lines = delay_path.read_text(encoding="utf-8").splitlines() if delay_path.exists() else []
+
+          monthly_quotes = []
+          for line in history:
+              if " | " not in line:
+                  continue
+              date_text, quote = line.split(" | ", 1)
+              try:
+                  date = datetime.strptime(date_text.strip(), "%Y-%m-%d %H:%M")
+              except ValueError:
+                  continue
+              if date.strftime("%Y-%m") == month_key:
+                  monthly_quotes.append((date, quote.strip()))
+
+          counts = Counter(quote for _, quote in monthly_quotes)
+          top_quotes = counts.most_common(3)
+          days_recorded = len({date.date() for date, _ in monthly_quotes})
+          unique_quotes = len(counts)
+          total_quotes = len(monthly_quotes)
+
+          delays = []
+          for line in delay_lines:
+              if " | " not in line or "Delay:" not in line:
+                  continue
+              date_text, detail = line.split(" | ", 1)
+              try:
+                  date = datetime.strptime(date_text.strip(), "%Y-%m-%d %H:%M")
+                  delay_text = detail.split("Delay:", 1)[1].strip().split()[0]
+                  delay = int(delay_text)
+              except (ValueError, IndexError):
+                  continue
+              if date.strftime("%Y-%m") == month_key and delay >= 0:
+                  delays.append((date, delay))
+
+          top_delays = sorted(delays, key=lambda item: item[1], reverse=True)[:5]
+
+          W, H = 1000, 850
+          bg, panel, border = "#0d1117", "#161b22", "#30363d"
+          white, muted = "#f0f6fc", "#8b949e"
+          accents = ["#f2cc60", "#c9d1d9", "#d2995f"]
+          parts = [
+              f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">',
+              f'<rect width="{W}" height="{H}" rx="20" fill="{bg}"/>',
+              f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="20" fill="none" stroke="{border}"/>',
+              f'<text x="42" y="52" fill="{white}" font-family="Arial,sans-serif" font-size="29" font-weight="700">Monthly GitHub Quote Report</text>',
+              f'<text x="42" y="82" fill="{muted}" font-family="Arial,sans-serif" font-size="17">{escape(month_label)} · Previous calendar month</text>',
+          ]
+
+          # Summary statistics
+          stats = [
+              ("Quotes published", str(total_quotes)),
+              ("Different quotes", str(unique_quotes)),
+              ("Days recorded", str(days_recorded)),
+              ("Delays recorded", str(len(delays))),
+          ]
+          x_positions = [42, 280, 518, 756]
+          for (label, value), x in zip(stats, x_positions):
+              parts.extend([
+                  f'<rect x="{x}" y="108" width="202" height="88" rx="13" fill="{panel}" stroke="{border}"/>',
+                  f'<text x="{x+16}" y="143" fill="{muted}" font-family="Arial,sans-serif" font-size="14">{escape(label)}</text>',
+                  f'<text x="{x+16}" y="177" fill="{white}" font-family="Arial,sans-serif" font-size="27" font-weight="700">{escape(value)}</text>',
+              ])
+
+          parts.append(f'<text x="42" y="245" fill="{white}" font-family="Arial,sans-serif" font-size="22" font-weight="700">Top 3 most-used random quotes</text>')
+          if top_quotes:
+              y = 265
+              max_count = max(count for _, count in top_quotes) or 1
+              for i, (quote, count) in enumerate(top_quotes):
+                  accent = accents[i]
+                  parts.append(f'<rect x="42" y="{y}" width="916" height="86" rx="12" fill="{panel}" stroke="{border}"/>')
+                  parts.append(f'<circle cx="76" cy="{y+43}" r="21" fill="{accent}"/>')
+                  parts.append(f'<text x="76" y="{y+49}" text-anchor="middle" fill="#0d1117" font-family="Arial,sans-serif" font-size="17" font-weight="700">{i+1}</text>')
+                  quote_text = quote if len(quote) <= 95 else quote[:92] + "..."
+                  parts.append(f'<text x="112" y="{y+35}" fill="{white}" font-family="Arial,sans-serif" font-size="16" font-weight="600">{escape(quote_text)}</text>')
+                  bar_x, bar_y, bar_w = 112, y+55, 700
+                  width = max(5, int(bar_w * count / max_count))
+                  parts.append(f'<rect x="{bar_x}" y="{bar_y}" width="{bar_w}" height="8" rx="4" fill="#21262d"/>')
+                  parts.append(f'<rect x="{bar_x}" y="{bar_y}" width="{width}" height="8" rx="4" fill="{accent}"/>')
+                  parts.append(f'<text x="900" y="{y+60}" text-anchor="end" fill="{muted}" font-family="Arial,sans-serif" font-size="14">{count} use(s)</text>')
+                  y += 96
+          else:
+              parts.append(f'<text x="50" y="290" fill="{muted}" font-family="Arial,sans-serif" font-size="16">No quote history found for this month.</text>')
+
+          parts.append(f'<text x="42" y="585" fill="{white}" font-family="Arial,sans-serif" font-size="22" font-weight="700">Top 5 GitHub Actions delays</text>')
+          parts.append(f'<text x="42" y="610" fill="{muted}" font-family="Arial,sans-serif" font-size="14">Largest recorded delays compared with the scheduled 06:00 UTC run</text>')
+
+          if top_delays:
+              y = 635
+              for i, (date, delay) in enumerate(top_delays, 1):
+                  date_label = date.strftime("%d/%m/%Y %H:%M")
+                  parts.append(f'<rect x="42" y="{y}" width="916" height="34" rx="8" fill="{panel}" stroke="{border}"/>')
+                  parts.append(f'<text x="60" y="{y+22}" fill="{white}" font-family="Arial,sans-serif" font-size="14">{i}.</text>')
+                  parts.append(f'<text x="95" y="{y+22}" fill="{white}" font-family="Arial,sans-serif" font-size="14">{escape(date_label)}</text>')
+                  parts.append(f'<text x="930" y="{y+22}" text-anchor="end" fill="{accents[0]}" font-family="Arial,sans-serif" font-size="14" font-weight="700">{delay} min</text>')
+                  y += 39
+          else:
+              parts.append(f'<text x="50" y="660" fill="{muted}" font-family="Arial,sans-serif" font-size="16">No delay records found for this month yet.</text>')
+
+          parts.append(f'<text x="42" y="{H-22}" fill="{muted}" font-family="Arial,sans-serif" font-size="12">Generated automatically by GitHub Actions · Archived monthly in img/monthly/</text>')
+          parts.append("</svg>")
+
+          output = Path(f"img/monthly/{month_key}.svg")
+          output.write_text("\n".join(parts), encoding="utf-8")
+          print(f"Monthly report generated: {output}")
+          PY
+
       - name: Commit & Push
         run: |
           git config user.name "angeBiancamaria"
           git config user.email "129753970+angeBiancamaria@users.noreply.github.com"
-          git add README.md stats/quotes_history.txt stats/quotes_stats.txt stats/delay_log.txt stats/top_quotes.txt img/top_quotes.svg
-          git commit --author="angeBiancamaria <129753970+angeBiancamaria@users.noreply.github.com>" -m "chore: update daily quote" || exit 0
+          git add README.md stats/quotes_history.txt stats/quotes_stats.txt stats/delay_log.txt stats/top_quotes.txt img/top_quotes.svg img/monthly/
+          git commit --author="angeBiancamaria <129753970+angeBiancamaria@users.noreply.github.com>" -m "chore: update quote and monthly report" || exit 0
           git push
