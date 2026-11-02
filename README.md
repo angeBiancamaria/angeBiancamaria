@@ -18,7 +18,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Engineering solutions with measurable results and immeasurable debugging sessions.
+> Making computers do things they were never explicitly asked to do.
 
 ---
 
