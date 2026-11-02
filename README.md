@@ -9,10 +9,10 @@
 <!-- Corsica location card -->
 
 <a href="#" title="Viva Corsica">
-  <img src="./corsica_card.svg" alt="Based in Corsica" width="900"/>
+  <img src="./img/corsica_card.svg" alt="Based in Corsica" width="900"/>
 </a>
-  
-I'm passionate about **creating things** — web applications, games, useful tools, and  experimental projects.  
+
+I'm passionate about **creating things** — web applications, games, useful tools, and  experimental projects.
 I enjoy building, understanding systems, and improving them step by step.
 
  ---
@@ -21,10 +21,10 @@ I enjoy building, understanding systems, and improving them step by step.
 > Engineering solutions with measurable results and immeasurable debugging sessions.
 
 ---
-  
+
 ## 🎯 Current Goal
- 
-<div align="center"> <img src="./my_goals.svg" alt="My Goals" width="90%"/></div>
+
+<div align="center"> <img src="./img/my_goals.svg" alt="My Goals" width="90%"/></div>
 
 > I’m also open to a **full-time position** if no alternance opportunity is available.
 
@@ -35,13 +35,13 @@ I enjoy building, understanding systems, and improving them step by step.
           const developer = {
             name: "Ange",
             role: "Full Stack Web Developer",
-        
+
             profile: {
                 specialization: "Backend",
                 frontend: "Currently improving",
                 certification: "Web Developer (Fullstack)"
             },
-        
+
             interests: [
                 "Web development",
                 "Game development & modding",
@@ -54,8 +54,8 @@ I enjoy building, understanding systems, and improving them step by step.
 
 ## ⭐ Featured Project
 
-- **Time Management Web Application**  
-  My main project, focused on backend logic, database design, and user management.  
+- **Time Management Web Application**
+  My main project, focused on backend logic, database design, and user management.
   The project is actively evolving and serves as my primary technical showcase.
 
 ---
@@ -78,7 +78,7 @@ I enjoy building, understanding systems, and improving them step by step.
 ***Skills :***
 
 <table align="center">
-  <div align="center">Frontend:</div> 
+  <div align="center">Frontend:</div>
   <tr>
     <td align="center"><img src="https://skillicons.dev/icons?i=html"/><br/>html</td>
     <td align="center"><img src="https://skillicons.dev/icons?i=css"/><br/>css</td>
@@ -89,7 +89,7 @@ I enjoy building, understanding systems, and improving them step by step.
 
 
 <table align="center">
-  <div align="center">Backend:</div> 
+  <div align="center">Backend:</div>
   <tr>
     <td align="center"><img src="https://skillicons.dev/icons?i=java"/><br/>java</td>
     <td align="center"><img src="https://skillicons.dev/icons?i=python"/><br/>python</td>
@@ -100,7 +100,7 @@ I enjoy building, understanding systems, and improving them step by step.
 </table>
 
 <table align="center">
- <div align="center">framework/librairie:</div> 
+ <div align="center">framework/librairie:</div>
   <tr>
     <td align="center"><img src="https://skillicons.dev/icons?i=tailwind"/><br/>tailwind</td>
     <td align="center"><img src="https://skillicons.dev/icons?i=bootstrap"/><br/>bootstrap</td>
@@ -110,7 +110,7 @@ I enjoy building, understanding systems, and improving them step by step.
 </table>
 
 <table align="center">
-  <div align="center">Tools:</div> 
+  <div align="center">Tools:</div>
   <tr>
     <td align="center"><img src="https://skillicons.dev/icons?i=figma"/><br/>figma</td>
     <td align="center"><img src="https://skillicons.dev/icons?i=git"/><br/>git</td>
@@ -130,7 +130,7 @@ I enjoy building, understanding systems, and improving them step by step.
 
 ## 📫 Contact
 
-- 📧 Email: ange.biancamaria09@gmail.com  
+- 📧 Email: ange.biancamaria09@gmail.com
 - 💼 LinkedIn: https://www.linkedin.com/in/ange-biancamaria/
 
 ---
@@ -140,5 +140,5 @@ I enjoy building, understanding systems, and improving them step by step.
 <!-- TOP_QUOTES_START -->
 ### 🏆 Top 3 Daily Quotes
 
-![Top 3 Daily Quotes](./top_quotes.svg)
+![Top 3 Daily Quotes](./img/top_quotes.svg)
 <!-- TOP_QUOTES_END -->

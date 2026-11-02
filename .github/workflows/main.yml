@@ -18,12 +18,13 @@ jobs:
 
       - name: Generate quote
         run: |
-          FILE="quotes_history.txt"
-          STATS_FILE="quotes_stats.txt"
-          DELAY_FILE="delay_log.txt"
+          FILE="stats/quotes_history.txt"
+          STATS_FILE="stats/quotes_stats.txt"
+          DELAY_FILE="stats/delay_log.txt"
 
-          touch $FILE
-          touch $DELAY_FILE
+          touch "$FILE"
+          touch "$STATS_FILE"
+          touch "$DELAY_FILE"
 
           QUOTES=(
             "I don’t always test my code… but when I do, I do it in production."
@@ -126,15 +127,15 @@ jobs:
 
           # -------- HISTORY --------
           echo "$DATE | $QUOTE" >> $FILE
-          echo "$QUOTE" > quote.txt
+          echo "$QUOTE" > stats/quote.txt
 
           # -------- STATS --------
-          cut -d '|' -f2 $FILE | sed 's/^ //' > temp_quotes.txt
-          sort temp_quotes.txt | uniq -c | sort -nr | awk '{count=$1; $1=""; sub(/^ /, ""); print $0 " | " count}' > $STATS_FILE
-          rm temp_quotes.txt
+          cut -d '|' -f2 "$FILE" | sed 's/^ //' > stats/temp_quotes.txt
+          sort stats/temp_quotes.txt | uniq -c | sort -nr | awk '{count=$1; $1=""; sub(/^ /, ""); print $0 " | " count}' > "$STATS_FILE"
+          rm stats/temp_quotes.txt
 
           # -------- TOP 3 QUOTES --------
-          head -n 3 "$STATS_FILE" > top_quotes.txt
+          head -n 3 "$STATS_FILE" > stats/top_quotes.txt
 
           # Generate a polished SVG chart for the README.
           python3 - <<'PY'
@@ -142,7 +143,7 @@ jobs:
           from xml.sax.saxutils import escape
 
           rows = []
-          for line in Path("top_quotes.txt").read_text(encoding="utf-8").splitlines():
+          for line in Path("stats/top_quotes.txt").read_text(encoding="utf-8").splitlines():
               if " | " in line:
                   quote, count = line.rsplit(" | ", 1)
                   try:
@@ -215,19 +216,19 @@ jobs:
           parts.append(f'<text x="42" y="{H-18}" fill="{muted}" font-family="Arial, sans-serif" font-size="11">Updated automatically by GitHub Actions</text>')
           parts.append("</svg>")
 
-          Path("top_quotes.svg").write_text("\n".join(parts), encoding="utf-8")
+          Path("img/top_quotes.svg").write_text("\n".join(parts), encoding="utf-8")
           PY
 
       - name: Update README
         run: |
-          QUOTE=$(cat quote.txt)
+          QUOTE=$(cat stats/quote.txt)
           sed -i "/📝 \*\*Daily thought\*\*/,/^$/ s|> .*|> $QUOTE|" README.md
 
           python3 - <<'PY'
           from pathlib import Path
 
           readme = Path("README.md")
-          stats = Path("top_quotes.txt")
+          stats = Path("stats/top_quotes.txt")
           text = readme.read_text(encoding="utf-8")
 
           lines = []
@@ -238,7 +239,7 @@ jobs:
 
           start = "<!-- TOP_QUOTES_START -->"
           end = "<!-- TOP_QUOTES_END -->"
-          section = "### 🏆 Top 3 Daily Quotes\n\n![Top 3 Daily Quotes](./top_quotes.svg)"
+          section = "### 🏆 Top 3 Daily Quotes\n\n![Top 3 Daily Quotes](./img/top_quotes.svg)"
           block = f"{start}\n{section}\n{end}"
 
           if start in text and end in text:
@@ -255,6 +256,6 @@ jobs:
         run: |
           git config user.name "angeBiancamaria"
           git config user.email "129753970+angeBiancamaria@users.noreply.github.com"
-          git add README.md quotes_history.txt quotes_stats.txt delay_log.txt top_quotes.txt top_quotes.svg
+          git add README.md stats/quotes_history.txt stats/quotes_stats.txt stats/delay_log.txt stats/top_quotes.txt img/top_quotes.svg
           git commit --author="angeBiancamaria <129753970+angeBiancamaria@users.noreply.github.com>" -m "chore: update daily quote" || exit 0
           git push
