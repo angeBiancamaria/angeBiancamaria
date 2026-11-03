@@ -130,5 +130,19 @@
 <circle cx="743.3" cy="319.4" r="3.5" fill="#f3a866"><animate attributeName="opacity" values=".3;1;.3" dur="3s" repeatCount="indefinite"/></circle>
 <circle cx="796.7" cy="323.2" r="3.5" fill="#f3a866"><animate attributeName="opacity" values=".3;1;.3" dur="4s" repeatCount="indefinite"/></circle>
 <circle cx="850.0" cy="327.6" r="3.5" fill="#f3a866"><animate attributeName="opacity" values=".3;1;.3" dur="5s" repeatCount="indefinite"/></circle>
+</g><g class="seasonal-scene" pointer-events="none">
+<g transform="translate(788 242)"><path d="M26 95 Q42 30 24 -20" stroke="#a86b47" stroke-width="8" fill="none"/><path d="M24 15 Q-26 -22 -14 29 Q3 52 24 15 M24 15 Q80 -27 80 19 Q50 51 24 15" fill="#f3a866" stroke="#e6ba6b" stroke-width="3"/><path d="M25 40 Q-17 21 -9 61 Q8 79 25 40" fill="#c16b3c"/></g>
+<text x="45" y="55" fill="#f3a866" font-size="13" opacity=".65">◆<animateTransform attributeName="transform" type="translate" values="0 -7;0 11;0 -7" dur="4s" repeatCount="indefinite"/></text>
+<text x="118" y="92" fill="#f3a866" font-size="16" opacity=".65">◆<animateTransform attributeName="transform" type="translate" values="0 -7;0 11;0 -7" dur="5s" repeatCount="indefinite"/></text>
+<text x="191" y="129" fill="#f3a866" font-size="19" opacity=".65">◆<animateTransform attributeName="transform" type="translate" values="0 -7;0 11;0 -7" dur="6s" repeatCount="indefinite"/></text>
+<text x="264" y="48" fill="#f3a866" font-size="22" opacity=".65">◆<animateTransform attributeName="transform" type="translate" values="0 -7;0 11;0 -7" dur="7s" repeatCount="indefinite"/></text>
+<text x="337" y="312" fill="#f3a866" font-size="13" opacity=".65">◆<animateTransform attributeName="transform" type="translate" values="0 -7;0 11;0 -7" dur="8s" repeatCount="indefinite"/></text>
+<text x="410" y="48" fill="#f3a866" font-size="16" opacity=".65">◆<animateTransform attributeName="transform" type="translate" values="0 -7;0 11;0 -7" dur="4s" repeatCount="indefinite"/></text>
+<text x="483" y="312" fill="#f3a866" font-size="19" opacity=".65">◆<animateTransform attributeName="transform" type="translate" values="0 -7;0 11;0 -7" dur="5s" repeatCount="indefinite"/></text>
+<text x="556" y="64" fill="#f3a866" font-size="22" opacity=".65">◆<animateTransform attributeName="transform" type="translate" values="0 -7;0 11;0 -7" dur="6s" repeatCount="indefinite"/></text>
+<text x="629" y="312" fill="#f3a866" font-size="13" opacity=".65">◆<animateTransform attributeName="transform" type="translate" values="0 -7;0 11;0 -7" dur="7s" repeatCount="indefinite"/></text>
+<text x="702" y="48" fill="#f3a866" font-size="16" opacity=".65">◆<animateTransform attributeName="transform" type="translate" values="0 -7;0 11;0 -7" dur="8s" repeatCount="indefinite"/></text>
+<text x="775" y="175" fill="#f3a866" font-size="19" opacity=".65">◆<animateTransform attributeName="transform" type="translate" values="0 -7;0 11;0 -7" dur="4s" repeatCount="indefinite"/></text>
+<text x="848" y="212" fill="#f3a866" font-size="22" opacity=".65">◆<animateTransform attributeName="transform" type="translate" values="0 -7;0 11;0 -7" dur="5s" repeatCount="indefinite"/></text>
 </g>
 </svg>
