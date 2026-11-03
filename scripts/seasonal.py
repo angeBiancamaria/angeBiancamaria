@@ -198,6 +198,71 @@ def update_seasonal_text(readme,theme):
     if anchor not in readme:
         raise ValueError('Cannot find Corsica location card anchor; README left untouched')
     return readme.replace(anchor,block+'\n\n'+anchor,1)
+
+# The headings and small contextual notes change, but all personal facts, goals,
+# project descriptions, skills tables, daily quotes, links and the snake stay intact.
+SECTION_THEMES={
+'winter': ['❄️ Winter objectives','🧠 Developer profile · Frost mode','⭐ Featured project · Winter build','📖 Currently Learning · Winter workshop','🧰 Languages, Frameworks & Tools · Frost edition','📊 GitHub Stats · Winter streak','📫 Contact'],
+'spring': ['🌱 Growing goals','🧠 Developer profile · Fresh start','⭐ Featured project · New growth','🌸 Currently Learning · Growing skills','🧰 Languages, Frameworks & Tools · Spring edition','📊 GitHub Stats · Spring progress','📫 Contact'],
+'summer': ['☀️ Summer goals','🧠 Developer profile · Sunny mode','⭐ Featured project · Summer build','🌊 Currently Learning · Summer lab','🧰 Languages, Frameworks & Tools · Summer edition','📊 GitHub Stats · Summer streak','📫 Contact'],
+'autumn': ['🍂 Autumn objectives','🧠 Developer profile · Harvest season','⭐ Featured project · Autumn build','📚 Currently Learning · Autumn studies','🧰 Languages, Frameworks & Tools · Autumn edition','📊 GitHub Stats · Autumn progress','📫 Contact'],
+'halloween': ['🎯 Spooky objectives','🧪 Developer profile · Secret laboratory','🦇 Featured project · Haunted build','🎃 Currently Learning · Haunted lab','🧰 Languages, Frameworks & Tools · Dark arts of code','📊 GitHub Stats · Spooky streak','📫 Contact'],
+'christmas': ['🎁 Holiday goals','🧠 Developer profile · Festive mode','⭐ Featured project · Holiday workshop','🎄 Currently Learning · Winter workshop','🧰 Languages, Frameworks & Tools · Festive edition','📊 GitHub Stats · Holiday streak','📫 Contact'],
+'easter': ['🐣 Springtime objectives','🧠 Developer profile · Easter edition','🥚 Featured project · Hidden gems','🐣 Currently Learning · Easter discoveries','🧰 Languages, Frameworks & Tools · Easter edition','📊 GitHub Stats · Easter streak','📫 Contact'],
+'birthday': ['🎯 Next-level goals','🧠 Developer profile · Player one','🎮 Featured project · Level-up build','🎂 Currently Learning · Level up!','🧰 Languages, Frameworks & Tools · Birthday edition','📊 GitHub Stats · Achievement unlocked','📫 Contact'],
+}
+SECTION_BASE=[
+'🎯 Current Goal','🧠 Profile','⭐ Featured Project',
+'📖 Currently Learning & improving','🧰 Languages, Frameworks & Tools',
+'📊 GitHub Stats','📫 Contact'
+]
+SECTION_NOTES={
+'winter':['Quiet season, ambitious plans.','Building steadily, one feature at a time.','Experimenting with technologies during the colder days.','Keeping the stack sharp.','Every contribution counts.'],
+'spring':['Fresh season, steady progress.','New ideas are taking shape.','Growing skills one experiment at a time.','Tools for new beginnings.','Progress is blooming.'],
+'summer':['Long days, big ideas.','Building something worth sharing.','Exploring technologies under the summer sun.','A bright toolkit for new projects.','Keeping the streak alive.'],
+'autumn':['Time to turn plans into results.','Collecting ideas, shipping features.','A new season of learning.','The toolkit behind the projects.','Harvesting progress, commit by commit.'],
+'halloween':['No goal is too frightening to tackle.','Enter the developer’s workshop.','Experimenting in the haunted laboratory.','No dark magic required — just code.','Hunting bugs, not ghosts.'],
+'christmas':['Wrapping up progress, not ambitions.','A little festive creativity.','New skills are on the wish list.','The workshop is open for business.','Every commit is a small gift.'],
+'easter':['Discovering new possibilities.','Something new is hatching.','Finding new skills and hidden gems.','A basket full of technologies.','Collecting commits, not eggs.'],
+'birthday':['A new level, the same ambitions.','Another year of creating and improving.','Experience points gained through learning.','Inventory: languages, frameworks and tools.','Achievement unlocked: another year of code.'],
+}
+SUB_LABELS={
+'winter':['❄️ Frontend','🧊 Backend','🔧 Frameworks & Libraries','🛠️ Tools'],
+'spring':['🌼 Frontend','🌱 Backend','🌸 Frameworks & Libraries','🛠️ Tools'],
+'summer':['☀️ Frontend','🌊 Backend','🏖️ Frameworks & Libraries','🛠️ Tools'],
+'autumn':['🍁 Frontend','🍂 Backend','📚 Frameworks & Libraries','🛠️ Tools'],
+'halloween':['🕸️ Frontend','🧪 Backend','🔮 Frameworks & Libraries','🦇 Tools'],
+'christmas':['🎄 Frontend','🎁 Backend','✨ Frameworks & Libraries','🛠️ Tools'],
+'easter':['🐣 Frontend','🥚 Backend','🌸 Frameworks & Libraries','🛠️ Tools'],
+'birthday':['🎉 Frontend','🎂 Backend','🎮 Frameworks & Libraries','🛠️ Tools'],
+}
+NOTE_START='<!-- SEASONAL_SECTION_NOTE:'
+def update_readme_sections(readme,theme):
+    headings=SECTION_THEMES[theme]
+    # Match known originals and all generated variants; refuse if a section
+    # cannot be found instead of silently corrupting a custom README.
+    for i,base in enumerate(SECTION_BASE):
+        variants=[base]+[SECTION_THEMES[t][i] for t in SECTION_THEMES]
+        pattern=r'(?m)^## (?:'+ '|'.join(re.escape(v) for v in variants)+r')\s*$'
+        readme,count=re.subn(pattern,lambda m:'## '+headings[i],readme,count=1)
+        if count!=1:
+            raise ValueError(f'Missing expected heading {base!r}; no README saved')
+    # Remove previous notes and replace them under the five relevant headings.
+    readme=re.sub(r'(?m)^<!-- SEASONAL_SECTION_NOTE:\d+ -->\n.*?\n<!-- /SEASONAL_SECTION_NOTE -->\n\n?', '',readme,flags=re.S)
+    indices=[0,2,3,4,5]
+    for j,i in enumerate(indices):
+        heading='## '+headings[i]
+        note=f'<!-- SEASONAL_SECTION_NOTE:{i} -->\n*{SECTION_NOTES[theme][j]}*\n<!-- /SEASONAL_SECTION_NOTE -->'
+        readme=readme.replace(heading+'\n',heading+'\n\n'+note+'\n',1)
+    # Replace only four literal labels that sit outside the HTML table rows.
+    for index,base in enumerate(['Frontend:','Backend:','framework/librairie:','Tools:']):
+        variants=[base]+[SUB_LABELS[t][index]+':' for t in SUB_LABELS]
+        pattern=r'(<div align="center">)(?:'+'|'.join(re.escape(v) for v in variants)+r')(</div>)'
+        readme,count=re.subn(pattern,lambda m:m.group(1)+SUB_LABELS[theme][index]+':'+m.group(2),readme,count=1)
+        if count!=1:
+            raise ValueError(f'Missing expected technology label {base!r}; no README saved')
+    return readme
+
 def main():
     p=argparse.ArgumentParser()
     p.add_argument('--date')
@@ -220,6 +285,7 @@ def main():
     readme=ROOT/'README.md'
     s=update_image_refs(readme.read_text(encoding='utf-8'),theme)
     s=update_seasonal_text(s,theme)
+    s=update_readme_sections(s,theme)
     accent=PALETTES[theme][0].lstrip('#')
     s=re.sub(r'(&color=)(?:gradient|[0-9a-fA-F]{6})(?=&section=header)',lambda m:m.group(1)+accent,s,count=1)
     s=re.sub(r'(pause=1000&color=)[0-9A-Fa-f]{6}',lambda m:m.group(1)+accent.upper(),s,count=1)

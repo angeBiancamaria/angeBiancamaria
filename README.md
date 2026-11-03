@@ -35,16 +35,18 @@ I enjoy building, understanding systems, and improving them step by step.
 
 ---
 
-## 🎯 Current Goal
+## 🍂 Autumn objectives
 
+<!-- SEASONAL_SECTION_NOTE:0 -->
+*Time to turn plans into results.*
+<!-- /SEASONAL_SECTION_NOTE -->
 <div align="center"> <img src="./img/seasonal/my_goals_autumn.svg" alt="My Goals" width="90%"/></div>
 
 > I’m also open to a **full-time position** if no alternance opportunity is available.
 
 ---
 
-## 🧠 Profile
-
+## 🧠 Developer profile · Harvest season
           const developer = {
             name: "Ange",
             role: "Full Stack Web Developer",
@@ -65,16 +67,22 @@ I enjoy building, understanding systems, and improving them step by step.
           ;
 ---
 
-## ⭐ Featured Project
+## ⭐ Featured project · Autumn build
 
+<!-- SEASONAL_SECTION_NOTE:2 -->
+*Collecting ideas, shipping features.*
+<!-- /SEASONAL_SECTION_NOTE -->
 - **Time Management Web Application**
   My main project, focused on backend logic, database design, and user management.
   The project is actively evolving and serves as my primary technical showcase.
 
 ---
 
-## 📖 Currently Learning & improving
+## 📚 Currently Learning · Autumn studies
 
+<!-- SEASONAL_SECTION_NOTE:3 -->
+*A new season of learning.*
+<!-- /SEASONAL_SECTION_NOTE -->
 <table align="center">
   <tr>
     <td align="center"><img src="https://skillicons.dev/icons?i=symfony"/><br/>symfony</td>
@@ -86,12 +94,15 @@ I enjoy building, understanding systems, and improving them step by step.
 </table>
 ---
 
-## 🧰 Languages, Frameworks & Tools
+## 🧰 Languages, Frameworks & Tools · Autumn edition
 
+<!-- SEASONAL_SECTION_NOTE:4 -->
+*The toolkit behind the projects.*
+<!-- /SEASONAL_SECTION_NOTE -->
 ***Skills :***
 
 <table align="center">
-  <div align="center">Frontend:</div>
+  <div align="center">🍁 Frontend:</div>
   <tr>
     <td align="center"><img src="https://skillicons.dev/icons?i=html"/><br/>html</td>
     <td align="center"><img src="https://skillicons.dev/icons?i=css"/><br/>css</td>
@@ -102,7 +113,7 @@ I enjoy building, understanding systems, and improving them step by step.
 
 
 <table align="center">
-  <div align="center">Backend:</div>
+  <div align="center">🍂 Backend:</div>
   <tr>
     <td align="center"><img src="https://skillicons.dev/icons?i=java"/><br/>java</td>
     <td align="center"><img src="https://skillicons.dev/icons?i=python"/><br/>python</td>
@@ -113,7 +124,7 @@ I enjoy building, understanding systems, and improving them step by step.
 </table>
 
 <table align="center">
- <div align="center">framework/librairie:</div>
+ <div align="center">📚 Frameworks & Libraries:</div>
   <tr>
     <td align="center"><img src="https://skillicons.dev/icons?i=tailwind"/><br/>tailwind</td>
     <td align="center"><img src="https://skillicons.dev/icons?i=bootstrap"/><br/>bootstrap</td>
@@ -123,7 +134,7 @@ I enjoy building, understanding systems, and improving them step by step.
 </table>
 
 <table align="center">
-  <div align="center">Tools:</div>
+  <div align="center">🛠️ Tools:</div>
   <tr>
     <td align="center"><img src="https://skillicons.dev/icons?i=figma"/><br/>figma</td>
     <td align="center"><img src="https://skillicons.dev/icons?i=git"/><br/>git</td>
@@ -133,8 +144,11 @@ I enjoy building, understanding systems, and improving them step by step.
 
 ---
 
-## 📊 GitHub Stats
+## 📊 GitHub Stats · Autumn progress
 
+<!-- SEASONAL_SECTION_NOTE:5 -->
+*Harvesting progress, commit by commit.*
+<!-- /SEASONAL_SECTION_NOTE -->
 <div align="center">
   <img width="90%" src="https://streak-stats.demolab.com?user=angeBiancamaria&theme=tokyonight_duo&hide_border=true&background=0D1117" />
 </div>
@@ -142,7 +156,6 @@ I enjoy building, understanding systems, and improving them step by step.
 ---
 
 ## 📫 Contact
-
 - 📧 Email: ange.biancamaria09@gmail.com
 - 💼 LinkedIn: https://www.linkedin.com/in/ange-biancamaria/
 
