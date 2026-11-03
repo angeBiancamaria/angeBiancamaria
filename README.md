@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=venom&height=300&color=f3a866&section=header&reversal=false&text=hello+i%27m+ange+%F0%9F%91%8B&textBg=false&fontSize=70&fontAlign=50&fontAlignY=50&animation=scaleIn&rotate=0&strokeWidth=0&descSize=20&descAlign=50&descAlignY=60"/>
+<img src="https://capsule-render.vercel.app/api?type=venom&height=300&color=ff86cf&section=header&reversal=false&text=hello+i%27m+ange+%F0%9F%91%8B&textBg=false&fontSize=70&fontAlign=50&fontAlignY=50&animation=scaleIn&rotate=0&strokeWidth=0&descSize=20&descAlign=50&descAlignY=60"/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=F3A866&center=true&vCenter=true&width=650&lines=Full+Stack+Developer+💻;mySQL+%7C+symphony+%7C+react;Creating+learning+and+building+things+that+matter;+Always+Creating+📖)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=FF86CF&center=true&vCenter=true&width=650&lines=Full+Stack+Developer+💻;mySQL+%7C+symphony+%7C+react;Creating+learning+and+building+things+that+matter;+Always+Creating+📖)](https://git.io/typing-svg)
 
 </div>
 
