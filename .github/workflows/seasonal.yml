@@ -1,0 +1,35 @@
+name: Seasonal profile theme
+
+on:
+  schedule:
+    - cron: "10 4 * * *" # 04:10 UTC; script uses Europe/Paris date
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: seasonal-profile
+  cancel-in-progress: false
+
+jobs:
+  update-season:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Generate seasonal banner
+        run: python3 scripts/seasonal.py
+      - name: Commit only when theme changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add img/seasonal/current.svg
+          if git diff --cached --quiet; then
+            echo "Theme unchanged"
+            exit 0
+          fi
+          git commit -m "chore: update seasonal profile theme"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

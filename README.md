@@ -6,6 +6,12 @@
 
 </div>
 
+<!-- SEASONAL_THEME_START -->
+<div align="center">
+  <img src="./img/seasonal/current.svg" alt="Seasonal GitHub profile theme" width="900"/>
+</div>
+<!-- SEASONAL_THEME_END -->
+
 <!-- Corsica location card -->
 
 <a href="#" title="Viva Corsica">

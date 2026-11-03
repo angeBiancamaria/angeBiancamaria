@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="260" viewBox="0 0 900 260" role="img" aria-label="HALLOWEEN // NIGHT SHIFT">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#1c102a"/><stop offset="1" stop-color="#6e3778"/></linearGradient><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#ff9a42" stroke-opacity=".09"/></pattern></defs>
+<rect width="900" height="260" rx="20" fill="url(#bg)"/><rect width="900" height="260" rx="20" fill="url(#grid)"/>
+<rect x="16" y="16" width="868" height="228" rx="14" fill="none" stroke="#ff9a42" stroke-opacity=".42"/>
+<path d="M35 53H132 M768 207H865" stroke="#ff9a42" stroke-width="4"/>
+<path d="M801 31q4 -8 8 0q4 -8 8 0" stroke="#ff9a42" stroke-opacity=".5" fill="none" stroke-width="2"/>
+<path d="M802 90q3 -6 6 0q3 -6 6 0" stroke="#ff9a42" stroke-opacity=".35" fill="none" stroke-width="2"/>
+<path d="M85 191q2 -4 4 0q2 -4 4 0" stroke="#ff9a42" stroke-opacity=".35" fill="none" stroke-width="2"/>
+<path d="M786 147q4 -8 8 0q4 -8 8 0" stroke="#ff9a42" stroke-opacity=".35" fill="none" stroke-width="2"/>
+<path d="M82 112q3 -6 6 0q3 -6 6 0" stroke="#ff9a42" stroke-opacity=".35" fill="none" stroke-width="2"/>
+<path d="M242 29q3 -6 6 0q3 -6 6 0" stroke="#ff9a42" stroke-opacity=".35" fill="none" stroke-width="2"/>
+<path d="M169 205q5 -10 10 0q5 -10 10 0" stroke="#ff9a42" stroke-opacity=".5" fill="none" stroke-width="2"/>
+<path d="M543 105q3 -6 6 0q3 -6 6 0" stroke="#ff9a42" stroke-opacity=".5" fill="none" stroke-width="2"/>
+<path d="M342 125q3 -6 6 0q3 -6 6 0" stroke="#ff9a42" stroke-opacity=".7" fill="none" stroke-width="2"/>
+<path d="M821 194q2 -4 4 0q2 -4 4 0" stroke="#ff9a42" stroke-opacity=".7" fill="none" stroke-width="2"/>
+<path d="M710 157q3 -6 6 0q3 -6 6 0" stroke="#ff9a42" stroke-opacity=".2" fill="none" stroke-width="2"/>
+<path d="M162 57q3 -6 6 0q3 -6 6 0" stroke="#ff9a42" stroke-opacity=".7" fill="none" stroke-width="2"/>
+<path d="M315 75q2 -4 4 0q2 -4 4 0" stroke="#ff9a42" stroke-opacity=".7" fill="none" stroke-width="2"/>
+<path d="M543 152q2 -4 4 0q2 -4 4 0" stroke="#ff9a42" stroke-opacity=".7" fill="none" stroke-width="2"/>
+<path d="M554 98q5 -10 10 0q5 -10 10 0" stroke="#ff9a42" stroke-opacity=".5" fill="none" stroke-width="2"/>
+<path d="M814 43q4 -8 8 0q4 -8 8 0" stroke="#ff9a42" stroke-opacity=".5" fill="none" stroke-width="2"/>
+<path d="M363 116q4 -8 8 0q4 -8 8 0" stroke="#ff9a42" stroke-opacity=".5" fill="none" stroke-width="2"/>
+<path d="M163 35q5 -10 10 0q5 -10 10 0" stroke="#ff9a42" stroke-opacity=".5" fill="none" stroke-width="2"/>
+<path d="M818 147q5 -10 10 0q5 -10 10 0" stroke="#ff9a42" stroke-opacity=".5" fill="none" stroke-width="2"/>
+<path d="M509 171q5 -10 10 0q5 -10 10 0" stroke="#ff9a42" stroke-opacity=".35" fill="none" stroke-width="2"/>
+<path d="M434 119q5 -10 10 0q5 -10 10 0" stroke="#ff9a42" stroke-opacity=".35" fill="none" stroke-width="2"/>
+<path d="M297 32q4 -8 8 0q4 -8 8 0" stroke="#ff9a42" stroke-opacity=".2" fill="none" stroke-width="2"/>
+<path d="M217 226q2 -4 4 0q2 -4 4 0" stroke="#ff9a42" stroke-opacity=".35" fill="none" stroke-width="2"/>
+<path d="M268 110q5 -10 10 0q5 -10 10 0" stroke="#ff9a42" stroke-opacity=".35" fill="none" stroke-width="2"/>
+<path d="M215 78q4 -8 8 0q4 -8 8 0" stroke="#ff9a42" stroke-opacity=".35" fill="none" stroke-width="2"/>
+<path d="M438 147q4 -8 8 0q4 -8 8 0" stroke="#ff9a42" stroke-opacity=".7" fill="none" stroke-width="2"/>
+<path d="M228 146q3 -6 6 0q3 -6 6 0" stroke="#ff9a42" stroke-opacity=".7" fill="none" stroke-width="2"/>
+<path d="M730 33q2 -4 4 0q2 -4 4 0" stroke="#ff9a42" stroke-opacity=".35" fill="none" stroke-width="2"/>
+<path d="M845 111q3 -6 6 0q3 -6 6 0" stroke="#ff9a42" stroke-opacity=".5" fill="none" stroke-width="2"/>
+<path d="M427 197q3 -6 6 0q3 -6 6 0" stroke="#ff9a42" stroke-opacity=".35" fill="none" stroke-width="2"/>
+<path d="M669 71q3 -6 6 0q3 -6 6 0" stroke="#ff9a42" stroke-opacity=".5" fill="none" stroke-width="2"/>
+<path d="M314 63q5 -10 10 0q5 -10 10 0" stroke="#ff9a42" stroke-opacity=".35" fill="none" stroke-width="2"/>
+<path d="M508 26q3 -6 6 0q3 -6 6 0" stroke="#ff9a42" stroke-opacity=".7" fill="none" stroke-width="2"/>
+<path d="M521 100q4 -8 8 0q4 -8 8 0" stroke="#ff9a42" stroke-opacity=".7" fill="none" stroke-width="2"/>
+<path d="M485 102q2 -4 4 0q2 -4 4 0" stroke="#ff9a42" stroke-opacity=".5" fill="none" stroke-width="2"/>
+<path d="M385 95q5 -10 10 0q5 -10 10 0" stroke="#ff9a42" stroke-opacity=".35" fill="none" stroke-width="2"/>
+<path d="M576 188q4 -8 8 0q4 -8 8 0" stroke="#ff9a42" stroke-opacity=".7" fill="none" stroke-width="2"/>
+<path d="M18 206q5 -10 10 0q5 -10 10 0" stroke="#ff9a42" stroke-opacity=".5" fill="none" stroke-width="2"/>
+<rect x="158" y="66" width="585" height="131" rx="18" fill="#090e18" fill-opacity=".78"/>
+<text x="450" y="119" text-anchor="middle" font-family="Verdana,Arial,sans-serif" font-size="34" font-weight="700" fill="#f2f6ff">ANGE BIANCAMARIA</text>
+<text x="450" y="157" text-anchor="middle" font-family="Verdana,Arial,sans-serif" font-size="17" letter-spacing="2" fill="#ff9a42">HALLOWEEN // NIGHT SHIFT</text>
+<text x="450" y="181" text-anchor="middle" font-family="Verdana,Arial,sans-serif" font-size="12" fill="#bdc8d5">FULL STACK DEVELOPER  ·  CORSICA</text>
+</svg>
