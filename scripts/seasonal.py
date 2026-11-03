@@ -34,33 +34,65 @@ def theme_for(day):
  if m in (6,7,8):return 'summer'
  return 'autumn'
 
+
+TITLES={
+ 'winter':('WINTER MODE','❄'), 'spring':('SPRING BLOOM','✿'),
+ 'summer':('SUMMER VIBES','☀'), 'autumn':('AUTUMN SEASON','◆'),
+ 'halloween':('HALLOWEEN NIGHT','☾'), 'christmas':('MERRY CHRISTMAS','✦'),
+ 'easter':('HAPPY EASTER','✿'), 'birthday':("HAPPY BIRTHDAY • 09 JAN",'★')
+}
 def decorations(theme,w,h):
  accent,secondary,_,shape=PALETTES[theme]
- rng=random.Random('ange-season-'+theme+str(w))
+ rng=random.Random('ange-strong-v3-'+theme+str(w))
  out=['<g class="seasonal-decor" pointer-events="none">']
- # Decorate only edges, keeping text, the Corsica silhouette and target centers legible.
- for i in range(30):
-  x=rng.choice([rng.randint(12,90),rng.randint(w-100,w-12),rng.randint(95,w-95)])
-  y=rng.randint(12,h-12)
-  if 95<x<w-95 and 65<y<h-65:continue
-  r=rng.randint(3,7)
-  if shape=='snow':mark=f'<path d="M{x-r} {y}h{2*r} M{x} {y-r}v{2*r} M{x-r*.7:.1f} {y-r*.7:.1f}l{r*1.4:.1f} {r*1.4:.1f} M{x+r*.7:.1f} {y-r*.7:.1f}l{-r*1.4:.1f} {r*1.4:.1f}" stroke="{accent}" stroke-width="1.6"/>'
-  elif shape=='leaf':mark=f'<path d="M{x} {y-r}q{r*2} {r} 0 {r*2}q{-r*2} {-r} 0 {-r*2}" fill="{accent}"/>'
-  elif shape=='flower':mark=''.join(f'<circle cx="{x+dx}" cy="{y+dy}" r="{r*.6:.1f}" fill="{accent}"/>' for dx,dy in [(-r,0),(r,0),(0,-r),(0,r)])+f'<circle cx="{x}" cy="{y}" r="{r*.45}" fill="{secondary}"/>'
-  elif shape=='bat':mark=f'<path d="M{x-2*r} {y}q{r} {-2*r} {2*r} 0q{r} {-2*r} {2*r} 0" stroke="{accent}" fill="none" stroke-width="2"/>'
-  elif shape=='egg':mark=f'<ellipse cx="{x}" cy="{y}" rx="{r*.8}" ry="{r*1.2}" fill="{accent}"/><path d="M{x-r*.5} {y}h{r}" stroke="{secondary}" stroke-width="2"/>'
-  elif shape=='sun':mark=f'<circle cx="{x}" cy="{y}" r="{r}" fill="{accent}"/>'
-  elif shape=='star':mark=f'<path d="M{x} {y-r}L{x+r*.3} {y-r*.3}L{x+r} {y}L{x+r*.3} {y+r*.3}L{x} {y+r}L{x-r*.3} {y+r*.3}L{x-r} {y}L{x-r*.3} {y-r*.3}Z" fill="{accent}"/>'
-  else:mark=f'<rect x="{x}" y="{y}" width="{r}" height="{r*.55}" rx="1" fill="{rng.choice([accent,secondary])}" transform="rotate({rng.randint(-50,50)} {x} {y})"/>'
-  out.append(f'<g opacity="{rng.choice([.25,.4,.55,.75])}">{mark}</g>')
+ # Animated neon perimeter + top season label: no second name banner.
+ out.append(f'<rect x="14" y="14" width="{w-28}" height="{h-28}" rx="18" fill="none" stroke="{accent}" stroke-width="3" opacity=".7"/>')
+ out.append(f'<rect x="23" y="23" width="{w-46}" height="{h-46}" rx="14" fill="none" stroke="{secondary}" stroke-width="1.3" stroke-dasharray="10 9" opacity=".38"/>')
+ out.append(f'<path d="M35 27 H{min(w-35,280)}" stroke="{secondary}" stroke-width="5" stroke-linecap="round"><animate attributeName="opacity" values=".35;1;.35" dur="4s" repeatCount="indefinite"/></path>')
+ title,_=TITLES[theme]
+ # Seasonal label in top-right safe area of both existing cards.
+ label_width=min(300,14+len(title)*9)
+ out.append(f'<rect x="{w-label_width-35}" y="32" width="{label_width}" height="34" rx="9" fill="#0b101a" fill-opacity=".92" stroke="{accent}" stroke-width="2"/>')
+ out.append(f'<text x="{w-47}" y="54" text-anchor="end" font-family="Arial,sans-serif" font-size="15" font-weight="bold" letter-spacing="1" fill="{secondary}">{title}</text>')
+ # Large recognizable edge motifs, animated in SVG (GitHub may limit SVG animation).
+ for i in range(34):
+  side=i%4
+  if side==0:x=rng.randint(25,w-25);y=rng.randint(70,85)
+  elif side==1:x=rng.randint(25,w-25);y=rng.randint(h-75,h-25)
+  elif side==2:x=rng.randint(20,78);y=rng.randint(80,h-60)
+  else:x=rng.randint(w-78,w-20);y=rng.randint(80,h-60)
+  r=rng.randint(5,11)
+  if shape=='snow':
+   mark=f'<path d="M{-r} 0H{r} M0 {-r}V{r} M{-r*.7:.1f} {-r*.7:.1f}L{r*.7:.1f} {r*.7:.1f} M{r*.7:.1f} {-r*.7:.1f}L{-r*.7:.1f} {r*.7:.1f}" stroke="{accent}" stroke-width="2.5"/>'
+  elif shape=='leaf':
+   mark=f'<path d="M0 {-r}Q{r*2} 0 0 {r}Q{-r*2} 0 0 {-r}Z" fill="{accent}" stroke="{secondary}" stroke-width="1"/>'
+  elif shape=='flower':
+   mark=''.join(f'<circle cx="{dx}" cy="{dy}" r="{r*.62:.1f}" fill="{accent}"/>' for dx,dy in [(-r,0),(r,0),(0,-r),(0,r)])+f'<circle r="{r*.6:.1f}" fill="{secondary}"/>'
+  elif shape=='bat':
+   mark=f'<path d="M{-2*r} 0Q{-r} {-2*r} 0 0Q{r} {-2*r} {2*r} 0L{r} {r*.3}L0 {-r*.4}L{-r} {r*.3}Z" fill="{accent}"/>'
+  elif shape=='egg':
+   mark=f'<ellipse rx="{r*.8}" ry="{r*1.3}" fill="{accent}"/><path d="M{-r*.6} 0H{r*.6}" stroke="{secondary}" stroke-width="3"/>'
+  elif shape=='sun':
+   mark=f'<circle r="{r}" fill="{accent}"/><circle r="{r*1.55}" fill="none" stroke="{secondary}" stroke-width="2" stroke-dasharray="3 4"/>'
+  elif shape=='star':
+   mark=f'<path d="M0 {-r*1.6}L{r*.4} {-r*.4}L{r*1.6} 0L{r*.4} {r*.4}L0 {r*1.6}L{-r*.4} {r*.4}L{-r*1.6} 0L{-r*.4} {-r*.4}Z" fill="{accent}"/>'
+  else:
+   mark=f'<rect x="{-r/2}" y="{-r/2}" width="{r}" height="{r*.6}" rx="1" fill="{rng.choice([accent,secondary])}"/>'
+  dur=5+i%5
+  out.append(f'<g transform="translate({x} {y})" opacity=".85">{mark}<animateTransform attributeName="transform" type="translate" additive="sum" values="0 0;0 {-5-i%8};0 0" dur="{dur}s" repeatCount="indefinite"/><animate attributeName="opacity" values=".4;.95;.4" dur="{dur}s" repeatCount="indefinite"/></g>')
+ # Festive decorative string across the bottom, or seasonal light line.
+ out.append(f'<path d="M35 {h-31}Q{w//2} {h-54} {w-35} {h-31}" stroke="{secondary}" stroke-width="2" fill="none" opacity=".7"/>')
+ for i in range(16):
+  x=50+i*(w-100)/15
+  y=h-31-((x-35)*(w-35-x)/(w*w))*90
+  out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3.5" fill="{accent}"><animate attributeName="opacity" values=".3;1;.3" dur="{2+i%4}s" repeatCount="indefinite"/></circle>')
  out.append('</g>')
  return '\n'.join(out)
 
 def decorate_svg(source,theme):
  accent,secondary,bg,_=PALETTES[theme]
  s=source
- # Keep every existing shape and label; only replace accent strokes and dark backgrounds.
- for old,new in [('#111827',bg),('#0b1220',bg),('#60a5fa',accent),('#93c5fd',secondary),('#2563eb',accent),('#ef4444',secondary)]:
+ for old,new in [('#111827',bg),('#0b1220',bg),('#60a5fa',accent),('#93c5fd',secondary),('#2563eb',accent),('#ef4444',secondary),('#303b52',accent),('#172554',bg),('#080d18',bg)]:
   s=s.replace(old,new)
  m=re.search(r'<svg[^>]*viewBox="0 0 (\d+) (\d+)"',s)
  if not m:raise ValueError('SVG missing viewBox')
