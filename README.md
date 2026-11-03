@@ -8,6 +8,17 @@
 
 
 
+<!-- SEASONAL_TEXT_START -->
+<div align="center">
+
+### 🍂 AUTUMN SEASON
+
+**Fresh ideas are falling into place.**  
+*A season for building and learning.*
+
+</div>
+<!-- SEASONAL_TEXT_END -->
+
 <!-- Corsica location card -->
 
 <a href="#" title="Viva Corsica">

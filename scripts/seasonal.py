@@ -41,54 +41,38 @@ TITLES={
  'halloween':('HALLOWEEN NIGHT','☾'), 'christmas':('MERRY CHRISTMAS','✦'),
  'easter':('HAPPY EASTER','✿'), 'birthday':("HAPPY BIRTHDAY • 09 JAN",'★')
 }
-def decorations(theme,w,h):
- accent,secondary,_,shape=PALETTES[theme]
- rng=random.Random('ange-strong-v3-'+theme+str(w))
- out=['<g class="seasonal-decor" pointer-events="none">']
- # Animated neon perimeter + top season label: no second name banner.
- out.append(f'<rect x="14" y="14" width="{w-28}" height="{h-28}" rx="18" fill="none" stroke="{accent}" stroke-width="3" opacity=".7"/>')
- out.append(f'<rect x="23" y="23" width="{w-46}" height="{h-46}" rx="14" fill="none" stroke="{secondary}" stroke-width="1.3" stroke-dasharray="10 9" opacity=".38"/>')
- out.append(f'<path d="M35 27 H{min(w-35,280)}" stroke="{secondary}" stroke-width="5" stroke-linecap="round"><animate attributeName="opacity" values=".35;1;.35" dur="4s" repeatCount="indefinite"/></path>')
- title,_=TITLES[theme]
- # Seasonal label in top-right safe area of both existing cards.
- label_width=min(300,14+len(title)*9)
- out.append(f'<rect x="{w-label_width-35}" y="32" width="{label_width}" height="34" rx="9" fill="#0b101a" fill-opacity=".92" stroke="{accent}" stroke-width="2"/>')
- out.append(f'<text x="{w-47}" y="54" text-anchor="end" font-family="Arial,sans-serif" font-size="15" font-weight="bold" letter-spacing="1" fill="{secondary}">{title}</text>')
- # Large recognizable edge motifs, animated in SVG (GitHub may limit SVG animation).
- for i in range(34):
-  side=i%4
-  if side==0:x=rng.randint(25,w-25);y=rng.randint(70,85)
-  elif side==1:x=rng.randint(25,w-25);y=rng.randint(h-75,h-25)
-  elif side==2:x=rng.randint(20,78);y=rng.randint(80,h-60)
-  else:x=rng.randint(w-78,w-20);y=rng.randint(80,h-60)
-  r=rng.randint(5,11)
-  if shape=='snow':
-   mark=f'<path d="M{-r} 0H{r} M0 {-r}V{r} M{-r*.7:.1f} {-r*.7:.1f}L{r*.7:.1f} {r*.7:.1f} M{r*.7:.1f} {-r*.7:.1f}L{-r*.7:.1f} {r*.7:.1f}" stroke="{accent}" stroke-width="2.5"/>'
-  elif shape=='leaf':
-   mark=f'<path d="M0 {-r}Q{r*2} 0 0 {r}Q{-r*2} 0 0 {-r}Z" fill="{accent}" stroke="{secondary}" stroke-width="1"/>'
-  elif shape=='flower':
-   mark=''.join(f'<circle cx="{dx}" cy="{dy}" r="{r*.62:.1f}" fill="{accent}"/>' for dx,dy in [(-r,0),(r,0),(0,-r),(0,r)])+f'<circle r="{r*.6:.1f}" fill="{secondary}"/>'
-  elif shape=='bat':
-   mark=f'<path d="M{-2*r} 0Q{-r} {-2*r} 0 0Q{r} {-2*r} {2*r} 0L{r} {r*.3}L0 {-r*.4}L{-r} {r*.3}Z" fill="{accent}"/>'
-  elif shape=='egg':
-   mark=f'<ellipse rx="{r*.8}" ry="{r*1.3}" fill="{accent}"/><path d="M{-r*.6} 0H{r*.6}" stroke="{secondary}" stroke-width="3"/>'
-  elif shape=='sun':
-   mark=f'<circle r="{r}" fill="{accent}"/><circle r="{r*1.55}" fill="none" stroke="{secondary}" stroke-width="2" stroke-dasharray="3 4"/>'
-  elif shape=='star':
-   mark=f'<path d="M0 {-r*1.6}L{r*.4} {-r*.4}L{r*1.6} 0L{r*.4} {r*.4}L0 {r*1.6}L{-r*.4} {r*.4}L{-r*1.6} 0L{-r*.4} {-r*.4}Z" fill="{accent}"/>'
-  else:
-   mark=f'<rect x="{-r/2}" y="{-r/2}" width="{r}" height="{r*.6}" rx="1" fill="{rng.choice([accent,secondary])}"/>'
-  dur=5+i%5
-  out.append(f'<g transform="translate({x} {y})" opacity=".85">{mark}<animateTransform attributeName="transform" type="translate" additive="sum" values="0 0;0 {-5-i%8};0 0" dur="{dur}s" repeatCount="indefinite"/><animate attributeName="opacity" values=".4;.95;.4" dur="{dur}s" repeatCount="indefinite"/></g>')
- # Festive decorative string across the bottom, or seasonal light line.
- out.append(f'<path d="M35 {h-31}Q{w//2} {h-54} {w-35} {h-31}" stroke="{secondary}" stroke-width="2" fill="none" opacity=".7"/>')
- for i in range(16):
-  x=50+i*(w-100)/15
-  y=h-31-((x-35)*(w-35-x)/(w*w))*90
-  out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3.5" fill="{accent}"><animate attributeName="opacity" values=".3;1;.3" dur="{2+i%4}s" repeatCount="indefinite"/></circle>')
- out.append('</g>')
- return '\n'.join(out)
-
+def decorations(theme,w,h,kind):
+    """Safe decoration zones: 0-35px border, no particles over text."""
+    accent,secondary,_,shape=PALETTES[theme]
+    rng=random.Random('safe-v6-'+theme+kind)
+    out=['<g class="seasonal-decor" pointer-events="none">']
+    out.append(f'<rect x="10" y="10" width="{w-20}" height="{h-20}" rx="17" fill="none" stroke="{accent}" stroke-width="3" opacity=".65"/>')
+    out.append(f'<rect x="20" y="20" width="{w-40}" height="{h-40}" rx="14" fill="none" stroke="{secondary}" stroke-width="1.3" stroke-dasharray="12 12" opacity=".3"/>')
+    # The title is intentionally NOT placed inside either card: it now lives in README text.
+    # All particles are restricted to the very top/bottom border strips.
+    for i in range(24):
+        x=40+(i*(w-80)/23)
+        y=(28 if i%2 else h-27)
+        r=3+(i%3)
+        if shape=='snow':
+            mark=f'<path d="M{-r} 0H{r} M0 {-r}V{r}" stroke="{accent}" stroke-width="2"/>'
+        elif shape=='leaf':
+            mark=f'<path d="M0 {-r}Q{r*1.5} 0 0 {r}Q{-r*1.5} 0 0 {-r}" fill="{accent}"/>'
+        elif shape=='flower':
+            mark=f'<circle r="{r}" fill="{accent}"/><circle r="1.5" fill="{secondary}"/>'
+        elif shape=='bat':
+            mark=f'<path d="M{-r*2} 0Q{-r} {-r} 0 0Q{r} {-r} {r*2} 0L0 {r}Z" fill="{accent}"/>'
+        elif shape=='egg':
+            mark=f'<ellipse rx="{r}" ry="{r*1.5}" fill="{accent}"/>'
+        elif shape=='sun':
+            mark=f'<circle r="{r}" fill="{accent}"/>'
+        elif shape=='star':
+            mark=f'<path d="M0 {-r}L{r/3} {-r/3}L{r} 0L{r/3} {r/3}L0 {r}L{-r/3} {r/3}L{-r} 0L{-r/3} {-r/3}Z" fill="{accent}"/>'
+        else:
+            mark=f'<rect x="{-r/2}" y="{-r/2}" width="{r}" height="{r}" fill="{accent}"/>'
+        out.append(f'<g transform="translate({x:.1f} {y})">{mark}<animate attributeName="opacity" values=".35;1;.35" dur="{3+i%4}s" repeatCount="indefinite"/></g>')
+    out.append('</g>')
+    return '\\n'.join(out)
 
 def scene_details(theme,w,h):
     """Large recognizable themed illustrations anchored at card edges, never covering the map or goals."""
@@ -169,7 +153,7 @@ def scene_details(theme,w,h):
     out.append('</g>')
     return '\n'.join(out)
 
-def decorate_svg(source,theme):
+def decorate_svg(source,theme,kind):
  accent,secondary,bg,_=PALETTES[theme]
  s=source
  for old,new in [('#111827',bg),('#0b1220',bg),('#60a5fa',accent),('#93c5fd',secondary),('#2563eb',accent),('#ef4444',secondary),('#303b52',accent),('#172554',bg),('#080d18',bg)]:
@@ -177,7 +161,7 @@ def decorate_svg(source,theme):
  m=re.search(r'<svg[^>]*viewBox="0 0 (\d+) (\d+)"',s)
  if not m:raise ValueError('SVG missing viewBox')
  w,h=map(int,m.groups())
- return s.replace('</svg>',decorations(theme,w,h)+scene_details(theme,w,h)+'\n</svg>')
+ return s.replace('</svg>',decorations(theme,w,h,kind)+'\n</svg>')
 
 def update_image_refs(readme: str, theme: str) -> str:
     """Switch both cards to stable, theme-specific paths; preserve surrounding HTML."""
@@ -190,6 +174,30 @@ def update_image_refs(readme: str, theme: str) -> str:
             raise ValueError(f"README missing seasonal image reference for {stem}; refusing to silently skip it")
     return readme
 
+
+SEASONAL_COPY={
+ 'winter':('❄️ WINTER MODE','Cold outside, ideas in motion.','Building projects one commit at a time.'),
+ 'spring':('🌸 SPRING BLOOM','New season, new ideas.','Time to make projects grow.'),
+ 'summer':('☀️ SUMMER VIBES','Sunshine, code and creativity.','Keeping the momentum going.'),
+ 'autumn':('🍂 AUTUMN SEASON','Fresh ideas are falling into place.','A season for building and learning.'),
+ 'halloween':('🎃 HALLOWEEN NIGHT','Trick or commit?','No bugs allowed to haunt this repository.'),
+ 'christmas':('🎄 MERRY CHRISTMAS','A little festive magic in every commit.','Wishing you a wonderful holiday season!'),
+ 'easter':('🐣 HAPPY EASTER','A few Easter eggs hidden in the code.','New discoveries are always around the corner.'),
+ 'birthday':('🎂 HAPPY BIRTHDAY — JANUARY 9','Level up! Another year, another adventure.','Today is a special day for this developer.'),
+}
+BLOCK_START='<!-- SEASONAL_TEXT_START -->'
+BLOCK_END='<!-- SEASONAL_TEXT_END -->'
+
+def update_seasonal_text(readme,theme):
+    title,lead,sub=SEASONAL_COPY[theme]
+    block=f'{BLOCK_START}\n<div align="center">\n\n### {title}\n\n**{lead}**  \n*{sub}*\n\n</div>\n{BLOCK_END}'
+    if BLOCK_START in readme and BLOCK_END in readme:
+        return re.sub(re.escape(BLOCK_START)+r'.*?'+re.escape(BLOCK_END),lambda _:block,readme,flags=re.S)
+    # Insert before the Corsica card, never inside the generated daily quote.
+    anchor='<!-- Corsica location card -->'
+    if anchor not in readme:
+        raise ValueError('Cannot find Corsica location card anchor; README left untouched')
+    return readme.replace(anchor,block+'\n\n'+anchor,1)
 def main():
     p=argparse.ArgumentParser()
     p.add_argument('--date')
@@ -208,9 +216,10 @@ def main():
     for source,stem in (('corsica_card.svg','corsica_card'),('my_goals.svg','my_goals')):
         original=(ROOT/'img'/source).read_text(encoding='utf-8')
         for t in PALETTES:
-            (out/f'{stem}_{t}.svg').write_text(decorate_svg(original,t),encoding='utf-8')
+            (out/f'{stem}_{t}.svg').write_text(decorate_svg(original,t,stem),encoding='utf-8')
     readme=ROOT/'README.md'
     s=update_image_refs(readme.read_text(encoding='utf-8'),theme)
+    s=update_seasonal_text(s,theme)
     accent=PALETTES[theme][0].lstrip('#')
     s=re.sub(r'(&color=)(?:gradient|[0-9a-fA-F]{6})(?=&section=header)',lambda m:m.group(1)+accent,s,count=1)
     s=re.sub(r'(pause=1000&color=)[0-9A-Fa-f]{6}',lambda m:m.group(1)+accent.upper(),s,count=1)

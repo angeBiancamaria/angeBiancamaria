@@ -1,15 +1,19 @@
-# Thèmes saisonniers v5 — illustrations renforcées
+# Thèmes v6 — lisibilité et texte saisonnier
 
-Cette version conserve le système v4 des SVG séparés par thème, et ajoute des illustrations propres à chaque événement (gâteau d'anniversaire, citrouille, sapin, bonhomme de neige, fleurs, soleil, feuilles et œufs de Pâques). Les décorations sont placées près des bords pour conserver les illustrations d'origine.
+## Changements
+- Décorations des cartes cantonnées à une bordure fine (haut/bas), sans motifs sur les objectifs ou les descriptions.
+- Suppression des gros objets dessinés au-dessus du contenu des cartes.
+- Ajout d'un encart Markdown saisonnier entre l'en-tête animé et la carte de Corse.
+- Huit messages différents, dont Anniversaire le 9 janvier, Halloween et Noël.
+- Le script ne touche pas aux citations quotidiennes, aux objectifs textuels ni aux autres sections.
+- Les liens vers des SVG distincts pour chaque thème restent inchangés.
 
-## Installation depuis v4
+## Installation depuis la v5
+Remplacer `scripts/seasonal.py` par celui-ci et conserver `.github/workflows/seasonal.yml`.
+Exécuter Actions > Seasonal profile theme > Run workflow avec le thème désiré.
+Le script met à jour automatiquement le README et les SVG.
 
-Copiez `scripts/seasonal.py` et le dossier `img/seasonal/` dans votre dépôt. Le workflow `.github/workflows/seasonal.yml` de la v4 peut rester inchangé. Le README existant sera mis à jour au prochain lancement du workflow. Ne remplacez pas votre README par celui du ZIP si vous avez effectué d'autres modifications depuis la v4.
-
-## Tester
-
-Dans GitHub : Actions > Seasonal profile theme > Run workflow, choisissez un thème (`birthday`, `halloween`, `christmas`, `winter`, `spring`, `summer`, `autumn`, `easter`). Le thème automatique revient lors de la prochaine exécution planifiée.
-
-## Compatibilité
-
-Les illustrations principales sont statiques et restent visibles même si GitHub bloque certaines animations SVG. Les petites animations SVG peuvent varier selon le navigateur, le rendu GitHub et les réglages d'accessibilité. Le Snake est inchangé.
+## Attention
+Les images et le texte du profil sont personnalisables, mais GitHub ne permet pas d'appliquer
+du CSS arbitraire au README. Les changements textuels restent donc du Markdown standard.
+Les animations SVG peuvent varier selon le moteur de rendu.
