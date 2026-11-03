@@ -1,0 +1,101 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#172d2a"/><stop offset="1" stop-color="#080d18"/>
+  </linearGradient>
+  <filter id="soft"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity=".35"/></filter>
+</defs>
+
+<rect width="900" height="360" rx="22" fill="url(#bg)" stroke="#303b52" stroke-width="2"/>
+
+<text x="40" y="52" fill="#f8fafc" font-family="Arial,sans-serif"
+      font-size="30" font-weight="700">My Goals</text>
+<path d="M184 43H850" stroke="#ff737d" stroke-width="2" opacity=".6"/>
+<path d="M850 43l9 9 9-9-9-9z" fill="#75dfb4"/>
+
+<!-- GOAL 01 -->
+<g transform="translate(28 95)">
+  <!-- target -->
+  <circle cx="105" cy="105" r="72" fill="none" stroke="#ff737d" stroke-width="2" opacity=".35"/>
+  <circle cx="105" cy="105" r="62" fill="#172d2a" stroke="#ff737d" stroke-width="4"/>
+  <circle cx="105" cy="105" r="45" fill="#172554" stroke="#f8fafc" stroke-width="5"/>
+  <circle cx="105" cy="105" r="29" fill="#dbeafe" stroke="#ff737d" stroke-width="5"/>
+  <circle cx="105" cy="105" r="14" fill="#ff737d"/>
+  <circle cx="105" cy="105" r="5" fill="#fff"/>
+  <g transform="rotate(-42 105 105)" filter="url(#soft)">
+    <path d="M105 30V105" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+    <path d="M105 25l-10 16h20z" fill="#fff"/>
+  </g>
+
+  <!-- content -->
+  <rect x="195" y="22" width="150" height="34" rx="17"
+        fill="#111c35" stroke="#ff737d" stroke-width="2"/>
+  <text x="270" y="45" text-anchor="middle" fill="#75dfb4"
+        font-family="Arial,sans-serif" font-size="14" font-weight="700"
+        letter-spacing="1.5">GOAL 01</text>
+  <text x="195" y="93" fill="#f8fafc" font-family="Arial,sans-serif"
+        font-size="24" font-weight="700">Internship</text>
+  <text x="195" y="123" fill="#94a3b8" font-family="Arial,sans-serif"
+        font-size="15">Gain professional experience</text>
+  <text x="195" y="146" fill="#94a3b8" font-family="Arial,sans-serif"
+        font-size="15">in a real working environment.</text>
+</g>
+
+<!-- arrow between goals -->
+<g transform="translate(438 200)">
+  <path d="M0 0H24" stroke="#64748b" stroke-width="3"/>
+  <path d="M17 -7L27 0 17 7" fill="none" stroke="#c4b5fd" stroke-width="3"/>
+</g>
+
+<!-- GOAL 02 -->
+<g transform="translate(465 95)">
+  <!-- target -->
+  <circle cx="105" cy="105" r="72" fill="none" stroke="#7c3aed" stroke-width="2" opacity=".35"/>
+  <circle cx="105" cy="105" r="62" fill="#120d24" stroke="#c084fc" stroke-width="4"/>
+  <circle cx="105" cy="105" r="45" fill="#2e1065" stroke="#f8fafc" stroke-width="5"/>
+  <circle cx="105" cy="105" r="29" fill="#ede9fe" stroke="#c084fc" stroke-width="5"/>
+  <circle cx="105" cy="105" r="14" fill="#7c3aed"/>
+  <circle cx="105" cy="105" r="5" fill="#fff"/>
+  <g transform="rotate(-42 105 105)" filter="url(#soft)">
+    <path d="M105 30V105" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+    <path d="M105 25l-10 16h20z" fill="#fff"/>
+  </g>
+
+  <!-- content -->
+  <rect x="195" y="22" width="150" height="34" rx="17"
+        fill="#1a1230" stroke="#c084fc" stroke-width="2"/>
+  <text x="270" y="45" text-anchor="middle" fill="#d8b4fe"
+        font-family="Arial,sans-serif" font-size="14" font-weight="700"
+        letter-spacing="1.5">GOAL 02</text>
+  <text x="195" y="93" fill="#f8fafc" font-family="Arial,sans-serif"
+        font-size="24" font-weight="700">Work-study</text>
+  <text x="195" y="123" fill="#94a3b8" font-family="Arial,sans-serif" font-size="15">Alternance toward a Bachelor</text>
+  <text x="195" y="146" fill="#94a3b8" font-family="Arial,sans-serif" font-size="15">/ Master in Web Development.</text>
+</g>
+<g class="seasonal-decor" pointer-events="none">
+<g opacity="0.4"><path d="M34 267L35.2 269.8L38 271L35.2 272.2L34 275L32.8 272.2L30 271L32.8 269.8Z" fill="#ff737d"/></g>
+<g opacity="0.4"><path d="M340 27L342.1 31.9L347 34L342.1 36.1L340 41L337.9 36.1L333 34L337.9 31.9Z" fill="#ff737d"/></g>
+<g opacity="0.25"><path d="M620 14L621.8 18.2L626 20L621.8 21.8L620 26L618.2 21.8L614 20L618.2 18.2Z" fill="#ff737d"/></g>
+<g opacity="0.4"><path d="M815 13L817.1 17.9L822 20L817.1 22.1L815 27L812.9 22.1L808 20L812.9 17.9Z" fill="#ff737d"/></g>
+<g opacity="0.4"><path d="M859 324L859.9 326.1L862 327L859.9 327.9L859 330L858.1 327.9L856 327L858.1 326.1Z" fill="#ff737d"/></g>
+<g opacity="0.75"><path d="M59 65L60.2 67.8L63 69L60.2 70.2L59 73L57.8 70.2L55 69L57.8 67.8Z" fill="#ff737d"/></g>
+<g opacity="0.4"><path d="M80 294L81.8 298.2L86 300L81.8 301.8L80 306L78.2 301.8L74 300L78.2 298.2Z" fill="#ff737d"/></g>
+<g opacity="0.55"><path d="M90 92L91.5 95.5L95 97L91.5 98.5L90 102L88.5 98.5L85 97L88.5 95.5Z" fill="#ff737d"/></g>
+<g opacity="0.75"><path d="M853 329L854.2 331.8L857 333L854.2 334.2L853 337L851.8 334.2L849 333L851.8 331.8Z" fill="#ff737d"/></g>
+<g opacity="0.75"><path d="M48 140L49.5 143.5L53 145L49.5 146.5L48 150L46.5 146.5L43 145L46.5 143.5Z" fill="#ff737d"/></g>
+<g opacity="0.4"><path d="M808 242L809.2 244.8L812 246L809.2 247.2L808 250L806.8 247.2L804 246L806.8 244.8Z" fill="#ff737d"/></g>
+<g opacity="0.25"><path d="M13 99L14.8 103.2L19 105L14.8 106.8L13 111L11.2 106.8L7 105L11.2 103.2Z" fill="#ff737d"/></g>
+<g opacity="0.25"><path d="M853 300L854.5 303.5L858 305L854.5 306.5L853 310L851.5 306.5L848 305L851.5 303.5Z" fill="#ff737d"/></g>
+<g opacity="0.55"><path d="M807 91L808.8 95.2L813 97L808.8 98.8L807 103L805.2 98.8L801 97L805.2 95.2Z" fill="#ff737d"/></g>
+<g opacity="0.25"><path d="M831 86L831.9 88.1L834 89L831.9 89.9L831 92L830.1 89.9L828 89L830.1 88.1Z" fill="#ff737d"/></g>
+<g opacity="0.55"><path d="M491 320L493.1 324.9L498 327L493.1 329.1L491 334L488.9 329.1L484 327L488.9 324.9Z" fill="#ff737d"/></g>
+<g opacity="0.75"><path d="M638 57L639.2 59.8L642 61L639.2 62.2L638 65L636.8 62.2L634 61L636.8 59.8Z" fill="#ff737d"/></g>
+<g opacity="0.55"><path d="M119 322L120.8 326.2L125 328L120.8 329.8L119 334L117.2 329.8L113 328L117.2 326.2Z" fill="#ff737d"/></g>
+<g opacity="0.55"><path d="M845 209L846.5 212.5L850 214L846.5 215.5L845 219L843.5 215.5L840 214L843.5 212.5Z" fill="#ff737d"/></g>
+<g opacity="0.75"><path d="M18 307L18.9 309.1L21 310L18.9 310.9L18 313L17.1 310.9L15 310L17.1 309.1Z" fill="#ff737d"/></g>
+<g opacity="0.55"><path d="M885 328L887.1 332.9L892 335L887.1 337.1L885 342L882.9 337.1L878 335L882.9 332.9Z" fill="#ff737d"/></g>
+<g opacity="0.25"><path d="M842 301L843.5 304.5L847 306L843.5 307.5L842 311L840.5 307.5L837 306L840.5 304.5Z" fill="#ff737d"/></g>
+<g opacity="0.75"><path d="M78 76L80.1 80.9L85 83L80.1 85.1L78 90L75.9 85.1L71 83L75.9 80.9Z" fill="#ff737d"/></g>
+</g>
+</svg>

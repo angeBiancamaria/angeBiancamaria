@@ -1,0 +1,102 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#2b263a"/><stop offset="1" stop-color="#080d18"/>
+  </linearGradient>
+  <filter id="soft"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity=".35"/></filter>
+</defs>
+
+<rect width="900" height="360" rx="22" fill="url(#bg)" stroke="#303b52" stroke-width="2"/>
+
+<text x="40" y="52" fill="#f8fafc" font-family="Arial,sans-serif"
+      font-size="30" font-weight="700">My Goals</text>
+<path d="M184 43H850" stroke="#ffc4dc" stroke-width="2" opacity=".6"/>
+<path d="M850 43l9 9 9-9-9-9z" fill="#b8b0ff"/>
+
+<!-- GOAL 01 -->
+<g transform="translate(28 95)">
+  <!-- target -->
+  <circle cx="105" cy="105" r="72" fill="none" stroke="#ffc4dc" stroke-width="2" opacity=".35"/>
+  <circle cx="105" cy="105" r="62" fill="#2b263a" stroke="#ffc4dc" stroke-width="4"/>
+  <circle cx="105" cy="105" r="45" fill="#172554" stroke="#f8fafc" stroke-width="5"/>
+  <circle cx="105" cy="105" r="29" fill="#dbeafe" stroke="#ffc4dc" stroke-width="5"/>
+  <circle cx="105" cy="105" r="14" fill="#ffc4dc"/>
+  <circle cx="105" cy="105" r="5" fill="#fff"/>
+  <g transform="rotate(-42 105 105)" filter="url(#soft)">
+    <path d="M105 30V105" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+    <path d="M105 25l-10 16h20z" fill="#fff"/>
+  </g>
+
+  <!-- content -->
+  <rect x="195" y="22" width="150" height="34" rx="17"
+        fill="#111c35" stroke="#ffc4dc" stroke-width="2"/>
+  <text x="270" y="45" text-anchor="middle" fill="#b8b0ff"
+        font-family="Arial,sans-serif" font-size="14" font-weight="700"
+        letter-spacing="1.5">GOAL 01</text>
+  <text x="195" y="93" fill="#f8fafc" font-family="Arial,sans-serif"
+        font-size="24" font-weight="700">Internship</text>
+  <text x="195" y="123" fill="#94a3b8" font-family="Arial,sans-serif"
+        font-size="15">Gain professional experience</text>
+  <text x="195" y="146" fill="#94a3b8" font-family="Arial,sans-serif"
+        font-size="15">in a real working environment.</text>
+</g>
+
+<!-- arrow between goals -->
+<g transform="translate(438 200)">
+  <path d="M0 0H24" stroke="#64748b" stroke-width="3"/>
+  <path d="M17 -7L27 0 17 7" fill="none" stroke="#c4b5fd" stroke-width="3"/>
+</g>
+
+<!-- GOAL 02 -->
+<g transform="translate(465 95)">
+  <!-- target -->
+  <circle cx="105" cy="105" r="72" fill="none" stroke="#7c3aed" stroke-width="2" opacity=".35"/>
+  <circle cx="105" cy="105" r="62" fill="#120d24" stroke="#c084fc" stroke-width="4"/>
+  <circle cx="105" cy="105" r="45" fill="#2e1065" stroke="#f8fafc" stroke-width="5"/>
+  <circle cx="105" cy="105" r="29" fill="#ede9fe" stroke="#c084fc" stroke-width="5"/>
+  <circle cx="105" cy="105" r="14" fill="#7c3aed"/>
+  <circle cx="105" cy="105" r="5" fill="#fff"/>
+  <g transform="rotate(-42 105 105)" filter="url(#soft)">
+    <path d="M105 30V105" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+    <path d="M105 25l-10 16h20z" fill="#fff"/>
+  </g>
+
+  <!-- content -->
+  <rect x="195" y="22" width="150" height="34" rx="17"
+        fill="#1a1230" stroke="#c084fc" stroke-width="2"/>
+  <text x="270" y="45" text-anchor="middle" fill="#d8b4fe"
+        font-family="Arial,sans-serif" font-size="14" font-weight="700"
+        letter-spacing="1.5">GOAL 02</text>
+  <text x="195" y="93" fill="#f8fafc" font-family="Arial,sans-serif"
+        font-size="24" font-weight="700">Work-study</text>
+  <text x="195" y="123" fill="#94a3b8" font-family="Arial,sans-serif" font-size="15">Alternance toward a Bachelor</text>
+  <text x="195" y="146" fill="#94a3b8" font-family="Arial,sans-serif" font-size="15">/ Master in Web Development.</text>
+</g>
+<g class="seasonal-decor" pointer-events="none">
+<g opacity="0.25"><ellipse cx="833" cy="184" rx="4.0" ry="6.0" fill="#ffc4dc"/><path d="M830.5 184h5" stroke="#b8b0ff" stroke-width="2"/></g>
+<g opacity="0.25"><ellipse cx="87" cy="171" rx="4.0" ry="6.0" fill="#ffc4dc"/><path d="M84.5 171h5" stroke="#b8b0ff" stroke-width="2"/></g>
+<g opacity="0.75"><ellipse cx="864" cy="346" rx="3.2" ry="4.8" fill="#ffc4dc"/><path d="M862.0 346h4" stroke="#b8b0ff" stroke-width="2"/></g>
+<g opacity="0.55"><ellipse cx="814" cy="330" rx="5.6000000000000005" ry="8.4" fill="#ffc4dc"/><path d="M810.5 330h7" stroke="#b8b0ff" stroke-width="2"/></g>
+<g opacity="0.75"><ellipse cx="66" cy="82" rx="3.2" ry="4.8" fill="#ffc4dc"/><path d="M64.0 82h4" stroke="#b8b0ff" stroke-width="2"/></g>
+<g opacity="0.55"><ellipse cx="14" cy="226" rx="2.4000000000000004" ry="3.5999999999999996" fill="#ffc4dc"/><path d="M12.5 226h3" stroke="#b8b0ff" stroke-width="2"/></g>
+<g opacity="0.55"><ellipse cx="869" cy="317" rx="3.2" ry="4.8" fill="#ffc4dc"/><path d="M867.0 317h4" stroke="#b8b0ff" stroke-width="2"/></g>
+<g opacity="0.75"><ellipse cx="43" cy="272" rx="4.800000000000001" ry="7.199999999999999" fill="#ffc4dc"/><path d="M40.0 272h6" stroke="#b8b0ff" stroke-width="2"/></g>
+<g opacity="0.75"><ellipse cx="283" cy="305" rx="2.4000000000000004" ry="3.5999999999999996" fill="#ffc4dc"/><path d="M281.5 305h3" stroke="#b8b0ff" stroke-width="2"/></g>
+<g opacity="0.25"><ellipse cx="76" cy="237" rx="4.800000000000001" ry="7.199999999999999" fill="#ffc4dc"/><path d="M73.0 237h6" stroke="#b8b0ff" stroke-width="2"/></g>
+<g opacity="0.25"><ellipse cx="18" cy="24" rx="3.2" ry="4.8" fill="#ffc4dc"/><path d="M16.0 24h4" stroke="#b8b0ff" stroke-width="2"/></g>
+<g opacity="0.75"><ellipse cx="822" cy="255" rx="5.6000000000000005" ry="8.4" fill="#ffc4dc"/><path d="M818.5 255h7" stroke="#b8b0ff" stroke-width="2"/></g>
+<g opacity="0.25"><ellipse cx="80" cy="224" rx="3.2" ry="4.8" fill="#ffc4dc"/><path d="M78.0 224h4" stroke="#b8b0ff" stroke-width="2"/></g>
+<g opacity="0.75"><ellipse cx="366" cy="65" rx="4.0" ry="6.0" fill="#ffc4dc"/><path d="M363.5 65h5" stroke="#b8b0ff" stroke-width="2"/></g>
+<g opacity="0.55"><ellipse cx="829" cy="163" rx="4.800000000000001" ry="7.199999999999999" fill="#ffc4dc"/><path d="M826.0 163h6" stroke="#b8b0ff" stroke-width="2"/></g>
+<g opacity="0.25"><ellipse cx="286" cy="52" rx="2.4000000000000004" ry="3.5999999999999996" fill="#ffc4dc"/><path d="M284.5 52h3" stroke="#b8b0ff" stroke-width="2"/></g>
+<g opacity="0.55"><ellipse cx="52" cy="242" rx="3.2" ry="4.8" fill="#ffc4dc"/><path d="M50.0 242h4" stroke="#b8b0ff" stroke-width="2"/></g>
+<g opacity="0.25"><ellipse cx="842" cy="44" rx="4.800000000000001" ry="7.199999999999999" fill="#ffc4dc"/><path d="M839.0 44h6" stroke="#b8b0ff" stroke-width="2"/></g>
+<g opacity="0.25"><ellipse cx="50" cy="346" rx="2.4000000000000004" ry="3.5999999999999996" fill="#ffc4dc"/><path d="M48.5 346h3" stroke="#b8b0ff" stroke-width="2"/></g>
+<g opacity="0.55"><ellipse cx="809" cy="81" rx="5.6000000000000005" ry="8.4" fill="#ffc4dc"/><path d="M805.5 81h7" stroke="#b8b0ff" stroke-width="2"/></g>
+<g opacity="0.4"><ellipse cx="873" cy="123" rx="4.800000000000001" ry="7.199999999999999" fill="#ffc4dc"/><path d="M870.0 123h6" stroke="#b8b0ff" stroke-width="2"/></g>
+<g opacity="0.75"><ellipse cx="806" cy="212" rx="2.4000000000000004" ry="3.5999999999999996" fill="#ffc4dc"/><path d="M804.5 212h3" stroke="#b8b0ff" stroke-width="2"/></g>
+<g opacity="0.55"><ellipse cx="783" cy="327" rx="5.6000000000000005" ry="8.4" fill="#ffc4dc"/><path d="M779.5 327h7" stroke="#b8b0ff" stroke-width="2"/></g>
+<g opacity="0.55"><ellipse cx="47" cy="38" rx="4.0" ry="6.0" fill="#ffc4dc"/><path d="M44.5 38h5" stroke="#b8b0ff" stroke-width="2"/></g>
+</g>
+</svg>

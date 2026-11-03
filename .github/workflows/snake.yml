@@ -12,13 +12,34 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+      - name: Select seasonal snake colors
+        id: colors
+        run: |
+          python3 - <<'PYCOLORS' >> "$GITHUB_OUTPUT"
+          import sys
+          sys.path.insert(0,'scripts')
+          from seasonal import theme_for
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          theme=theme_for(datetime.now(ZoneInfo('Europe/Paris')).date())
+          colors={
+            'winter':('8bd9ff','c9f2ff'), 'spring':('a7e4a2','ffc4dc'),
+            'summer':('ffd17d','65d8e7'), 'autumn':('f3a866','e6ba6b'),
+            'halloween':('ff9a42','c38aff'), 'christmas':('ff737d','75dfb4'),
+            'easter':('ffc4dc','b8b0ff'), 'birthday':('ff86cf','ffd17d')
+          }
+          main,secondary=colors[theme]
+          print(f'snake={main}')
+          print(f'dots=161b22,283544,355b63,{secondary},{main}')
+          PYCOLORS
       - name: Generate animated SVGs
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: angeBiancamaria
           outputs: |
-            dist/github-snake.svg?color_snake=%236DD8CE&color_dots=%23ebedf0,%239bd8d1,%236dd8ce,%233caaa3,%231c7774
-            dist/github-snake-dark.svg?color_snake=%23FF6976&color_dots=%23161b22,%23482636,%238c344c,%23d93648,%23ff6976
+            dist/github-snake.svg?color_snake=%23${{ steps.colors.outputs.snake }}&color_dots=%23ebedf0,%23c5d3d3,%2393b6b6,%23${{ steps.colors.outputs.snake }},%23${{ steps.colors.outputs.snake }}
+            dist/github-snake-dark.svg?color_snake=%23${{ steps.colors.outputs.snake }}&color_dots=%23161b22,%23283544,%23355b63,%23${{ steps.colors.outputs.snake }},%23${{ steps.colors.outputs.snake }}
       - name: Publish generated images
         uses: crazy-max/ghaction-github-pages@v4
         with:

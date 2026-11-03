@@ -1,0 +1,98 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#152b3a"/><stop offset="1" stop-color="#080d18"/>
+  </linearGradient>
+  <filter id="soft"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity=".35"/></filter>
+</defs>
+
+<rect width="900" height="360" rx="22" fill="url(#bg)" stroke="#303b52" stroke-width="2"/>
+
+<text x="40" y="52" fill="#f8fafc" font-family="Arial,sans-serif"
+      font-size="30" font-weight="700">My Goals</text>
+<path d="M184 43H850" stroke="#ffd17d" stroke-width="2" opacity=".6"/>
+<path d="M850 43l9 9 9-9-9-9z" fill="#65d8e7"/>
+
+<!-- GOAL 01 -->
+<g transform="translate(28 95)">
+  <!-- target -->
+  <circle cx="105" cy="105" r="72" fill="none" stroke="#ffd17d" stroke-width="2" opacity=".35"/>
+  <circle cx="105" cy="105" r="62" fill="#152b3a" stroke="#ffd17d" stroke-width="4"/>
+  <circle cx="105" cy="105" r="45" fill="#172554" stroke="#f8fafc" stroke-width="5"/>
+  <circle cx="105" cy="105" r="29" fill="#dbeafe" stroke="#ffd17d" stroke-width="5"/>
+  <circle cx="105" cy="105" r="14" fill="#ffd17d"/>
+  <circle cx="105" cy="105" r="5" fill="#fff"/>
+  <g transform="rotate(-42 105 105)" filter="url(#soft)">
+    <path d="M105 30V105" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+    <path d="M105 25l-10 16h20z" fill="#fff"/>
+  </g>
+
+  <!-- content -->
+  <rect x="195" y="22" width="150" height="34" rx="17"
+        fill="#111c35" stroke="#ffd17d" stroke-width="2"/>
+  <text x="270" y="45" text-anchor="middle" fill="#65d8e7"
+        font-family="Arial,sans-serif" font-size="14" font-weight="700"
+        letter-spacing="1.5">GOAL 01</text>
+  <text x="195" y="93" fill="#f8fafc" font-family="Arial,sans-serif"
+        font-size="24" font-weight="700">Internship</text>
+  <text x="195" y="123" fill="#94a3b8" font-family="Arial,sans-serif"
+        font-size="15">Gain professional experience</text>
+  <text x="195" y="146" fill="#94a3b8" font-family="Arial,sans-serif"
+        font-size="15">in a real working environment.</text>
+</g>
+
+<!-- arrow between goals -->
+<g transform="translate(438 200)">
+  <path d="M0 0H24" stroke="#64748b" stroke-width="3"/>
+  <path d="M17 -7L27 0 17 7" fill="none" stroke="#c4b5fd" stroke-width="3"/>
+</g>
+
+<!-- GOAL 02 -->
+<g transform="translate(465 95)">
+  <!-- target -->
+  <circle cx="105" cy="105" r="72" fill="none" stroke="#7c3aed" stroke-width="2" opacity=".35"/>
+  <circle cx="105" cy="105" r="62" fill="#120d24" stroke="#c084fc" stroke-width="4"/>
+  <circle cx="105" cy="105" r="45" fill="#2e1065" stroke="#f8fafc" stroke-width="5"/>
+  <circle cx="105" cy="105" r="29" fill="#ede9fe" stroke="#c084fc" stroke-width="5"/>
+  <circle cx="105" cy="105" r="14" fill="#7c3aed"/>
+  <circle cx="105" cy="105" r="5" fill="#fff"/>
+  <g transform="rotate(-42 105 105)" filter="url(#soft)">
+    <path d="M105 30V105" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+    <path d="M105 25l-10 16h20z" fill="#fff"/>
+  </g>
+
+  <!-- content -->
+  <rect x="195" y="22" width="150" height="34" rx="17"
+        fill="#1a1230" stroke="#c084fc" stroke-width="2"/>
+  <text x="270" y="45" text-anchor="middle" fill="#d8b4fe"
+        font-family="Arial,sans-serif" font-size="14" font-weight="700"
+        letter-spacing="1.5">GOAL 02</text>
+  <text x="195" y="93" fill="#f8fafc" font-family="Arial,sans-serif"
+        font-size="24" font-weight="700">Work-study</text>
+  <text x="195" y="123" fill="#94a3b8" font-family="Arial,sans-serif" font-size="15">Alternance toward a Bachelor</text>
+  <text x="195" y="146" fill="#94a3b8" font-family="Arial,sans-serif" font-size="15">/ Master in Web Development.</text>
+</g>
+<g class="seasonal-decor" pointer-events="none">
+<g opacity="0.4"><circle cx="808" cy="322" r="4" fill="#ffd17d"/></g>
+<g opacity="0.25"><circle cx="17" cy="223" r="6" fill="#ffd17d"/></g>
+<g opacity="0.4"><circle cx="90" cy="41" r="6" fill="#ffd17d"/></g>
+<g opacity="0.4"><circle cx="75" cy="270" r="4" fill="#ffd17d"/></g>
+<g opacity="0.4"><circle cx="846" cy="145" r="6" fill="#ffd17d"/></g>
+<g opacity="0.55"><circle cx="26" cy="170" r="5" fill="#ffd17d"/></g>
+<g opacity="0.4"><circle cx="865" cy="72" r="3" fill="#ffd17d"/></g>
+<g opacity="0.4"><circle cx="846" cy="184" r="5" fill="#ffd17d"/></g>
+<g opacity="0.25"><circle cx="520" cy="47" r="6" fill="#ffd17d"/></g>
+<g opacity="0.4"><circle cx="806" cy="294" r="7" fill="#ffd17d"/></g>
+<g opacity="0.25"><circle cx="860" cy="232" r="7" fill="#ffd17d"/></g>
+<g opacity="0.25"><circle cx="875" cy="169" r="6" fill="#ffd17d"/></g>
+<g opacity="0.75"><circle cx="44" cy="40" r="6" fill="#ffd17d"/></g>
+<g opacity="0.25"><circle cx="846" cy="278" r="7" fill="#ffd17d"/></g>
+<g opacity="0.75"><circle cx="75" cy="223" r="6" fill="#ffd17d"/></g>
+<g opacity="0.25"><circle cx="823" cy="262" r="5" fill="#ffd17d"/></g>
+<g opacity="0.55"><circle cx="882" cy="128" r="5" fill="#ffd17d"/></g>
+<g opacity="0.4"><circle cx="16" cy="214" r="3" fill="#ffd17d"/></g>
+<g opacity="0.55"><circle cx="18" cy="92" r="5" fill="#ffd17d"/></g>
+<g opacity="0.4"><circle cx="823" cy="186" r="7" fill="#ffd17d"/></g>
+</g>
+</svg>

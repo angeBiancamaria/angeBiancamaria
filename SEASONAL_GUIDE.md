@@ -1,20 +1,32 @@
-# Seasonal GitHub profile themes
+# Seasonal profile skins v2
 
-The new banner is shown directly above the Corsica card. Existing daily quote and snake workflows are unchanged.
+This version **does not add a second banner**. It preserves the original animated header, Corsica silhouette, goal targets, quotes, and contribution Snake.
 
-## Calendar (Europe/Paris)
-- Christmas: December 15–January 6
+The daily workflow updates:
+- the existing capsule-render header accent and typing text color in README.md;
+- `img/seasonal/corsica_current.svg` (derived from the original Corsica card);
+- `img/seasonal/goals_current.svg` (derived from the original targets).
+
+The Snake workflow now chooses its palette from the same calendar, each time it runs. Snake images are still published to the `output` branch.
+
+## Theme calendar (Europe/Paris)
+- Birthday: **January 9**, highest priority
+- Christmas: December 15 through January 6
 - Halloween: October 20–31
-- Easter: seven days before through seven days after Easter Sunday (computus)
-- Winter: December–February; spring: March–May; summer: June–August; autumn: September–November
+- Easter: 4 days before through 4 days after Easter Sunday (computed each year)
+- Winter: December–February
+- Spring: March–May
+- Summer: June–August
+- Autumn: September–November
 
-Holiday windows override seasons. All SVG artwork is original procedural vector decoration, not raster sprites. SVGs are static; the existing snake remains animated separately.
+## Install
+Copy all files into the `angeBiancamaria` profile repository, keeping paths. Commit and push. In **Actions → Seasonal profile theme → Run workflow**, choose `auto` or a specific preview theme. If testing a forced theme, the next scheduled run restores the current calendar theme. Run **Generate contribution snake** to regenerate its colors too.
 
-## Test
-`python3 scripts/seasonal.py --all` generates all eight preview SVGs and the current banner. `python3 scripts/seasonal.py --date 2026-12-25` previews Christmas as current. Rerun without flags to restore the present date.
+## Local tests
+`python3 scripts/seasonal.py --date 2026-01-09 --print-theme` prints `birthday`.
+`python3 scripts/seasonal.py --date 2026-11-03` applies autumn.
+`python3 scripts/seasonal.py --theme halloween --preview-all` applies Halloween and generates standalone previews of the decorated Corsica card and goals.
 
-## Deploy
-Copy all files into the `angeBiancamaria` profile repository. Commit and push, then run Actions → Seasonal profile theme → Run workflow. The workflow runs daily at 04:10 UTC, but only commits when the SVG content changes. GitHub Actions may start late. Ensure Actions workflow has read/write contents permission. The daily quote workflow may update README concurrently; this workflow only stages the banner SVG.
+The script regenerates themed copies from `img/corsica_card.svg` and `img/my_goals.svg`, leaving the originals untouched. The existing daily quote workflow is unchanged.
 
-## Notes
-GitHub README SVG images cannot run JavaScript; a daily regenerated SVG is reliable and cache-friendly. GitHub may cache the displayed image for a while after a change. GitHub does not support theming the entire README with custom CSS, so this release themes the banner while preserving the rest of the profile.
+Note: GitHub caches SVGs; hard-refresh after Actions finishes. GitHub SVG rendering may limit some SVG animations. GitHub Actions scheduled jobs may run later than their cron time.

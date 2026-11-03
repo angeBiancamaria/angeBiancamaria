@@ -1,0 +1,101 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#142b2b"/><stop offset="1" stop-color="#080d18"/>
+  </linearGradient>
+  <filter id="soft"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity=".35"/></filter>
+</defs>
+
+<rect width="900" height="360" rx="22" fill="url(#bg)" stroke="#303b52" stroke-width="2"/>
+
+<text x="40" y="52" fill="#f8fafc" font-family="Arial,sans-serif"
+      font-size="30" font-weight="700">My Goals</text>
+<path d="M184 43H850" stroke="#a7e4a2" stroke-width="2" opacity=".6"/>
+<path d="M850 43l9 9 9-9-9-9z" fill="#ffc4dc"/>
+
+<!-- GOAL 01 -->
+<g transform="translate(28 95)">
+  <!-- target -->
+  <circle cx="105" cy="105" r="72" fill="none" stroke="#a7e4a2" stroke-width="2" opacity=".35"/>
+  <circle cx="105" cy="105" r="62" fill="#142b2b" stroke="#a7e4a2" stroke-width="4"/>
+  <circle cx="105" cy="105" r="45" fill="#172554" stroke="#f8fafc" stroke-width="5"/>
+  <circle cx="105" cy="105" r="29" fill="#dbeafe" stroke="#a7e4a2" stroke-width="5"/>
+  <circle cx="105" cy="105" r="14" fill="#a7e4a2"/>
+  <circle cx="105" cy="105" r="5" fill="#fff"/>
+  <g transform="rotate(-42 105 105)" filter="url(#soft)">
+    <path d="M105 30V105" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+    <path d="M105 25l-10 16h20z" fill="#fff"/>
+  </g>
+
+  <!-- content -->
+  <rect x="195" y="22" width="150" height="34" rx="17"
+        fill="#111c35" stroke="#a7e4a2" stroke-width="2"/>
+  <text x="270" y="45" text-anchor="middle" fill="#ffc4dc"
+        font-family="Arial,sans-serif" font-size="14" font-weight="700"
+        letter-spacing="1.5">GOAL 01</text>
+  <text x="195" y="93" fill="#f8fafc" font-family="Arial,sans-serif"
+        font-size="24" font-weight="700">Internship</text>
+  <text x="195" y="123" fill="#94a3b8" font-family="Arial,sans-serif"
+        font-size="15">Gain professional experience</text>
+  <text x="195" y="146" fill="#94a3b8" font-family="Arial,sans-serif"
+        font-size="15">in a real working environment.</text>
+</g>
+
+<!-- arrow between goals -->
+<g transform="translate(438 200)">
+  <path d="M0 0H24" stroke="#64748b" stroke-width="3"/>
+  <path d="M17 -7L27 0 17 7" fill="none" stroke="#c4b5fd" stroke-width="3"/>
+</g>
+
+<!-- GOAL 02 -->
+<g transform="translate(465 95)">
+  <!-- target -->
+  <circle cx="105" cy="105" r="72" fill="none" stroke="#7c3aed" stroke-width="2" opacity=".35"/>
+  <circle cx="105" cy="105" r="62" fill="#120d24" stroke="#c084fc" stroke-width="4"/>
+  <circle cx="105" cy="105" r="45" fill="#2e1065" stroke="#f8fafc" stroke-width="5"/>
+  <circle cx="105" cy="105" r="29" fill="#ede9fe" stroke="#c084fc" stroke-width="5"/>
+  <circle cx="105" cy="105" r="14" fill="#7c3aed"/>
+  <circle cx="105" cy="105" r="5" fill="#fff"/>
+  <g transform="rotate(-42 105 105)" filter="url(#soft)">
+    <path d="M105 30V105" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+    <path d="M105 25l-10 16h20z" fill="#fff"/>
+  </g>
+
+  <!-- content -->
+  <rect x="195" y="22" width="150" height="34" rx="17"
+        fill="#1a1230" stroke="#c084fc" stroke-width="2"/>
+  <text x="270" y="45" text-anchor="middle" fill="#d8b4fe"
+        font-family="Arial,sans-serif" font-size="14" font-weight="700"
+        letter-spacing="1.5">GOAL 02</text>
+  <text x="195" y="93" fill="#f8fafc" font-family="Arial,sans-serif"
+        font-size="24" font-weight="700">Work-study</text>
+  <text x="195" y="123" fill="#94a3b8" font-family="Arial,sans-serif" font-size="15">Alternance toward a Bachelor</text>
+  <text x="195" y="146" fill="#94a3b8" font-family="Arial,sans-serif" font-size="15">/ Master in Web Development.</text>
+</g>
+<g class="seasonal-decor" pointer-events="none">
+<g opacity="0.25"><circle cx="693" cy="44" r="4.2" fill="#a7e4a2"/><circle cx="707" cy="44" r="4.2" fill="#a7e4a2"/><circle cx="700" cy="37" r="4.2" fill="#a7e4a2"/><circle cx="700" cy="51" r="4.2" fill="#a7e4a2"/><circle cx="700" cy="44" r="3.15" fill="#ffc4dc"/></g>
+<g opacity="0.75"><circle cx="854" cy="240" r="4.2" fill="#a7e4a2"/><circle cx="868" cy="240" r="4.2" fill="#a7e4a2"/><circle cx="861" cy="233" r="4.2" fill="#a7e4a2"/><circle cx="861" cy="247" r="4.2" fill="#a7e4a2"/><circle cx="861" cy="240" r="3.15" fill="#ffc4dc"/></g>
+<g opacity="0.4"><circle cx="9" cy="62" r="3.6" fill="#a7e4a2"/><circle cx="21" cy="62" r="3.6" fill="#a7e4a2"/><circle cx="15" cy="56" r="3.6" fill="#a7e4a2"/><circle cx="15" cy="68" r="3.6" fill="#a7e4a2"/><circle cx="15" cy="62" r="2.7" fill="#ffc4dc"/></g>
+<g opacity="0.75"><circle cx="862" cy="132" r="3.0" fill="#a7e4a2"/><circle cx="872" cy="132" r="3.0" fill="#a7e4a2"/><circle cx="867" cy="127" r="3.0" fill="#a7e4a2"/><circle cx="867" cy="137" r="3.0" fill="#a7e4a2"/><circle cx="867" cy="132" r="2.25" fill="#ffc4dc"/></g>
+<g opacity="0.25"><circle cx="544" cy="311" r="1.8" fill="#a7e4a2"/><circle cx="550" cy="311" r="1.8" fill="#a7e4a2"/><circle cx="547" cy="308" r="1.8" fill="#a7e4a2"/><circle cx="547" cy="314" r="1.8" fill="#a7e4a2"/><circle cx="547" cy="311" r="1.35" fill="#ffc4dc"/></g>
+<g opacity="0.55"><circle cx="64" cy="260" r="3.0" fill="#a7e4a2"/><circle cx="74" cy="260" r="3.0" fill="#a7e4a2"/><circle cx="69" cy="255" r="3.0" fill="#a7e4a2"/><circle cx="69" cy="265" r="3.0" fill="#a7e4a2"/><circle cx="69" cy="260" r="2.25" fill="#ffc4dc"/></g>
+<g opacity="0.75"><circle cx="15" cy="126" r="1.8" fill="#a7e4a2"/><circle cx="21" cy="126" r="1.8" fill="#a7e4a2"/><circle cx="18" cy="123" r="1.8" fill="#a7e4a2"/><circle cx="18" cy="129" r="1.8" fill="#a7e4a2"/><circle cx="18" cy="126" r="1.35" fill="#ffc4dc"/></g>
+<g opacity="0.4"><circle cx="865" cy="26" r="3.6" fill="#a7e4a2"/><circle cx="877" cy="26" r="3.6" fill="#a7e4a2"/><circle cx="871" cy="20" r="3.6" fill="#a7e4a2"/><circle cx="871" cy="32" r="3.6" fill="#a7e4a2"/><circle cx="871" cy="26" r="2.7" fill="#ffc4dc"/></g>
+<g opacity="0.25"><circle cx="834" cy="218" r="4.2" fill="#a7e4a2"/><circle cx="848" cy="218" r="4.2" fill="#a7e4a2"/><circle cx="841" cy="211" r="4.2" fill="#a7e4a2"/><circle cx="841" cy="225" r="4.2" fill="#a7e4a2"/><circle cx="841" cy="218" r="3.15" fill="#ffc4dc"/></g>
+<g opacity="0.4"><circle cx="48" cy="196" r="4.2" fill="#a7e4a2"/><circle cx="62" cy="196" r="4.2" fill="#a7e4a2"/><circle cx="55" cy="189" r="4.2" fill="#a7e4a2"/><circle cx="55" cy="203" r="4.2" fill="#a7e4a2"/><circle cx="55" cy="196" r="3.15" fill="#ffc4dc"/></g>
+<g opacity="0.25"><circle cx="61" cy="238" r="4.2" fill="#a7e4a2"/><circle cx="75" cy="238" r="4.2" fill="#a7e4a2"/><circle cx="68" cy="231" r="4.2" fill="#a7e4a2"/><circle cx="68" cy="245" r="4.2" fill="#a7e4a2"/><circle cx="68" cy="238" r="3.15" fill="#ffc4dc"/></g>
+<g opacity="0.4"><circle cx="833" cy="201" r="3.0" fill="#a7e4a2"/><circle cx="843" cy="201" r="3.0" fill="#a7e4a2"/><circle cx="838" cy="196" r="3.0" fill="#a7e4a2"/><circle cx="838" cy="206" r="3.0" fill="#a7e4a2"/><circle cx="838" cy="201" r="2.25" fill="#ffc4dc"/></g>
+<g opacity="0.75"><circle cx="66" cy="252" r="1.8" fill="#a7e4a2"/><circle cx="72" cy="252" r="1.8" fill="#a7e4a2"/><circle cx="69" cy="249" r="1.8" fill="#a7e4a2"/><circle cx="69" cy="255" r="1.8" fill="#a7e4a2"/><circle cx="69" cy="252" r="1.35" fill="#ffc4dc"/></g>
+<g opacity="0.4"><circle cx="16" cy="35" r="3.6" fill="#a7e4a2"/><circle cx="28" cy="35" r="3.6" fill="#a7e4a2"/><circle cx="22" cy="29" r="3.6" fill="#a7e4a2"/><circle cx="22" cy="41" r="3.6" fill="#a7e4a2"/><circle cx="22" cy="35" r="2.7" fill="#ffc4dc"/></g>
+<g opacity="0.55"><circle cx="805" cy="162" r="1.8" fill="#a7e4a2"/><circle cx="811" cy="162" r="1.8" fill="#a7e4a2"/><circle cx="808" cy="159" r="1.8" fill="#a7e4a2"/><circle cx="808" cy="165" r="1.8" fill="#a7e4a2"/><circle cx="808" cy="162" r="1.35" fill="#ffc4dc"/></g>
+<g opacity="0.25"><circle cx="13" cy="30" r="4.2" fill="#a7e4a2"/><circle cx="27" cy="30" r="4.2" fill="#a7e4a2"/><circle cx="20" cy="23" r="4.2" fill="#a7e4a2"/><circle cx="20" cy="37" r="4.2" fill="#a7e4a2"/><circle cx="20" cy="30" r="3.15" fill="#ffc4dc"/></g>
+<g opacity="0.4"><circle cx="819" cy="112" r="2.4" fill="#a7e4a2"/><circle cx="827" cy="112" r="2.4" fill="#a7e4a2"/><circle cx="823" cy="108" r="2.4" fill="#a7e4a2"/><circle cx="823" cy="116" r="2.4" fill="#a7e4a2"/><circle cx="823" cy="112" r="1.8" fill="#ffc4dc"/></g>
+<g opacity="0.25"><circle cx="37" cy="272" r="3.6" fill="#a7e4a2"/><circle cx="49" cy="272" r="3.6" fill="#a7e4a2"/><circle cx="43" cy="266" r="3.6" fill="#a7e4a2"/><circle cx="43" cy="278" r="3.6" fill="#a7e4a2"/><circle cx="43" cy="272" r="2.7" fill="#ffc4dc"/></g>
+<g opacity="0.4"><circle cx="44" cy="228" r="4.2" fill="#a7e4a2"/><circle cx="58" cy="228" r="4.2" fill="#a7e4a2"/><circle cx="51" cy="221" r="4.2" fill="#a7e4a2"/><circle cx="51" cy="235" r="4.2" fill="#a7e4a2"/><circle cx="51" cy="228" r="3.15" fill="#ffc4dc"/></g>
+<g opacity="0.4"><circle cx="43" cy="116" r="1.8" fill="#a7e4a2"/><circle cx="49" cy="116" r="1.8" fill="#a7e4a2"/><circle cx="46" cy="113" r="1.8" fill="#a7e4a2"/><circle cx="46" cy="119" r="1.8" fill="#a7e4a2"/><circle cx="46" cy="116" r="1.35" fill="#ffc4dc"/></g>
+<g opacity="0.75"><circle cx="69" cy="247" r="3.0" fill="#a7e4a2"/><circle cx="79" cy="247" r="3.0" fill="#a7e4a2"/><circle cx="74" cy="242" r="3.0" fill="#a7e4a2"/><circle cx="74" cy="252" r="3.0" fill="#a7e4a2"/><circle cx="74" cy="247" r="2.25" fill="#ffc4dc"/></g>
+<g opacity="0.4"><circle cx="22" cy="117" r="1.8" fill="#a7e4a2"/><circle cx="28" cy="117" r="1.8" fill="#a7e4a2"/><circle cx="25" cy="114" r="1.8" fill="#a7e4a2"/><circle cx="25" cy="120" r="1.8" fill="#a7e4a2"/><circle cx="25" cy="117" r="1.35" fill="#ffc4dc"/></g>
+<g opacity="0.55"><circle cx="138" cy="45" r="3.6" fill="#a7e4a2"/><circle cx="150" cy="45" r="3.6" fill="#a7e4a2"/><circle cx="144" cy="39" r="3.6" fill="#a7e4a2"/><circle cx="144" cy="51" r="3.6" fill="#a7e4a2"/><circle cx="144" cy="45" r="2.7" fill="#ffc4dc"/></g>
+</g>
+</svg>

@@ -1,0 +1,99 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#2d1a35"/><stop offset="1" stop-color="#080d18"/>
+  </linearGradient>
+  <filter id="soft"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity=".35"/></filter>
+</defs>
+
+<rect width="900" height="360" rx="22" fill="url(#bg)" stroke="#303b52" stroke-width="2"/>
+
+<text x="40" y="52" fill="#f8fafc" font-family="Arial,sans-serif"
+      font-size="30" font-weight="700">My Goals</text>
+<path d="M184 43H850" stroke="#ff86cf" stroke-width="2" opacity=".6"/>
+<path d="M850 43l9 9 9-9-9-9z" fill="#ffd17d"/>
+
+<!-- GOAL 01 -->
+<g transform="translate(28 95)">
+  <!-- target -->
+  <circle cx="105" cy="105" r="72" fill="none" stroke="#ff86cf" stroke-width="2" opacity=".35"/>
+  <circle cx="105" cy="105" r="62" fill="#2d1a35" stroke="#ff86cf" stroke-width="4"/>
+  <circle cx="105" cy="105" r="45" fill="#172554" stroke="#f8fafc" stroke-width="5"/>
+  <circle cx="105" cy="105" r="29" fill="#dbeafe" stroke="#ff86cf" stroke-width="5"/>
+  <circle cx="105" cy="105" r="14" fill="#ff86cf"/>
+  <circle cx="105" cy="105" r="5" fill="#fff"/>
+  <g transform="rotate(-42 105 105)" filter="url(#soft)">
+    <path d="M105 30V105" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+    <path d="M105 25l-10 16h20z" fill="#fff"/>
+  </g>
+
+  <!-- content -->
+  <rect x="195" y="22" width="150" height="34" rx="17"
+        fill="#111c35" stroke="#ff86cf" stroke-width="2"/>
+  <text x="270" y="45" text-anchor="middle" fill="#ffd17d"
+        font-family="Arial,sans-serif" font-size="14" font-weight="700"
+        letter-spacing="1.5">GOAL 01</text>
+  <text x="195" y="93" fill="#f8fafc" font-family="Arial,sans-serif"
+        font-size="24" font-weight="700">Internship</text>
+  <text x="195" y="123" fill="#94a3b8" font-family="Arial,sans-serif"
+        font-size="15">Gain professional experience</text>
+  <text x="195" y="146" fill="#94a3b8" font-family="Arial,sans-serif"
+        font-size="15">in a real working environment.</text>
+</g>
+
+<!-- arrow between goals -->
+<g transform="translate(438 200)">
+  <path d="M0 0H24" stroke="#64748b" stroke-width="3"/>
+  <path d="M17 -7L27 0 17 7" fill="none" stroke="#c4b5fd" stroke-width="3"/>
+</g>
+
+<!-- GOAL 02 -->
+<g transform="translate(465 95)">
+  <!-- target -->
+  <circle cx="105" cy="105" r="72" fill="none" stroke="#7c3aed" stroke-width="2" opacity=".35"/>
+  <circle cx="105" cy="105" r="62" fill="#120d24" stroke="#c084fc" stroke-width="4"/>
+  <circle cx="105" cy="105" r="45" fill="#2e1065" stroke="#f8fafc" stroke-width="5"/>
+  <circle cx="105" cy="105" r="29" fill="#ede9fe" stroke="#c084fc" stroke-width="5"/>
+  <circle cx="105" cy="105" r="14" fill="#7c3aed"/>
+  <circle cx="105" cy="105" r="5" fill="#fff"/>
+  <g transform="rotate(-42 105 105)" filter="url(#soft)">
+    <path d="M105 30V105" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+    <path d="M105 25l-10 16h20z" fill="#fff"/>
+  </g>
+
+  <!-- content -->
+  <rect x="195" y="22" width="150" height="34" rx="17"
+        fill="#1a1230" stroke="#c084fc" stroke-width="2"/>
+  <text x="270" y="45" text-anchor="middle" fill="#d8b4fe"
+        font-family="Arial,sans-serif" font-size="14" font-weight="700"
+        letter-spacing="1.5">GOAL 02</text>
+  <text x="195" y="93" fill="#f8fafc" font-family="Arial,sans-serif"
+        font-size="24" font-weight="700">Work-study</text>
+  <text x="195" y="123" fill="#94a3b8" font-family="Arial,sans-serif" font-size="15">Alternance toward a Bachelor</text>
+  <text x="195" y="146" fill="#94a3b8" font-family="Arial,sans-serif" font-size="15">/ Master in Web Development.</text>
+</g>
+<g class="seasonal-decor" pointer-events="none">
+<g opacity="0.25"><rect x="571" y="39" width="4" height="2.2" rx="1" fill="#ffd17d" transform="rotate(-43 571 39)"/></g>
+<g opacity="0.25"><rect x="30" y="203" width="4" height="2.2" rx="1" fill="#ff86cf" transform="rotate(-18 30 203)"/></g>
+<g opacity="0.25"><rect x="865" y="286" width="3" height="1.6500000000000001" rx="1" fill="#ff86cf" transform="rotate(-42 865 286)"/></g>
+<g opacity="0.25"><rect x="873" y="51" width="4" height="2.2" rx="1" fill="#ff86cf" transform="rotate(-18 873 51)"/></g>
+<g opacity="0.55"><rect x="285" y="26" width="5" height="2.75" rx="1" fill="#ff86cf" transform="rotate(39 285 26)"/></g>
+<g opacity="0.25"><rect x="842" y="175" width="6" height="3.3000000000000003" rx="1" fill="#ff86cf" transform="rotate(-48 842 175)"/></g>
+<g opacity="0.4"><rect x="881" y="301" width="5" height="2.75" rx="1" fill="#ff86cf" transform="rotate(-4 881 301)"/></g>
+<g opacity="0.75"><rect x="275" y="58" width="5" height="2.75" rx="1" fill="#ffd17d" transform="rotate(-12 275 58)"/></g>
+<g opacity="0.75"><rect x="868" y="43" width="4" height="2.2" rx="1" fill="#ffd17d" transform="rotate(0 868 43)"/></g>
+<g opacity="0.25"><rect x="67" y="291" width="3" height="1.6500000000000001" rx="1" fill="#ff86cf" transform="rotate(39 67 291)"/></g>
+<g opacity="0.75"><rect x="829" y="76" width="4" height="2.2" rx="1" fill="#ff86cf" transform="rotate(-26 829 76)"/></g>
+<g opacity="0.4"><rect x="881" y="194" width="4" height="2.2" rx="1" fill="#ffd17d" transform="rotate(-22 881 194)"/></g>
+<g opacity="0.4"><rect x="89" y="41" width="4" height="2.2" rx="1" fill="#ffd17d" transform="rotate(15 89 41)"/></g>
+<g opacity="0.55"><rect x="51" y="321" width="7" height="3.8500000000000005" rx="1" fill="#ff86cf" transform="rotate(33 51 321)"/></g>
+<g opacity="0.75"><rect x="18" y="288" width="4" height="2.2" rx="1" fill="#ffd17d" transform="rotate(35 18 288)"/></g>
+<g opacity="0.25"><rect x="77" y="158" width="6" height="3.3000000000000003" rx="1" fill="#ff86cf" transform="rotate(50 77 158)"/></g>
+<g opacity="0.25"><rect x="31" y="164" width="7" height="3.8500000000000005" rx="1" fill="#ffd17d" transform="rotate(36 31 164)"/></g>
+<g opacity="0.25"><rect x="51" y="137" width="7" height="3.8500000000000005" rx="1" fill="#ff86cf" transform="rotate(41 51 137)"/></g>
+<g opacity="0.25"><rect x="505" y="308" width="4" height="2.2" rx="1" fill="#ff86cf" transform="rotate(-30 505 308)"/></g>
+<g opacity="0.75"><rect x="69" y="181" width="3" height="1.6500000000000001" rx="1" fill="#ffd17d" transform="rotate(36 69 181)"/></g>
+<g opacity="0.75"><rect x="21" y="43" width="4" height="2.2" rx="1" fill="#ffd17d" transform="rotate(25 21 43)"/></g>
+</g>
+</svg>

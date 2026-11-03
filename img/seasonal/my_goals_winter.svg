@@ -1,0 +1,102 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#18283c"/><stop offset="1" stop-color="#080d18"/>
+  </linearGradient>
+  <filter id="soft"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity=".35"/></filter>
+</defs>
+
+<rect width="900" height="360" rx="22" fill="url(#bg)" stroke="#303b52" stroke-width="2"/>
+
+<text x="40" y="52" fill="#f8fafc" font-family="Arial,sans-serif"
+      font-size="30" font-weight="700">My Goals</text>
+<path d="M184 43H850" stroke="#8bd9ff" stroke-width="2" opacity=".6"/>
+<path d="M850 43l9 9 9-9-9-9z" fill="#c9f2ff"/>
+
+<!-- GOAL 01 -->
+<g transform="translate(28 95)">
+  <!-- target -->
+  <circle cx="105" cy="105" r="72" fill="none" stroke="#8bd9ff" stroke-width="2" opacity=".35"/>
+  <circle cx="105" cy="105" r="62" fill="#18283c" stroke="#8bd9ff" stroke-width="4"/>
+  <circle cx="105" cy="105" r="45" fill="#172554" stroke="#f8fafc" stroke-width="5"/>
+  <circle cx="105" cy="105" r="29" fill="#dbeafe" stroke="#8bd9ff" stroke-width="5"/>
+  <circle cx="105" cy="105" r="14" fill="#8bd9ff"/>
+  <circle cx="105" cy="105" r="5" fill="#fff"/>
+  <g transform="rotate(-42 105 105)" filter="url(#soft)">
+    <path d="M105 30V105" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+    <path d="M105 25l-10 16h20z" fill="#fff"/>
+  </g>
+
+  <!-- content -->
+  <rect x="195" y="22" width="150" height="34" rx="17"
+        fill="#111c35" stroke="#8bd9ff" stroke-width="2"/>
+  <text x="270" y="45" text-anchor="middle" fill="#c9f2ff"
+        font-family="Arial,sans-serif" font-size="14" font-weight="700"
+        letter-spacing="1.5">GOAL 01</text>
+  <text x="195" y="93" fill="#f8fafc" font-family="Arial,sans-serif"
+        font-size="24" font-weight="700">Internship</text>
+  <text x="195" y="123" fill="#94a3b8" font-family="Arial,sans-serif"
+        font-size="15">Gain professional experience</text>
+  <text x="195" y="146" fill="#94a3b8" font-family="Arial,sans-serif"
+        font-size="15">in a real working environment.</text>
+</g>
+
+<!-- arrow between goals -->
+<g transform="translate(438 200)">
+  <path d="M0 0H24" stroke="#64748b" stroke-width="3"/>
+  <path d="M17 -7L27 0 17 7" fill="none" stroke="#c4b5fd" stroke-width="3"/>
+</g>
+
+<!-- GOAL 02 -->
+<g transform="translate(465 95)">
+  <!-- target -->
+  <circle cx="105" cy="105" r="72" fill="none" stroke="#7c3aed" stroke-width="2" opacity=".35"/>
+  <circle cx="105" cy="105" r="62" fill="#120d24" stroke="#c084fc" stroke-width="4"/>
+  <circle cx="105" cy="105" r="45" fill="#2e1065" stroke="#f8fafc" stroke-width="5"/>
+  <circle cx="105" cy="105" r="29" fill="#ede9fe" stroke="#c084fc" stroke-width="5"/>
+  <circle cx="105" cy="105" r="14" fill="#7c3aed"/>
+  <circle cx="105" cy="105" r="5" fill="#fff"/>
+  <g transform="rotate(-42 105 105)" filter="url(#soft)">
+    <path d="M105 30V105" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+    <path d="M105 25l-10 16h20z" fill="#fff"/>
+  </g>
+
+  <!-- content -->
+  <rect x="195" y="22" width="150" height="34" rx="17"
+        fill="#1a1230" stroke="#c084fc" stroke-width="2"/>
+  <text x="270" y="45" text-anchor="middle" fill="#d8b4fe"
+        font-family="Arial,sans-serif" font-size="14" font-weight="700"
+        letter-spacing="1.5">GOAL 02</text>
+  <text x="195" y="93" fill="#f8fafc" font-family="Arial,sans-serif"
+        font-size="24" font-weight="700">Work-study</text>
+  <text x="195" y="123" fill="#94a3b8" font-family="Arial,sans-serif" font-size="15">Alternance toward a Bachelor</text>
+  <text x="195" y="146" fill="#94a3b8" font-family="Arial,sans-serif" font-size="15">/ Master in Web Development.</text>
+</g>
+<g class="seasonal-decor" pointer-events="none">
+<g opacity="0.25"><path d="M801 96h8 M805 92v8 M802.2 93.2l5.6 5.6 M807.8 93.2l-5.6 5.6" stroke="#8bd9ff" stroke-width="1.6"/></g>
+<g opacity="0.4"><path d="M581 300h10 M586 295v10 M582.5 296.5l7.0 7.0 M589.5 296.5l-7.0 7.0" stroke="#8bd9ff" stroke-width="1.6"/></g>
+<g opacity="0.75"><path d="M829 229h12 M835 223v12 M830.8 224.8l8.4 8.4 M839.2 224.8l-8.4 8.4" stroke="#8bd9ff" stroke-width="1.6"/></g>
+<g opacity="0.4"><path d="M817 158h14 M824 151v14 M819.1 153.1l9.8 9.8 M828.9 153.1l-9.8 9.8" stroke="#8bd9ff" stroke-width="1.6"/></g>
+<g opacity="0.4"><path d="M821 65h12 M827 59v12 M822.8 60.8l8.4 8.4 M831.2 60.8l-8.4 8.4" stroke="#8bd9ff" stroke-width="1.6"/></g>
+<g opacity="0.25"><path d="M63 158h6 M66 155v6 M63.9 155.9l4.2 4.2 M68.1 155.9l-4.2 4.2" stroke="#8bd9ff" stroke-width="1.6"/></g>
+<g opacity="0.25"><path d="M851 156h14 M858 149v14 M853.1 151.1l9.8 9.8 M862.9 151.1l-9.8 9.8" stroke="#8bd9ff" stroke-width="1.6"/></g>
+<g opacity="0.55"><path d="M874 262h14 M881 255v14 M876.1 257.1l9.8 9.8 M885.9 257.1l-9.8 9.8" stroke="#8bd9ff" stroke-width="1.6"/></g>
+<g opacity="0.55"><path d="M806 171h14 M813 164v14 M808.1 166.1l9.8 9.8 M817.9 166.1l-9.8 9.8" stroke="#8bd9ff" stroke-width="1.6"/></g>
+<g opacity="0.55"><path d="M832 322h12 M838 316v12 M833.8 317.8l8.4 8.4 M842.2 317.8l-8.4 8.4" stroke="#8bd9ff" stroke-width="1.6"/></g>
+<g opacity="0.4"><path d="M53 22h8 M57 18v8 M54.2 19.2l5.6 5.6 M59.8 19.2l-5.6 5.6" stroke="#8bd9ff" stroke-width="1.6"/></g>
+<g opacity="0.4"><path d="M352 306h10 M357 301v10 M353.5 302.5l7.0 7.0 M360.5 302.5l-7.0 7.0" stroke="#8bd9ff" stroke-width="1.6"/></g>
+<g opacity="0.4"><path d="M866 72h12 M872 66v12 M867.8 67.8l8.4 8.4 M876.2 67.8l-8.4 8.4" stroke="#8bd9ff" stroke-width="1.6"/></g>
+<g opacity="0.55"><path d="M55 256h10 M60 251v10 M56.5 252.5l7.0 7.0 M63.5 252.5l-7.0 7.0" stroke="#8bd9ff" stroke-width="1.6"/></g>
+<g opacity="0.4"><path d="M38 306h12 M44 300v12 M39.8 301.8l8.4 8.4 M48.2 301.8l-8.4 8.4" stroke="#8bd9ff" stroke-width="1.6"/></g>
+<g opacity="0.4"><path d="M59 274h8 M63 270v8 M60.2 271.2l5.6 5.6 M65.8 271.2l-5.6 5.6" stroke="#8bd9ff" stroke-width="1.6"/></g>
+<g opacity="0.55"><path d="M839 46h12 M845 40v12 M840.8 41.8l8.4 8.4 M849.2 41.8l-8.4 8.4" stroke="#8bd9ff" stroke-width="1.6"/></g>
+<g opacity="0.75"><path d="M612 43h12 M618 37v12 M613.8 38.8l8.4 8.4 M622.2 38.8l-8.4 8.4" stroke="#8bd9ff" stroke-width="1.6"/></g>
+<g opacity="0.55"><path d="M56 310h12 M62 304v12 M57.8 305.8l8.4 8.4 M66.2 305.8l-8.4 8.4" stroke="#8bd9ff" stroke-width="1.6"/></g>
+<g opacity="0.75"><path d="M81 90h14 M88 83v14 M83.1 85.1l9.8 9.8 M92.9 85.1l-9.8 9.8" stroke="#8bd9ff" stroke-width="1.6"/></g>
+<g opacity="0.55"><path d="M36 305h12 M42 299v12 M37.8 300.8l8.4 8.4 M46.2 300.8l-8.4 8.4" stroke="#8bd9ff" stroke-width="1.6"/></g>
+<g opacity="0.55"><path d="M22 169h6 M25 166v6 M22.9 166.9l4.2 4.2 M27.1 166.9l-4.2 4.2" stroke="#8bd9ff" stroke-width="1.6"/></g>
+<g opacity="0.25"><path d="M76 145h12 M82 139v12 M77.8 140.8l8.4 8.4 M86.2 140.8l-8.4 8.4" stroke="#8bd9ff" stroke-width="1.6"/></g>
+<g opacity="0.4"><path d="M41 341h10 M46 336v10 M42.5 337.5l7.0 7.0 M49.5 337.5l-7.0 7.0" stroke="#8bd9ff" stroke-width="1.6"/></g>
+</g>
+</svg>
