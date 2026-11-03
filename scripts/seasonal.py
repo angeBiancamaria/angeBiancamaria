@@ -99,30 +99,42 @@ def decorate_svg(source,theme):
  w,h=map(int,m.groups())
  return s.replace('</svg>',decorations(theme,w,h)+'\n</svg>')
 
-def main():
- p=argparse.ArgumentParser();p.add_argument('--date');p.add_argument('--theme',choices=PALETTES);p.add_argument('--preview-all',action='store_true');p.add_argument('--print-theme',action='store_true')
- args=p.parse_args();day=dt.date.fromisoformat(args.date) if args.date else dt.datetime.now(ZoneInfo('Europe/Paris')).date()
- theme=args.theme or theme_for(day)
- if args.print_theme:print(theme);return
- out=ROOT/'img/seasonal';out.mkdir(parents=True,exist_ok=True)
- for source,name in [('corsica_card.svg','corsica_current.svg'),('my_goals.svg','goals_current.svg')]:
-  original=(ROOT/'img'/source).read_text(encoding='utf-8')
-  (out/name).write_text(decorate_svg(original,theme),encoding='utf-8')
-  if args.preview_all:
-   for t in PALETTES:(out/f'{Path(source).stem}_{t}.svg').write_text(decorate_svg(original,t),encoding='utf-8')
- # Update existing animated header palette and typing animation color, no second name banner.
- readme=ROOT/'README.md';s=readme.read_text(encoding='utf-8')
- # Cache busting: GitHub's image proxy may reuse the previous image for the same URL.
- # A digest changes only when the generated SVG content changes.
- for name in ('corsica_current.svg','goals_current.svg'):
-  digest=hashlib.sha256((out/name).read_bytes()).hexdigest()[:12]
-  pattern=r'(img/seasonal/'+re.escape(name)+r')(?:\?v=[0-9a-f]{12})?'
-  s=re.sub(pattern,lambda m:m.group(1)+'?v='+digest,s)
+def update_image_refs(readme: str, theme: str) -> str:
+    """Switch both cards to stable, theme-specific paths; preserve surrounding HTML."""
+    for stem, old in (("corsica_card", "corsica_current"), ("my_goals", "goals_current")):
+        target = f"img/seasonal/{stem}_{theme}.svg"
+        # Handles relative paths, raw.githubusercontent.com URLs and old ?v= digests.
+        pattern = rf"img/seasonal/(?:{stem}_(?:winter|spring|summer|autumn|halloween|christmas|easter|birthday)|{old})\.svg(?:\?(?:v=[0-9a-f]+|test=[a-zA-Z0-9_-]+))?"
+        readme, count = re.subn(pattern, target, readme)
+        if count == 0:
+            raise ValueError(f"README missing seasonal image reference for {stem}; refusing to silently skip it")
+    return readme
 
- accent,secondary,_,_=PALETTES[theme]
- s=re.sub(r'(&color=)(?:gradient|[0-9a-fA-F]{6})(?=&section=header)',lambda m:m.group(1)+accent.lstrip('#'),s,count=1)
- s=re.sub(r'(&color=)(?:gradient|[0-9a-fA-F]{6})(?=&section=header)',lambda m:m.group(1)+accent.lstrip('#'),s,count=1)
- s=re.sub(r'(pause=1000&color=)[0-9A-Fa-f]{6}',lambda m:m.group(1)+accent.lstrip('#').upper(),s,count=1)
- readme.write_text(s,encoding='utf-8')
- print(f'{day} -> {theme} (existing header, Corsica card, goals)')
+def main():
+    p=argparse.ArgumentParser()
+    p.add_argument('--date')
+    p.add_argument('--theme', choices=PALETTES)
+    p.add_argument('--preview-all', action='store_true', help='kept for backwards compatibility')
+    p.add_argument('--print-theme', action='store_true')
+    args=p.parse_args()
+    day=dt.date.fromisoformat(args.date) if args.date else dt.datetime.now(ZoneInfo('Europe/Paris')).date()
+    theme=args.theme or theme_for(day)
+    if args.print_theme:
+        print(theme)
+        return
+    out=ROOT/'img/seasonal'
+    out.mkdir(parents=True, exist_ok=True)
+    # Generate every theme so each README URL resolves to an existing committed file.
+    for source,stem in (('corsica_card.svg','corsica_card'),('my_goals.svg','my_goals')):
+        original=(ROOT/'img'/source).read_text(encoding='utf-8')
+        for t in PALETTES:
+            (out/f'{stem}_{t}.svg').write_text(decorate_svg(original,t),encoding='utf-8')
+    readme=ROOT/'README.md'
+    s=update_image_refs(readme.read_text(encoding='utf-8'),theme)
+    accent=PALETTES[theme][0].lstrip('#')
+    s=re.sub(r'(&color=)(?:gradient|[0-9a-fA-F]{6})(?=&section=header)',lambda m:m.group(1)+accent,s,count=1)
+    s=re.sub(r'(pause=1000&color=)[0-9A-Fa-f]{6}',lambda m:m.group(1)+accent.upper(),s,count=1)
+    readme.write_text(s,encoding='utf-8')
+    print(f'{day} -> {theme}; README points to dedicated SVG files')
+
 if __name__=='__main__':main()
