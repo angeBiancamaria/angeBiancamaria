@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=venom&height=300&color=ff9a42&section=header&reversal=false&text=hello+i%27m+ange+%F0%9F%91%8B&textBg=false&fontSize=70&fontAlign=50&fontAlignY=50&animation=scaleIn&rotate=0&strokeWidth=0&descSize=20&descAlign=50&descAlignY=60"/>
+<img src="https://capsule-render.vercel.app/api?type=venom&height=300&color=f3a866&section=header&reversal=false&text=hello+i%27m+ange+%F0%9F%91%8B&textBg=false&fontSize=70&fontAlign=50&fontAlignY=50&animation=scaleIn&rotate=0&strokeWidth=0&descSize=20&descAlign=50&descAlignY=60"/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=FF9A42&center=true&vCenter=true&width=650&lines=Full+Stack+Developer+💻;mySQL+%7C+symphony+%7C+react;Creating+learning+and+building+things+that+matter;+Always+Creating+📖)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=F3A866&center=true&vCenter=true&width=650&lines=Full+Stack+Developer+💻;mySQL+%7C+symphony+%7C+react;Creating+learning+and+building+things+that+matter;+Always+Creating+📖)](https://git.io/typing-svg)
 
 </div>
 
@@ -11,10 +11,10 @@
 <!-- SEASONAL_TEXT_START -->
 <div align="center">
 
-### 🎃 HALLOWEEN NIGHT
+### 🍂 AUTUMN SEASON
 
-**Trick or commit?**  
-*No bugs allowed to haunt this repository.*
+**Fresh ideas are falling into place.**  
+*A season for building and learning.*
 
 </div>
 <!-- SEASONAL_TEXT_END -->
@@ -22,7 +22,7 @@
 <!-- Corsica location card -->
 
 <a href="#" title="Viva Corsica">
-  <img src="./img/seasonal/corsica_card_halloween.svg" alt="Based in Corsica" width="900"/>
+  <img src="./img/seasonal/corsica_card_autumn.svg" alt="Based in Corsica" width="900"/>
 </a>
 
 I'm passionate about **creating things** — web applications, games, useful tools, and  experimental projects.
@@ -35,18 +35,18 @@ I enjoy building, understanding systems, and improving them step by step.
 
 ---
 
-## 🎯 Spooky objectives
+## 🍂 Autumn objectives
 
 <!-- SEASONAL_SECTION_NOTE:0 -->
-*No goal is too frightening to tackle.*
+*Time to turn plans into results.*
 <!-- /SEASONAL_SECTION_NOTE -->
-<div align="center"> <img src="./img/seasonal/my_goals_halloween.svg" alt="My Goals" width="90%"/></div>
+<div align="center"> <img src="./img/seasonal/my_goals_autumn.svg" alt="My Goals" width="90%"/></div>
 
 > I’m also open to a **full-time position** if no alternance opportunity is available.
 
 ---
 
-## 🧪 Developer profile · Secret laboratory
+## 🧠 Developer profile · Harvest season
           const developer = {
             name: "Ange",
             role: "Full Stack Web Developer",
@@ -67,10 +67,10 @@ I enjoy building, understanding systems, and improving them step by step.
           ;
 ---
 
-## 🦇 Featured project · Haunted build
+## ⭐ Featured project · Autumn build
 
 <!-- SEASONAL_SECTION_NOTE:2 -->
-*Enter the developer’s workshop.*
+*Collecting ideas, shipping features.*
 <!-- /SEASONAL_SECTION_NOTE -->
 - **Time Management Web Application**
   My main project, focused on backend logic, database design, and user management.
@@ -78,10 +78,10 @@ I enjoy building, understanding systems, and improving them step by step.
 
 ---
 
-## 🎃 Currently Learning · Haunted lab
+## 📚 Currently Learning · Autumn studies
 
 <!-- SEASONAL_SECTION_NOTE:3 -->
-*Experimenting in the haunted laboratory.*
+*A new season of learning.*
 <!-- /SEASONAL_SECTION_NOTE -->
 <table align="center">
   <tr>
@@ -94,15 +94,15 @@ I enjoy building, understanding systems, and improving them step by step.
 </table>
 ---
 
-## 🧰 Languages, Frameworks & Tools · Dark arts of code
+## 🧰 Languages, Frameworks & Tools · Autumn edition
 
 <!-- SEASONAL_SECTION_NOTE:4 -->
-*No dark magic required — just code.*
+*The toolkit behind the projects.*
 <!-- /SEASONAL_SECTION_NOTE -->
 ***Skills :***
 
 <table align="center">
-  <div align="center">🕸️ Frontend:</div>
+  <div align="center">🍁 Frontend:</div>
   <tr>
     <td align="center"><img src="https://skillicons.dev/icons?i=html"/><br/>html</td>
     <td align="center"><img src="https://skillicons.dev/icons?i=css"/><br/>css</td>
@@ -113,7 +113,7 @@ I enjoy building, understanding systems, and improving them step by step.
 
 
 <table align="center">
-  <div align="center">🧪 Backend:</div>
+  <div align="center">🍂 Backend:</div>
   <tr>
     <td align="center"><img src="https://skillicons.dev/icons?i=java"/><br/>java</td>
     <td align="center"><img src="https://skillicons.dev/icons?i=python"/><br/>python</td>
@@ -124,7 +124,7 @@ I enjoy building, understanding systems, and improving them step by step.
 </table>
 
 <table align="center">
- <div align="center">🔮 Frameworks & Libraries:</div>
+ <div align="center">📚 Frameworks & Libraries:</div>
   <tr>
     <td align="center"><img src="https://skillicons.dev/icons?i=tailwind"/><br/>tailwind</td>
     <td align="center"><img src="https://skillicons.dev/icons?i=bootstrap"/><br/>bootstrap</td>
@@ -134,7 +134,7 @@ I enjoy building, understanding systems, and improving them step by step.
 </table>
 
 <table align="center">
-  <div align="center">🦇 Tools:</div>
+  <div align="center">🛠️ Tools:</div>
   <tr>
     <td align="center"><img src="https://skillicons.dev/icons?i=figma"/><br/>figma</td>
     <td align="center"><img src="https://skillicons.dev/icons?i=git"/><br/>git</td>
@@ -144,10 +144,10 @@ I enjoy building, understanding systems, and improving them step by step.
 
 ---
 
-## 📊 GitHub Stats · Spooky streak
+## 📊 GitHub Stats · Autumn progress
 
 <!-- SEASONAL_SECTION_NOTE:5 -->
-*Hunting bugs, not ghosts.*
+*Harvesting progress, commit by commit.*
 <!-- /SEASONAL_SECTION_NOTE -->
 <div align="center">
   <img width="90%" src="https://streak-stats.demolab.com?user=angeBiancamaria&theme=tokyonight_duo&hide_border=true&background=0D1117" />
