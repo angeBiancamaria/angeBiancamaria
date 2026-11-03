@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Apply a seasonal skin to the EXISTING profile graphics, without extra banners."""
 from __future__ import annotations
-import argparse, datetime as dt, random, re
+import argparse, datetime as dt, random, re, hashlib
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -112,6 +112,13 @@ def main():
    for t in PALETTES:(out/f'{Path(source).stem}_{t}.svg').write_text(decorate_svg(original,t),encoding='utf-8')
  # Update existing animated header palette and typing animation color, no second name banner.
  readme=ROOT/'README.md';s=readme.read_text(encoding='utf-8')
+ # Cache busting: GitHub's image proxy may reuse the previous image for the same URL.
+ # A digest changes only when the generated SVG content changes.
+ for name in ('corsica_current.svg','goals_current.svg'):
+  digest=hashlib.sha256((out/name).read_bytes()).hexdigest()[:12]
+  pattern=r'(img/seasonal/'+re.escape(name)+r')(?:\?v=[0-9a-f]{12})?'
+  s=re.sub(pattern,lambda m:m.group(1)+'?v='+digest,s)
+
  accent,secondary,_,_=PALETTES[theme]
  s=re.sub(r'(&color=)(?:gradient|[0-9a-fA-F]{6})(?=&section=header)',lambda m:m.group(1)+accent.lstrip('#'),s,count=1)
  s=re.sub(r'(&color=)(?:gradient|[0-9a-fA-F]{6})(?=&section=header)',lambda m:m.group(1)+accent.lstrip('#'),s,count=1)
