@@ -385,27 +385,26 @@ jobs:
           output.write_text("\n".join(parts), encoding="utf-8")
           print(f"Monthly report generated: {output}")
           PY
-
+          
       - name: Commit & Push
-        - name: Commit & Push
-  run: |
-    git config user.name "angeBiancamaria"
-    git config user.email "129753970+angeBiancamaria@users.noreply.github.com"
+        run: |
+          git config user.name "angeBiancamaria"
+          git config user.email "129753970+angeBiancamaria@users.noreply.github.com"
 
-    git add README.md
-    git add stats/quotes_history.txt stats/quotes_stats.txt
-    git add stats/delay_log.txt stats/top_quotes.txt
-    git add img/top_quotes.svg
+          git add README.md
+          git add stats/quotes_history.txt stats/quotes_stats.txt
+          git add stats/delay_log.txt stats/top_quotes.txt
+          git add img/top_quotes.svg
 
-    # Ajouter les archives mensuelles uniquement si elles existent
-    if [ -d "img/monthly" ]; then
-      git add img/monthly/
-    fi
-
-    # Créer un commit uniquement si des fichiers ont changé
-    if ! git diff --cached --quiet; then
-      git commit -m "chore: update quote and monthly report"
-      git push
-    else
-      echo "Aucune modification à enregistrer."
-    fi
+          # Ajouter les archives mensuelles uniquement si elles existent
+          if [ -d "img/monthly" ]; then
+            git add img/monthly/
+          fi
+      
+          # Créer un commit uniquement si des fichiers ont changé
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update quote and monthly report"
+            git push
+          else
+            echo "Aucune modification à enregistrer."
+          fi
