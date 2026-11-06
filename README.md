@@ -31,7 +31,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Creating solutions, fixing problems, and occasionally creating new ones.
+> My code has fewer bugs than my sleep schedule.
 
 ---
 
