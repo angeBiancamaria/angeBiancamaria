@@ -31,7 +31,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> My code has fewer bugs than my sleep schedule.
+> One commit at a time, one questionable decision at a time.
 
 ---
 
