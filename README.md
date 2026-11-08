@@ -31,7 +31,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> One commit at a time, one questionable decision at a time.
+> Making complex problems slightly more complicated before simplifying them.
 
 ---
 

@@ -28,6 +28,7 @@ One commit at a time, one questionable decision at a time. | 1
 My code has fewer bugs than my sleep schedule. | 1
 Making software look easy since discovering Stack Overflow. | 1
 Making computers do things they were never explicitly asked to do. | 1
+Making complex problems slightly more complicated before simplifying them. | 1
 Making APIs talk to each other so humans don't have to. | 1
 Keeping the semicolons aligned and the deadlines slightly less so. | 1
 Keeping production stable through skill, testing, and suspicious amounts of luck. | 1
