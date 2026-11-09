@@ -12,6 +12,7 @@ Writing software with confidence, deploying it with caution. | 1
 Writing elegant solutions to problems created by previous elegant solutions. | 1
 Writing code today that future me will pretend not to recognize. | 1
 Writing code that future developers will definitely understand. Probably. | 1
+Turning ‘just one small change’ into a three-day adventure. | 1
 Turning vague requirements into very precise technical problems. | 1
 Turning requirements into features and features into maintenance tasks. | 1
 Turning complex requirements into simple interfaces and complicated Git histories. | 1
