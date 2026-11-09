@@ -1,0 +1,49 @@
+name: Developer Cards v9.0 (safe)
+on:
+  schedule:
+    - cron: '35 7 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: profile-main-branch
+  cancel-in-progress: false
+jobs:
+  cards:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Verify generator and existing SVGs
+        run: python3 scripts/developer_cards.py --self-test
+      - name: Generate cards from GitHub API
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_STATS_TOKEN: ${{ secrets.GH_STATS_TOKEN }}
+        run: python3 scripts/developer_cards.py
+      - name: Validate generated SVG and JSON
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, xml.etree.ElementTree as ET
+          root=pathlib.Path('img/developer')
+          for name in ('streak','pulse','languages','rpg','timeline','achievements','automation'):
+              ET.parse(root/f'{name}.svg')
+          cache=json.loads(pathlib.Path('stats/developer_cards_cache.json').read_text())
+          assert cache['schema']==1 and cache['user']=='angeBiancamaria'
+          assert cache['repos']
+          if not cache['calendar']:
+              print('Warning: contribution calendar unavailable; other cards validated')
+          print('Validation successful')
+          PY
+      - name: Commit only cards and last valid snapshot
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- img/developer/streak.svg img/developer/pulse.svg img/developer/languages.svg img/developer/rpg.svg img/developer/timeline.svg img/developer/achievements.svg img/developer/automation.svg img/developer/data.json stats/developer_cards_cache.json
+          if git diff --cached --quiet; then echo 'No changes'; exit 0; fi
+          git commit -m 'chore: refresh protected developer cards'
+          git pull --rebase origin main
+          git push origin HEAD:main

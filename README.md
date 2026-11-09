@@ -150,9 +150,25 @@ I enjoy building, understanding systems, and improving them step by step.
 *Harvesting progress, commit by commit.*
 <!-- /SEASONAL_SECTION_NOTE -->
 <div align="center">
-  <img width="90%" src="https://streak-stats.demolab.com?user=angeBiancamaria&theme=tokyonight_duo&hide_border=true&background=0D1117" />
+  <img width="90%" src="./img/developer/streak.svg" alt="GitHub streak with mini Chaty" />
 </div>
 
+
+
+<!-- DEVELOPER_CARDS_V8_START -->
+### Developer Observatory
+
+<div align="center">
+  <img width="49%" src="./img/developer/pulse.svg" alt="Developer Pulse" />
+  <img width="49%" src="./img/developer/languages.svg" alt="Language DNA" />
+  <img width="49%" src="./img/developer/rpg.svg" alt="Developer RPG" />
+  <img width="49%" src="./img/developer/timeline.svg" alt="Project Timeline" />
+  <img width="49%" src="./img/developer/achievements.svg" alt="Achievement Cabinet" />
+  <img width="49%" src="./img/developer/automation.svg" alt="Automation Health" />
+</div>
+
+<sub>Generated from GitHub API data. Recent public events are a limited sample; RPG XP is for fun.</sub>
+<!-- DEVELOPER_CARDS_V8_END -->
 
 ---
 
