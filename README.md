@@ -31,7 +31,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Turning ‘just one small change’ into a three-day adventure.
+> Making machines productive while questioning my own productivity.
 
 ---
 
