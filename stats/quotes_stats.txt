@@ -50,4 +50,5 @@ Building the future, one error message at a time. | 1
 Building systems robust enough to survive their users. | 1
 Building software that works, scales, and occasionally behaves as documented. | 1
 Building features nobody knew they needed until yesterday. | 1
+Because apparently, computers need instructions for everything. | 1
  | 1

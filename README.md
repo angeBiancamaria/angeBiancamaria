@@ -31,7 +31,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Making machines productive while questioning my own productivity.
+> Because apparently, computers need instructions for everything.
 
 ---
 
