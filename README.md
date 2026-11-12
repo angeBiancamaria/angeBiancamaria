@@ -31,7 +31,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Because apparently, computers need instructions for everything.
+> Transforming business logic into maintainable code and manageable chaos.
 
 ---
 

@@ -211,3 +211,4 @@
 2026-11-09 16:05 | Turning ‘just one small change’ into a three-day adventure.
 2026-11-10 15:17 | Making machines productive while questioning my own productivity.
 2026-11-11 14:30 | Because apparently, computers need instructions for everything.
+2026-11-12 15:35 | Transforming business logic into maintainable code and manageable chaos.
