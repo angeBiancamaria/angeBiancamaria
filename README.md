@@ -31,7 +31,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Transforming business logic into maintainable code and manageable chaos.
+> My code doesn't judge you. The linter does.
 
 ---
 
