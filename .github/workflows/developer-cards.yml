@@ -1,4 +1,4 @@
-name: Developer Cards v9.0 (safe)
+name: Developer Cards
 on:
   schedule:
     - cron: '35 7 * * *'
