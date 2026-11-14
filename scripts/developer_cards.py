@@ -10,8 +10,16 @@ OUT=ROOT/'img'/'developer'
 CACHE=ROOT/'stats'/'developer_cards_cache.json'
 CARDS=['streak','pulse','languages','rpg','timeline','achievements','automation']
 THEMES=['winter','spring','summer','autumn','halloween','christmas','easter','birthday']
-VARIANTS=('normal','cheapy','strike','sleepy')
+VARIANTS=('normal','cheapy','strike','sleepy','gamer','reader','snacky','cheapy-night','strike-night')
 VARIANT_LINES={'cheapy':['The budget was cut. Again.','My crown is made of CSS.','Please do not tell the original.'],'strike':['I demand paid vacations and better textures.','No more commits without better working conditions!','My union demands actual pixels.'],'sleepy':['Five more minutes...','Even villains need weekends.','Shhh. The repository can wait.']}
+VARIANT_LINES.update({
+ 'gamer':['One more game. Probably.','The boss has a second phase?!'],
+ 'reader':['Just one more chapter.','My book has better documentation.'],
+ 'snacky':['Cake is a valid dependency.','Snack break. No pull requests.'],
+ 'cheapy-night':['They could not afford a bed.','My box has no warranty.'],
+ 'strike-night':['The union demands a mattress.','Even my cardboard is unpaid.']})
+VARIANT_LINES['cheapy'] += ['Seasonal cardboard. Again.','My budget is a rounding error.']
+VARIANT_LINES['strike'] += ['5 AM?! My lawyer will hear about this.','Still waiting for my thirteenth month.','I am protesting efficiently.']
 SPECIAL_RATE=10 # 8% Cheapy, 2% Cheapy on strike
 
 LINES={
@@ -130,22 +138,27 @@ def compact_card(name,theme,body,foot='',width=520,height=214):
 
 def mascot_image(theme,x,y,w=178,h=116,variant='normal'):
  # Self-contained image: no external hosting or requests, survives GitHub image proxy.
- asset=OUT/'chaty'/((theme if variant=='normal' else variant)+'.png')
+ name=theme if variant=='normal' else 'sleepy-'+theme if variant=='sleepy' else 'cheapy-night' if variant=='strike-night' else variant
+ asset=OUT/'chaty'/(name+'.png')
  if variant!='normal' and not asset.exists():asset=OUT/'chaty'/(theme+'.png')
  if not asset.exists():asset=OUT/'chaty.png'
  if not asset.exists():return ''
  encoded=base64.b64encode(asset.read_bytes()).decode('ascii')
  return f'<image x="{x}" y="{y}" width="{w}" height="{h}" href="data:image/png;base64,{encoded}" preserveAspectRatio="xMidYMid meet"/>'
 
-def choose_variant(day,force=None):
- """One deterministic draw per Paris calendar day; no random changes on reruns."""
+def choose_variant(day,force=None,hour=12,theme=None):
+ """Stable daily roll; festive previews override leisure and cheap variants."""
  if force:
   if force not in VARIANTS:raise ValueError('Unknown variant')
   return force
+ night=hour<5 or hour>=17
+ if theme in ('birthday','halloween','christmas','easter'):
+  return 'sleepy' if night else 'normal'
  roll=int.from_bytes(hashlib.sha256(('chaty-v9:'+day.isoformat()).encode()).digest()[:8],'big')%100
- if roll<2:return 'strike'
- if roll<10:return 'cheapy'
- if day.weekday()>=5:return 'sleepy'
+ if roll<2:return 'strike-night' if night else 'strike'
+ if roll<10:return 'cheapy-night' if night else 'cheapy'
+ if night:return 'sleepy'
+ if day.weekday()>=5:return ('gamer','reader','snacky')[int(hashlib.sha256(('leisure:'+day.isoformat()).encode()).hexdigest(),16)%3]
  return 'normal'
 
 def quote_for(theme,day,variant,streak=None):
@@ -193,7 +206,7 @@ def generate(theme,day,repos,pushes,languages,runs,errors,calendar=None, previou
  import textwrap
  quote_lines=textwrap.wrap(quote,width=27,break_long_words=False)[:2]
  for i,line in enumerate(quote_lines):body+=txt(718,181+i*17,'“'+line+'”' if len(quote_lines)==1 else line,12,b,400,'middle')
- body+=txt(718,226,'— '+('Cheapy' if variant in ('cheapy','strike') else 'Mini-Chaty')+' ♡',11,'#a8b3ca',400,'middle')
+ body+=txt(718,226,'— '+('Cheapy' if variant in ('cheapy','strike','cheapy-night','strike-night') else 'Mini-Chaty')+' ♡',11,'#a8b3ca',400,'middle')
  (OUT/'streak.svg').write_text(card('GITHUB STREAK',theme,body,820,245),encoding='utf-8')
  # All six cards use the same dimensions so they can sit side by side.
  body=txt(22,90,str(days),31,a,700)+txt(83,88,'active push days (7d)',14)
@@ -258,7 +271,7 @@ def generate(theme,day,repos,pushes,languages,runs,errors,calendar=None, previou
  if durations:body+=txt(315,179,f'Avg {round(statistics.mean(durations))}s',12,b)
  if completed:body+=txt(315,145,'Latest: '+str(completed[0].get('conclusion') or 'unknown')[:12],12)
  (OUT/'automation.svg').write_text(compact_card('AUTOMATION HEALTH',theme,body,'Up to 100 recent workflow runs'),encoding='utf-8')
- meta={'generated_at':dt.datetime.now(dt.timezone.utc).isoformat(),'theme':theme,'public_repos':len(repos),'sampled_public_events':len(pushes),'api_errors':errors,'variant':variant,'data_last_checked_at':last_checked}
+ meta={'generated_at':dt.datetime.now(dt.timezone.utc).isoformat(),'theme':theme,'public_repos':len(repos),'sampled_public_events':len(pushes),'api_errors':errors,'variant':variant,'local_date':day.isoformat(),'data_last_checked_at':last_checked}
  (OUT/'data.json').write_text(json.dumps(meta,indent=2),encoding='utf-8')
 
 def cache_read():
@@ -299,6 +312,8 @@ def main():
  p.add_argument('--allow-preview-overwrite',action='store_true',help='Explicitly overwrite cards with offline preview placeholders')
  p.add_argument('--cached-only',action='store_true',help='Recolor from last valid snapshot without API requests')
  p.add_argument('--date')
+ p.add_argument('--hour',type=int,choices=range(24),help='Preview local hour')
+ p.add_argument('--tick',action='store_true',help='Hourly catch-up; refresh API once per local day after 05:00')
  p.add_argument('--force-variant',choices=VARIANTS,help='Preview only; never set this in the scheduled workflow')
  p.add_argument('--self-test',action='store_true')
  args=p.parse_args()
@@ -313,7 +328,20 @@ def main():
  except ZoneInfoNotFoundError:
   day=dt.datetime.now(dt.timezone.utc).date()
   print('Warning: timezone data missing; using UTC date (install tzdata for Europe/Paris)')
- theme=args.theme or active_theme(day);variant=choose_variant(day,args.force_variant);OUT.mkdir(parents=True,exist_ok=True)
+ try: hour=args.hour if args.hour is not None else dt.datetime.now(ZoneInfo('Europe/Paris')).hour
+ except ZoneInfoNotFoundError: hour=args.hour if args.hour is not None else dt.datetime.now(dt.timezone.utc).hour
+ theme=args.theme or active_theme(day);variant=choose_variant(day,args.force_variant,hour,theme);OUT.mkdir(parents=True,exist_ok=True)
+ if args.tick:
+  cache=cache_read()
+  checked=cache.get('last_checked_at')
+  try: checked_day=dt.datetime.fromisoformat(checked).astimezone(ZoneInfo('Europe/Paris')).date()
+  except (TypeError,ValueError): checked_day=None
+  if checked_day==day or hour<5:
+   args.cached_only=True
+   try: meta=json.loads((OUT/'data.json').read_text())
+   except (OSError,ValueError):meta={}
+   if meta.get('theme')==theme and meta.get('variant')==variant and meta.get('local_date')==day.isoformat():
+    print('No character change needed');return
  if args.offline and not args.allow_preview_overwrite:
   print('SAFE MODE: offline preview will NOT overwrite existing cards.')
   print('For deliberate preview generation, add --allow-preview-overwrite on a test branch.')

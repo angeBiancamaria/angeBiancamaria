@@ -1,7 +1,7 @@
 name: Developer Cards
 on:
   schedule:
-    - cron: '35 7 * * *'
+    - cron: '7 * * * *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -17,24 +17,14 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
-      - name: Debug GitHub API
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          echo "Testing GitHub REST API..."
-          gh api /users/angeBiancamaria --jq '{login, public_repos}'
-      
-          echo "Testing GitHub GraphQL..."
-          gh api graphql \
-            -f query='query { viewer { login } }' \
-            --jq '.data.viewer.login'
       - name: Verify generator and existing SVGs
         run: python3 scripts/developer_cards.py --self-test
       - name: Generate cards from GitHub API
         env:
           GH_TOKEN: ${{ github.token }}
           GH_STATS_TOKEN: ${{ secrets.GH_STATS_TOKEN }}
-        run: python3 scripts/developer_cards.py
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = schedule ]; then python3 scripts/developer_cards.py --tick; else python3 scripts/developer_cards.py; fi
       - name: Validate generated SVG and JSON
         run: |
           python3 - <<'PY'
