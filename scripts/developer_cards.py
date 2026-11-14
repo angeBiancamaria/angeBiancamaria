@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Generate self-hosted GitHub profile SVG cards. Stdlib only; no external image API."""
-import argparse, collections, datetime as dt, html, json, os, random, urllib.request, base64, tempfile, sys, statistics, hashlib
+import argparse, collections, datetime as dt, html, json, os, random, urllib.request, base64, tempfile, sys, statistics, hashlib, re
 from pathlib import Path
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 from seasonal import PALETTES, theme_for
@@ -282,11 +282,22 @@ def validate_cards():
   if not path.exists() or path.stat().st_size<250:raise RuntimeError('Missing or empty card: '+str(path))
   ET.parse(path)
 
+def active_theme(day):
+ # Seasonal owns the README image references; both must agree.
+ try:
+  text=(ROOT/'README.md').read_text(encoding='utf-8')
+  a=re.search(r'img/seasonal/corsica_card_(\w+)\.svg',text)
+  b=re.search(r'img/seasonal/my_goals_(\w+)\.svg',text)
+  if a and b and a[1]==b[1] and a[1] in THEMES:return a[1]
+ except OSError:pass
+ return theme_for(day)
+
 def main():
  p=argparse.ArgumentParser()
  p.add_argument('--theme',choices=THEMES)
  p.add_argument('--offline',action='store_true',help='Generate preview only if --allow-preview-overwrite is also set')
  p.add_argument('--allow-preview-overwrite',action='store_true',help='Explicitly overwrite cards with offline preview placeholders')
+ p.add_argument('--cached-only',action='store_true',help='Recolor from last valid snapshot without API requests')
  p.add_argument('--date')
  p.add_argument('--force-variant',choices=VARIANTS,help='Preview only; never set this in the scheduled workflow')
  p.add_argument('--self-test',action='store_true')
@@ -302,10 +313,20 @@ def main():
  except ZoneInfoNotFoundError:
   day=dt.datetime.now(dt.timezone.utc).date()
   print('Warning: timezone data missing; using UTC date (install tzdata for Europe/Paris)')
- theme=args.theme or theme_for(day);variant=choose_variant(day,args.force_variant);OUT.mkdir(parents=True,exist_ok=True)
+ theme=args.theme or active_theme(day);variant=choose_variant(day,args.force_variant);OUT.mkdir(parents=True,exist_ok=True)
  if args.offline and not args.allow_preview_overwrite:
   print('SAFE MODE: offline preview will NOT overwrite existing cards.')
   print('For deliberate preview generation, add --allow-preview-overwrite on a test branch.')
+  return
+ if args.cached_only:
+  if args.offline: p.error('--cached-only and --offline are mutually exclusive')
+  cache=cache_read()
+  if not cache.get('repos') or not cache.get('calendar'):
+   raise SystemExit('No valid snapshot; run Developer Cards first')
+  stamp=cache.get('last_fresh_calendar_at') or 'unknown'
+  generate(theme,day,cache['repos'],cache.get('pushes',[]),collections.Counter(cache.get('languages',{})),cache.get('runs',[]),[],cache['calendar'],snapshot_note='Cached GitHub data · last verified '+stamp[:10],variant=variant,last_checked=stamp)
+  validate_cards()
+  print('Recolored 7 cards from saved snapshot: '+theme)
   return
  if args.offline:
   repos=[];pushes=[];langs=collections.Counter();runs=[];errors=['Offline preview: placeholders'];calendar={}
