@@ -31,7 +31,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> My code doesn't judge you. The linter does.
+> Solving problems that would not exist without software.
 
 ---
 
