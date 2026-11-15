@@ -31,7 +31,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Solving problems that would not exist without software.
+> Every bug is just an undocumented feature waiting for attention.
 
 ---
 
