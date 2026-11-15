@@ -11,9 +11,9 @@ CACHE=ROOT/'stats'/'developer_cards_cache.json'
 CARDS=['streak','pulse','languages','rpg','timeline','achievements','automation']
 THEMES=['winter','spring','summer','autumn','halloween','christmas','easter','birthday']
 VARIANTS=('normal','cheapy','strike','sleepy','gamer','reader','snacky','cheapy-night','strike-night')
-VARIANT_LINES={'cheapy':['The budget was cut. Again.','My crown is made of CSS.','Please do not tell the original.'],'strike':['I demand paid vacations and better textures.','No more commits without better working conditions!','My union demands actual pixels.'],'sleepy':['Five more minutes...','Even villains need weekends.','Shhh. The repository can wait.']}
+VARIANT_LINES={'cheapy':['The budget was cut. Again.','My crown is made of CSS.','Please do not tell the original.'],'strike':['I demand paid vacations and better textures.','No more commits without better working conditions!','My union demands actual pixels.','I would like to report a colleague for unauthorized overtime.','She gets to read during overtime. I demand compensation.','Management promised hourly checks. I have screenshots','She disconnected without clocking out','She gets XP. I get unpaid overtime.'],'sleepy':['Five more minutes...','Even villains need weekends.','Shhh. The repository can wait.']}
 VARIANT_LINES.update({
- 'gamer':['One more game. Probably.','The boss has a second phase?!'],
+ 'gamer':['One more game. Probably.','The boss has a second phase?!,','I am grinding for XP.','leveling up my skills.','I am not AFK, I am AFK.','Let your heart be your guiding key.'],
  'reader':['Just one more chapter.','My book has better documentation.'],
  'snacky':['Cake is a valid dependency.','Snack break. No pull requests.'],
  'cheapy-night':['They could not afford a bed.','My box has no warranty.'],
