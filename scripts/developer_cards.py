@@ -55,9 +55,9 @@ class API:
 def esc(x):return html.escape(str(x),quote=True)
 def txt(x,y,s,size=15,color='#cbd5e1',weight=400,anchor='start'):
  return f'<text x="{x}" y="{y}" font-family="Segoe UI,Arial,sans-serif" font-size="{size}" font-weight="{weight}" fill="{color}" text-anchor="{anchor}">{esc(s)}</text>'
-def card(name,theme,body,width=820,height=205,foot=None):
+def card(name,theme,body,width=820,height=205,foot=None,divider_end=None):
  a,b,bg,_=PALETTES[theme]
- content=f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="{esc(name)}"><rect width="{width}" height="{height}" rx="18" fill="#0d1117"/><rect x="1.5" y="1.5" width="{width-3}" height="{height-3}" rx="17" fill="none" stroke="{a}" stroke-width="2" opacity=".72"/><path d="M22 55 H{width-22}" stroke="{b}" opacity=".35"/>{txt(26,35,name,20,a,700)}{body}'
+ content=f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="{esc(name)}"><rect width="{width}" height="{height}" rx="18" fill="#0d1117"/><rect x="1.5" y="1.5" width="{width-3}" height="{height-3}" rx="17" fill="none" stroke="{a}" stroke-width="2" opacity=".72"/><path d="M22 55 H{divider_end if divider_end is not None else width-22}" stroke="{b}" opacity=".35"/>{txt(26,35,name,20,a,700)}{body}'
  if foot:content+=txt(26,height-18,foot,11,'#8896aa')
  return content+'</svg>'
 def chibi(theme,x=720,y=78):
@@ -201,13 +201,13 @@ def generate(theme,day,repos,pushes,languages,runs,errors,calendar=None, previou
   body+=txt(26,109,'Streak data unavailable',22,a,700)
   body+=txt(26,145,'GitHub GraphQL data required',14,'#bac4d4')
  if snapshot_note:body+=txt(26,218,snapshot_note[:72],11,'#f3b56e')
- body+=mascot_image(theme,632,49,171,109,variant)
+ body+=mascot_image(theme,621,48,194,132,variant)
  # Keep the dialogue directly below the character, inside her own column.
  import textwrap
  quote_lines=textwrap.wrap(quote,width=27,break_long_words=False)[:2]
- for i,line in enumerate(quote_lines):body+=txt(718,181+i*17,'“'+line+'”' if len(quote_lines)==1 else line,12,b,400,'middle')
- body+=txt(718,226,'— '+('Cheapy' if variant in ('cheapy','strike','cheapy-night','strike-night') else 'Mini-Chaty')+' ♡',11,'#a8b3ca',400,'middle')
- (OUT/'streak.svg').write_text(card('GITHUB STREAK',theme,body,820,245),encoding='utf-8')
+ for i,line in enumerate(quote_lines):body+=txt(718,194+i*15,'“'+line+'”' if len(quote_lines)==1 else line,12,b,400,'middle')
+ body+=txt(718,232,'— '+('Cheapy' if variant in ('cheapy','strike','cheapy-night','strike-night') else 'Mini-Chaty')+' ♡',11,'#a8b3ca',400,'middle')
+ (OUT/'streak.svg').write_text(card('GITHUB STREAK',theme,body,820,245,divider_end=608),encoding='utf-8')
  # All six cards use the same dimensions so they can sit side by side.
  body=txt(22,90,str(days),31,a,700)+txt(83,88,'active push days (7d)',14)
  body+=txt(22,132,str(total),29,b,700)+txt(94,130,'commits in recent public events (30d)',12)
