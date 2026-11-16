@@ -47,5 +47,6 @@ jobs:
           git add -- img/developer/streak.svg img/developer/pulse.svg img/developer/languages.svg img/developer/rpg.svg img/developer/timeline.svg img/developer/achievements.svg img/developer/automation.svg img/developer/data.json stats/developer_cards_cache.json
           if git diff --cached --quiet; then echo 'No changes'; exit 0; fi
           git commit -m 'chore: refresh protected developer cards'
+          git status --short
           git pull --rebase origin main
           git push origin HEAD:main
