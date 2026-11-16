@@ -31,7 +31,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Every bug is just an undocumented feature waiting for attention.
+> My favorite programming language is whatever pays the bills.
 
 ---
 
