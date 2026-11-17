@@ -31,7 +31,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> My favorite programming language is whatever pays the bills.
+> Improving systems one pull request and one review comment at a time.
 
 ---
 
