@@ -51,6 +51,7 @@ Creating solutions, fixing problems, and occasionally creating new ones. | 1
 Committed to clean code, reliable systems, and reasonably timed coffee breaks. | 1
 Code, test, deploy, question every life choice. | 1
 Code first, documentation when the guilt becomes unbearable. | 1
+Clean code is temporary. Deadlines are forever. | 1
 Building tomorrow's legacy code today. | 1
 Building the future, one error message at a time. | 1
 Building systems robust enough to survive their users. | 1

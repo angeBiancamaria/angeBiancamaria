@@ -31,7 +31,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Improving systems one pull request and one review comment at a time.
+> Clean code is temporary. Deadlines are forever.
 
 ---
 
