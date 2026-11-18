@@ -377,17 +377,35 @@ def generate(theme,day,repos,pushes,languages,runs,errors,calendar=None, previou
  meta={'generated_at':dt.datetime.now(dt.timezone.utc).isoformat(),'theme':theme,'public_repos':len(repos),'sampled_public_events':len(pushes),'api_errors':errors,'variant':variant,'local_date':day.isoformat(),'data_last_checked_at':last_checked}
  (OUT/'data.json').write_text(json.dumps(meta,indent=2),encoding='utf-8')
 
+def sanitize_cache(data):
+ """Allowlist only fields consumed by the cards; discard API metadata and emails."""
+ if not isinstance(data,dict):return {}
+ clean=dict(data)
+ clean['repos']=[{key:r.get(key) for key in ('name','pushed_at','stargazers_count')}
+                 for r in data.get('repos',[]) if isinstance(r,dict)]
+ clean['runs']=[{key:r.get(key) for key in ('status','conclusion','run_started_at','updated_at')}
+                for r in data.get('runs',[]) if isinstance(r,dict)]
+ clean['pushes']=[p[:3] for p in data.get('pushes',[])
+                  if isinstance(p,(list,tuple)) and len(p)>=3]
+ clean['languages']={k:v for k,v in data.get('languages',{}).items()
+                     if isinstance(k,str) and isinstance(v,int)}
+ clean['calendar']={k:v for k,v in data.get('calendar',{}).items()
+                    if isinstance(k,str) and isinstance(v,int)}
+ return {key:clean[key] for key in ('schema','user','last_checked_at',
+  'last_fresh_repos_at','last_fresh_calendar_at','repos','runs','pushes',
+  'languages','calendar') if key in clean}
+
 def cache_read():
  try:
   data=json.loads(CACHE.read_text(encoding='utf-8'))
-  if data.get('schema')==1 and data.get('user')==USER:return data
+  if data.get('schema')==1 and data.get('user')==USER:return sanitize_cache(data)
  except (OSError,ValueError,TypeError):pass
  return {}
 
 def atomic_json(path,obj):
  path.parent.mkdir(parents=True,exist_ok=True)
  with tempfile.NamedTemporaryFile(mode='w',encoding='utf-8',dir=path.parent,delete=False,suffix='.tmp') as handle:
-  json.dump(obj,handle,ensure_ascii=False,indent=2)
+  json.dump(sanitize_cache(obj),handle,ensure_ascii=False,indent=2)
   tmp=Path(handle.name)
  os.replace(tmp,path)
 
@@ -464,6 +482,8 @@ def main():
  else:
   api=API();cache=cache_read()
   repos,pushes,langs,runs=load_data(api)
+  repos=sanitize_cache({'repos':repos})['repos']
+  runs=sanitize_cache({'runs':runs})['runs']
   calendar=contribution_calendar(api,day);errors=api.errors
   # Never replace real, previously valid data with API failures or empty placeholders.
   fresh={'repos':repos,'pushes':pushes,'languages':dict(langs),'runs':runs,'calendar':calendar}
