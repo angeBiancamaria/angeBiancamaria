@@ -31,7 +31,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Clean code is temporary. Deadlines are forever.
+> A good developer knows the answer. A great developer knows where to look.
 
 ---
 

@@ -218,3 +218,4 @@
 2026-11-16 15:43 | My favorite programming language is whatever pays the bills.
 2026-11-17 16:28 | Improving systems one pull request and one review comment at a time.
 2026-11-18 16:02 | Clean code is temporary. Deadlines are forever.
+2026-11-19 16:12 | A good developer knows the answer. A great developer knows where to look.
