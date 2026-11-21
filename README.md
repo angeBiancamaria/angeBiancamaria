@@ -31,7 +31,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Professional software engineer, amateur fortune teller for production issues.
+> Professional bug creator and part-time bug remover.
 
 ---
 
