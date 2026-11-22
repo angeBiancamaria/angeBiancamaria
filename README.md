@@ -31,7 +31,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Professional bug creator and part-time bug remover.
+> Deploying software is easy. Explaining why it broke is the real feature.
 
 ---
 

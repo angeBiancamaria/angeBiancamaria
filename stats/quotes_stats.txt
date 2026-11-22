@@ -47,6 +47,7 @@ If it compiles, it's a promising start. | 1
 I don't always write bugs, but when I do, they're in production. | 1
 Every bug is just an undocumented feature waiting for attention. | 1
 Engineering solutions with measurable results and immeasurable debugging sessions. | 1
+Deploying software is easy. Explaining why it broke is the real feature. | 1
 Delivering reliable software and carefully managed technical surprises. | 1
 Debugging: because the code refuses to explain itself. | 1
 Creating solutions, fixing problems, and occasionally creating new ones. | 1
