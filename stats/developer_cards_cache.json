@@ -1,13 +1,13 @@
 {
   "schema": 1,
   "user": "angeBiancamaria",
-  "last_checked_at": "2026-11-21T09:37:52.619781+00:00",
-  "last_fresh_repos_at": "2026-11-21T09:37:52.619807+00:00",
-  "last_fresh_calendar_at": "2026-11-21T09:37:52.619810+00:00",
+  "last_checked_at": "2026-11-22T11:07:01.531405+00:00",
+  "last_fresh_repos_at": "2026-11-22T11:07:01.531427+00:00",
+  "last_fresh_calendar_at": "2026-11-22T11:07:01.531430+00:00",
   "repos": [
     {
       "name": "angeBiancamaria",
-      "pushed_at": "2026-11-21T01:24:00Z",
+      "pushed_at": "2026-11-22T09:46:03Z",
       "stargazers_count": 1
     },
     {
@@ -45,8 +45,68 @@
     {
       "status": "in_progress",
       "conclusion": null,
+      "run_started_at": "2026-11-22T11:06:49Z",
+      "updated_at": "2026-11-22T11:06:52Z"
+    },
+    {
+      "status": "completed",
+      "conclusion": "success",
+      "run_started_at": "2026-11-22T09:45:53Z",
+      "updated_at": "2026-11-22T09:46:06Z"
+    },
+    {
+      "status": "completed",
+      "conclusion": "success",
+      "run_started_at": "2026-11-22T03:02:14Z",
+      "updated_at": "2026-11-22T03:02:22Z"
+    },
+    {
+      "status": "completed",
+      "conclusion": "success",
+      "run_started_at": "2026-11-21T23:04:20Z",
+      "updated_at": "2026-11-21T23:04:31Z"
+    },
+    {
+      "status": "completed",
+      "conclusion": "success",
+      "run_started_at": "2026-11-21T21:33:34Z",
+      "updated_at": "2026-11-21T21:33:44Z"
+    },
+    {
+      "status": "completed",
+      "conclusion": "success",
+      "run_started_at": "2026-11-21T17:22:37Z",
+      "updated_at": "2026-11-21T17:22:45Z"
+    },
+    {
+      "status": "completed",
+      "conclusion": "success",
+      "run_started_at": "2026-11-21T14:10:05Z",
+      "updated_at": "2026-11-21T14:10:13Z"
+    },
+    {
+      "status": "completed",
+      "conclusion": "success",
+      "run_started_at": "2026-11-21T12:31:01Z",
+      "updated_at": "2026-11-21T12:31:11Z"
+    },
+    {
+      "status": "completed",
+      "conclusion": "success",
+      "run_started_at": "2026-11-21T12:22:56Z",
+      "updated_at": "2026-11-21T12:23:03Z"
+    },
+    {
+      "status": "completed",
+      "conclusion": "success",
+      "run_started_at": "2026-11-21T09:49:42Z",
+      "updated_at": "2026-11-21T09:49:55Z"
+    },
+    {
+      "status": "completed",
+      "conclusion": "success",
       "run_started_at": "2026-11-21T09:37:42Z",
-      "updated_at": "2026-11-21T09:37:45Z"
+      "updated_at": "2026-11-21T09:37:56Z"
     },
     {
       "status": "completed",
@@ -581,66 +641,6 @@
       "conclusion": "success",
       "run_started_at": "2026-11-07T08:46:57Z",
       "updated_at": "2026-11-07T08:47:10Z"
-    },
-    {
-      "status": "completed",
-      "conclusion": "success",
-      "run_started_at": "2026-11-06T13:42:02Z",
-      "updated_at": "2026-11-06T13:42:12Z"
-    },
-    {
-      "status": "completed",
-      "conclusion": "success",
-      "run_started_at": "2026-11-06T11:59:37Z",
-      "updated_at": "2026-11-06T11:59:44Z"
-    },
-    {
-      "status": "completed",
-      "conclusion": "success",
-      "run_started_at": "2026-11-06T09:23:42Z",
-      "updated_at": "2026-11-06T09:23:59Z"
-    },
-    {
-      "status": "completed",
-      "conclusion": "success",
-      "run_started_at": "2026-11-05T12:11:19Z",
-      "updated_at": "2026-11-05T12:11:28Z"
-    },
-    {
-      "status": "completed",
-      "conclusion": "success",
-      "run_started_at": "2026-11-05T10:26:56Z",
-      "updated_at": "2026-11-05T10:27:08Z"
-    },
-    {
-      "status": "completed",
-      "conclusion": "failure",
-      "run_started_at": "2026-11-05T10:08:28Z",
-      "updated_at": "2026-11-05T10:08:28Z"
-    },
-    {
-      "status": "completed",
-      "conclusion": "success",
-      "run_started_at": "2026-11-05T09:29:08Z",
-      "updated_at": "2026-11-05T09:29:22Z"
-    },
-    {
-      "status": "completed",
-      "conclusion": "success",
-      "run_started_at": "2026-11-04T12:00:22Z",
-      "updated_at": "2026-11-04T12:00:39Z"
-    },
-    {
-      "status": "completed",
-      "conclusion": "success",
-      "run_started_at": "2026-11-04T09:11:11Z",
-      "updated_at": "2026-11-04T09:11:26Z"
-    },
-    {
-      "status": "completed",
-      "conclusion": "failure",
-      "run_started_at": "2026-11-03T15:20:50Z",
-      "updated_at": "2026-11-03T15:20:50Z"
     }
   ],
   "pushes": [
@@ -1141,7 +1141,8 @@
     "2026-11-18": 3,
     "2026-11-19": 1,
     "2026-11-20": 1,
-    "2026-11-21": 0,
-    "2026-11-22": 0
+    "2026-11-21": 1,
+    "2026-11-22": 0,
+    "2026-11-23": 0
   }
 }
