@@ -31,7 +31,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Deploying software is easy. Explaining why it broke is the real feature.
+> Focused on delivering quality software, preferably before production finds the bugs.
 
 ---
 

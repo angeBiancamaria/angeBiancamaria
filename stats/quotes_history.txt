@@ -222,3 +222,4 @@
 2026-11-20 15:51 | Professional software engineer, amateur fortune teller for production issues.
 2026-11-21 15:10 | Professional bug creator and part-time bug remover.
 2026-11-22 14:59 | Deploying software is easy. Explaining why it broke is the real feature.
+2026-11-23 18:18 | Focused on delivering quality software, preferably before production finds the bugs.
