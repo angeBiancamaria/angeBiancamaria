@@ -51,6 +51,7 @@ Engineering solutions with measurable results and immeasurable debugging session
 Deploying software is easy. Explaining why it broke is the real feature. | 1
 Delivering reliable software and carefully managed technical surprises. | 1
 Debugging: because the code refuses to explain itself. | 1
+Debugging is just detective work with worse lighting. | 1
 Creating solutions, fixing problems, and occasionally creating new ones. | 1
 Committed to clean code, reliable systems, and reasonably timed coffee breaks. | 1
 Code, test, deploy, question every life choice. | 1

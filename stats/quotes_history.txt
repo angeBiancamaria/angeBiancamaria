@@ -223,3 +223,4 @@
 2026-11-21 15:10 | Professional bug creator and part-time bug remover.
 2026-11-22 14:59 | Deploying software is easy. Explaining why it broke is the real feature.
 2026-11-23 18:18 | Focused on delivering quality software, preferably before production finds the bugs.
+2026-11-24 17:55 | Debugging is just detective work with worse lighting.

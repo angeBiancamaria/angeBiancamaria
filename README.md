@@ -31,7 +31,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Focused on delivering quality software, preferably before production finds the bugs.
+> Debugging is just detective work with worse lighting.
 
 ---
 
