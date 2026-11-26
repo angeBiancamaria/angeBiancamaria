@@ -29,6 +29,7 @@ Refactoring yesterday's genius into today's technical debt. | 1
 Professional software engineer, amateur fortune teller for production issues. | 1
 Professional problem solver, occasional problem generator. | 1
 Professional bug creator and part-time bug remover. | 1
+Optimizing performance, maintainability, and the occasional existential crisis. | 1
 One does not simply deploy without checking the logs. | 1
 One commit at a time, one questionable decision at a time. | 1
 My favorite programming language is whatever pays the bills. | 1
