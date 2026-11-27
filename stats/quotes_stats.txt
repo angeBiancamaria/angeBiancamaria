@@ -51,6 +51,7 @@ Focused on delivering quality software, preferably before production finds the b
 Every bug is just an undocumented feature waiting for attention. | 1
 Engineering solutions with measurable results and immeasurable debugging sessions. | 1
 Deploying software is easy. Explaining why it broke is the real feature. | 1
+Deploying confidence, debugging reality. | 1
 Delivering reliable software and carefully managed technical surprises. | 1
 Debugging: because the code refuses to explain itself. | 1
 Debugging is just detective work with worse lighting. | 1
