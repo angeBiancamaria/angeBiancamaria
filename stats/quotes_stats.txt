@@ -47,6 +47,7 @@ It works on my machine — now let's make it work everywhere. | 1
 Improving systems one pull request and one review comment at a time. | 1
 If it compiles, it's a promising start. | 1
 I don't always write bugs, but when I do, they're in production. | 1
+I came for the code and stayed for the production incidents. | 1
 Focused on delivering quality software, preferably before production finds the bugs. | 1
 Every bug is just an undocumented feature waiting for attention. | 1
 Engineering solutions with measurable results and immeasurable debugging sessions. | 1

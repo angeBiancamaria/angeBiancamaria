@@ -31,7 +31,7 @@ I enjoy building, understanding systems, and improving them step by step.
  ---
 
 📝 **Daily thought**
-> Deploying confidence, debugging reality.
+> I came for the code and stayed for the production incidents.
 
 ---
 
